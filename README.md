@@ -63,8 +63,9 @@
 ## [目录结构](https://hexo.io/zh-cn/docs/themes.html)
 
 .  
-├── _config.yml # 主题的配置文件。和 Hexo 配置文件不同，主题配置文件修改时会自动更新，无需重启 Hexo Server。  
-├── languages # 语言文件夹。请参见[国际化 (i18n)](https://hexo.io/zh-cn/docs/internationalization)。  
-├── layout # 布局文件夹。用于存放主题的模板文件，决定了网站内容的呈现方式。  
-├── scripts # 脚本文件夹。在启动时，Hexo 会载入此文件夹内的 JavaScript 文件。  
-└── source # 资源文件夹，除了模板以外的 Asset，例如 CSS、JavaScript 文件等，都应该放在这个文件夹中。文件或文件夹开头名称为 _（下划线线）或隐藏的文件会被忽略。
+├── _config.yml # 主题的配置文件  
+├── languages   # [国际化 (i18n)](https://hexo.io/zh-cn/docs/internationalization)  
+├── layout      # 布局文件夹，用于存放主题的模板文件  
+├── scripts     # 脚本文件夹，在启动时，会载入此文件夹内的 JavaScript 文件  
+└── source      # 资源文件夹，除了模板以外的 Asset，例如 CSS、JavaScript 文件等，都应该放在这个文件夹中。文件或文件夹开头名称为 _（下划线线）或隐藏的文件会被忽略  
+    └── sw.js   # Monetag 广告使用
