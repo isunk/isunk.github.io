@@ -1,0 +1,1621 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/bollnh/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            MySQL | 
+        
+        Dim.Ke
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg">
+    <link rel="icon" href="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content=",mysql">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/github-v2.min.css?AfzKxt++K+/lhZBlSjnxwg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+            
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Dim.Ke">
+    <meta name="msapplication-starturl" content="https://isunk.github.io/2025/03/22/mysql/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Dim.Ke">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg">
+
+    <!-- Site Verification -->
+    
+    <meta name="baidu-site-verification" content="code-ibxIxWHREM" />
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://isunk.github.io/2025/03/22/mysql/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="MySQL | Dim.Ke">
+    <meta property="og:image" content="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg">
+    <meta property="og:description" content="">
+    <meta property="og:article:tag" content="mysql"> 
+
+    
+        <meta property="article:published_time" content="Sat Mar 22 2025 06:39:26 GMT+0000">
+        <meta property="article:modified_time" content="Sat Mar 22 2025 02:25:41 GMT+0000">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="https://isunk.github.io/2025/03/22/mysql/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://isunk.github.io/2025/03/22/mysql/index.html",
+    "headline": "MySQL",
+    "datePublished": "Sat Mar 22 2025 06:39:26 GMT+0000",
+    "dateModified": "Sat Mar 22 2025 02:25:41 GMT+0000",
+    "author": {
+        "@type": "Person",
+        "name": "Dim.Ke",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Dim.Ke",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg"
+        }
+    },
+    "keywords": ",mysql",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+    <script src="https://kulroakonsu.net/88/tag.min.js" data-zone="137717" async data-cfasync="false"></script><!-- Monetag 广告 -->
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#MySQL"><span class="post-toc-text">MySQL</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="post-toc-text">环境搭建</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%8E%A7%E5%88%B6%E5%8F%B0%EF%BC%88mysql%EF%BC%89%E6%93%8D%E4%BD%9C"><span class="post-toc-text">控制台（mysql）操作</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%8E%A7%E5%88%B6%E5%8F%B0%EF%BC%88%E5%85%B6%E4%BB%96%EF%BC%89%E6%93%8D%E4%BD%9C"><span class="post-toc-text">控制台（其他）操作</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E9%85%8D%E7%BD%AE"><span class="post-toc-text">配置</span></a></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                MySQL
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Dim.Ke</strong>
+        <span>3月 22, 2025</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-none-link" href="/tags/mysql/" rel="tag">mysql</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=MySQL&url=https://isunk.github.io/2025/03/22/mysql/index.html&pic=https://isunk.github.iohttps://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=MySQL&url=https://isunk.github.io/2025/03/22/mysql/index.html&via=Dim.Ke" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://isunk.github.io/2025/03/22/mysql/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://isunk.github.io/2025/03/22/mysql/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h1><h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><ul>
+<li><p>Linux</p>
+<ul>
+<li><del>下载安装包并离线安装<br>  <code>wget https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-server_5.7.20-1ubuntu14.04_amd64.deb-bundle.tar</code><br>  <code>tar -xvf mysql-server_5.7.20-1ubuntu14.04_amd64.deb-bundle.tar</code><br>  <code>dpkg -i *.deb</code></del></li>
+<li>在线安装<br>  <code>apt-get install mysql-server mysql-client libmysqlclient-dev</code><br>  <font color="grey">安装过程中根据提示输入 mysql 用户中的 root 用户的密码</font><blockquote>
+<ul>
+<li>启动服务<ul>
+<li>方法一：使用 mysqladmin 启动<br>  <code>mysqladmin start</code></li>
+<li>方法二：启动服务<br>  <code>/etc/init.d/mysql start</code></li>
+</ul>
+</li>
+<li>重启服务<ul>
+<li>方法一：使用 mysqladmin 重启<br>  <code>mysqladmin restart</code></li>
+<li>方法二：<span id="restart-mysqld">重启服务</span><br>  <code>/etc/init.d/mysql restart</code></li>
+</ul>
+</li>
+<li>关闭服务<br>  <code>mysqladmin shutdown</code></li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>Windows</p>
+<ul>
+<li>离线安装<ol>
+<li>下载 <a target="_blank" rel="noopener" href="https://cdn.mysql.com//Downloads/MySQL-8.0/mysql-8.0.13-winx64.zip">mysql-8.0.13-winx64.zip</a> 并解压</li>
+<li>初始化 data 目录<br> <code>./bin/mysqld --initialize-insecure</code></li>
+<li>独立（非服务模式）运行<br> <code>./bin/mysqld --standalone --console</code><blockquote>
+<ul>
+<li>安装至系统服务<br>  <code>./bin/mysqld --install</code><ul>
+<li>启动系统服务<br>  <code>net start mysql</code>    </li>
+</ul>
+</li>
+<li>删除系统服务<br>  <code>./bin/mysqld --remove</code><br>  <del><code>./bin/mysqld --remove MySQL</code></del></li>
+</ul>
+</blockquote>
+</li>
+<li>登录/连接 mysql 控制台<br> <code>mysql -uroot</code></li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="控制台（mysql）操作"><a href="#控制台（mysql）操作" class="headerlink" title="控制台（mysql）操作"></a>控制台（mysql）操作</h2><ol>
+<li><p>登录/连接 mysql 控制台环境</p>
+<ul>
+<li>场景一：指定的 mysql 用户 root 已设置密码，需以密钥的方式登录<br>  <del><code>mysql -uroot -p</code></del><br>  <code>mysql -u root -p</code><br>  使用 test 用户登录远程主机 192.168.1.101（使用默认端口号 3306）的 mysql 服务<br>  <code>mysql -h 192.168.1.101 -u test -p</code><br>  根据提示输入密码，验证通过后进入 mysql 命令行控制台界面中</li>
+<li>场景二：登录的 mysql 用户（root）未设置密码<br>  <code>mysql</code><blockquote>
+<p>参数 “-u” 指定登录用户名称，默认使用 mysql 用户中的 root 用户</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>操作、命令</p>
+<ul>
+<li><p>执行 sql 语句（参考 <a href="#mysql-syntax">MySql 语法</a>）</p>
+<pre><code class="sql">-- 显示所有数据库
+show databases;
+
+-- 打开/使用 mysql 数据库（即切换当前所使用的数据库，也可通过 use 其他数据库来直接切换当前所使用的数据库）
+-- 打开之后，不指定数据库名如 &quot;select * from user;&quot; 默认使用当前打开的数据库中的表 user；也可在未打开任何数据库的情况下，直接指定数据库名如 &quot;select * from mysql.user;&quot;。）
+use mysql;
+
+-- 显示当前已打开的数据库中所有表
+show tables;
+
+-- 显示数据表 user 的结构
+describe user;
+-- 显示数据表 user 的列
+-- show columns from user;
+</code></pre>
+</li>
+<li><p>查询（mysql 系统）用户<br>  <code>select Host, User, Password as Pass from mysql.user;</code></p>
+<blockquote>
+<p>命令行中，以 <code>\G</code> 结尾，表示垂直显示查询结果，如<br><code>select top(3) * from mysql.user\G</code></p>
+</blockquote>
+</li>
+<li><p>执行 sql 脚本 data.sql<br>  <code>source data.sql</code></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/xh831213/archive/2012/04/10/2439886.html">将查询结果导出到文件 user.txt 中</a><br>  <code>select Host, User, Password as Pass from mysql.user into outfile &#39;./user.txt&#39;;</code>  </p>
+  <!-- 导入文件  
+  `load data infile './user.txt' into table table03` -->
+<blockquote>
+<p>若导入导出文件失败，且抛出 “ERROR 1290” 异常，解决方法见 <a href="#error-1290">导出文件时抛出异常 “ERROR 1290 (HY000): …</a><br>导出的文件见 /var/lib/mysql/user.txt</p>
+</blockquote>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/lvdongjie/p/6274392.html">导入导出 csv 文件</a></p>
+<pre><code class="sql">-- 导出 users 表中数据至 users.csv 文件中
+select * from users into outfile &#39;/tmp/users.csv&#39; fields terminated by &#39;,&#39; optionally enclosed by &#39;&quot;&#39; escaped by &#39;&quot;&#39; lines terminated by &#39;\r\n&#39;;
+
+-- 将 users.csv 文件中数据导入到 users 表中
+load data infile &#39;/tmp/users.csv&#39; into table users fields terminated by &#39;,&#39;  optionally enclosed by &#39;&quot;&#39; escaped by &#39;&quot;&#39; lines terminated by &#39;\r\n&#39;;
+</code></pre>
+</li>
+<li><p>将 table02 中的数据备份到 table02b 中<br>  <code>create table table02b(select * from table02);</code></p>
+</li>
+<li><p><span id="console-status">查看当前所有连接信息</span><br>  <code>status</code><br>  查看当前所有连接进程、等待时间、所处状态、是否 locked<br>  <code>show full processlist</code></p>
+</li>
+</ul>
+</li>
+<li><p>退出控制台环境<br> <code>exit</code></p>
+</li>
+</ol>
+<h2 id="控制台（其他）操作"><a href="#控制台（其他）操作" class="headerlink" title="控制台（其他）操作"></a>控制台（其他）操作</h2><ul>
+<li>使用 mysqldump 备份还原数据库  <ul>
+<li>备份数据库<br>  <code>mysqldump -u root commerce &gt; backup.sql</code></li>
+<li>还原数据库<br>  <code>mysql -u root &lt; backup.sql</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><ul>
+<li><p>使用 mysqladmin 修改 mysql 用户密码<br>  <code>mysqladmin -u[用户名] -p[旧密码] password [新密码]</code></p>
+</li>
+<li><p>实时查看 mysql 当前连接数</p>
+<ul>
+<li>方法一<ul>
+<li>查看当前所有连接的详细资料<br>  <code>./mysqladmin -uroot -p -h192.168.1.101 processlist</code></li>
+<li>只查看当前连接数（其中 Threads 即为连接数）<br>  <code>./mysqladmin -uroot -p -h192.168.1.101 status</code></li>
+</ul>
+</li>
+<li><a href="#console-status">方法二</a><blockquote>
+<p>或直接使用 mysql 控制台执行查询连接进程信息，并导出到文件 conns.txt 中  </p>
+<pre><code>`mysql -e &#39;show full processlist;&#39; &gt; conns.txt`
+</code></pre>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>配置 mysql 最大连接数</p>
+<ol>
+<li>编辑 my.cnf（windows 环境下为 my.ini），修改如下<pre><code class="ini">max_connections = 100
+</code></pre>
+<!--</li>
+</ol>
+</li>
+<li><p>mysql 历史命令记录</p>
+<ul>
+<li>方法一：配置 mysql 日志，记录历史执行语句<ol>
+<li>编辑 my.cnf（windows 环境下为 my.ini），修改如下<pre><code class="ini">[mysqld]
+log = /tmp/mysql.log
+</code></pre>
+</li>
+<li>重启 mysql 服务</li>
+</ol>
+</li>
+<li>方法二：~/.mysql_history 文件中记录每个用户使用数据库的操作命令<br>  <code>tail -20 ~/.mysql_history</code><blockquote>
+<ul>
+<li>该文件会把所有操作记录下来，包括创建用户和修改用户的明文密码。因此出于安全考虑，需禁止该功能<br><font color="grey">（该文件是 mysql 编译安装时默认配置好的，不容易修改。但是最好不要保存，仅仅删除是不行的，要直接将其软连接到垃圾箱）</font><br><code>ln -s /dev/null ~/.mysql_history</code></li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>-&gt;</p>
+</li>
+<li><p>在 shell 中执行 mysql 命令</p>
+<pre><code class="bash">mysql -h192.168.1.102 -P3306 -uroot -p123456 testdb &lt; EOF | tee - &gt; oper.log
+show tables;
+EOF
+</code></pre>
+</li>
+</ul>
+<h2 id="MySql-语法"><a href="#MySql-语法" class="headerlink" title="MySql 语法"></a><span id="mysql-syntax">MySql 语法</span></h2><ul>
+<li><p>DQL（数据查询语言）</p>
+<ul>
+<li><p>简单查询</p>
+<pre><code class="sql">-- 查询
+select * from users;
+
+select id, name, sex, round(datediff(curdate(), birth)/365.2422) as age from users;
+</code></pre>
+</li>
+<li><p>分页查询</p>
+<pre><code class="sql">-- 返回 4 行，跳过前 9 条记录，即返回第 10、11、12、13 条记录
+select * from users limit 9,5;
+select * from users limit 4 offset 9;
+</code></pre>
+</li>
+<li><p>其他</p>
+<pre><code class="sql">-- 查找 name 字段有重复的记录
+select name from users group by name having count(1) &gt; 1;
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>DML（数据操纵语言）</p>
+<ul>
+<li><p>简单增删改</p>
+<pre><code class="sql">-- 新增
+insert into users(name, telephone) values(&#39;luffy&#39;, &#39;17612345678&#39;);
+insert into users values(null, &#39;lina&#39;, &#39;female&#39;, &#39;1993-11-23 00:00:00&#39;, &#39;17612345679&#39;, null, now());
+insert into users(name, sex, birth, telephone, address) values(&#39;Haley&#39;, &#39;female&#39;, &#39;1993-05-17&#39;, &#39;18617382659&#39;, &#39;河南开封朝阳区新华路23号&#39;);
+
+-- 修改
+update users set birth = now() where id = 1;
+update users set birth = &#39;1993-11-24&#39; where name = &#39;lina&#39;;
+
+-- 删除
+delete from users where name = &#39;lina&#39;;
+</code></pre>
+</li>
+<li><p>复杂增删改</p>
+<pre><code class="sql">-- 插入一条数据，如果主键已存在，则修改该数据
+insert into users(id, name, telephone) values(1, &#39;zhangsan&#39;, &#39;17612345678&#39;) on duplicate key update name = &#39;lisi&#39;, telephone = &#39;17612335679&#39;;
+
+-- 复制数据到同一张表 users 中
+insert into users(name, sex, telephone) select name, sex, telephone from users;
+</code></pre>
+</li>
+<li><p>清空表数据</p>
+<pre><code class="sql">truncate table users;
+</code></pre>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/luyucheng/p/6297752.html">锁</a>  </p>
+<ul>
+<li><p>MySQL 各存储引擎使用了三种类型（级别）的锁定机制</p>
+<ul>
+<li><p>表级锁定（table-level）<br>  开销小，加锁快；不会出现死锁；锁定粒度大，发生锁冲突的概率最高，并发度最低。适合于以查询为主，只有少量按索引条件更新数据的应用。<br>  使用表级锁定的主要是 MyISAM、MEMORY、CSV 等一些非事务性存储引擎。</p>
+</li>
+<li><p>行级锁定（row-level）<br>  开销大，加锁慢；会出现死锁；锁定粒度最小，发生锁冲突的概率最低，并发度也最高。适合于有大量按索引条件并发更新少量不同数据，同时又有并发查询的应用。<br>  使用行级锁定的主要是 InnoDB 存储引擎<br>  InnoDB 行锁是通过给索引上的索引项加锁来实现的，只有通过索引条件检索数据，InnoDB才使用行级锁，否则，InnoDB将使用表锁</p>
+<pre><code class="sql">-- https://www.zhihu.com/tardis/sogou/art/143866444
+
+-- 悲观锁：每次获取商品时，对该商品加排他锁。也就是在用户A获取获取 id = 1 的商品信息时对该行记录加锁，期间其他用户（查询或修改）阻塞等待直至释放锁。悲观锁适合写入频繁的场景
+start transaction;
+select * from goods where id = 1 for update; -- for update 仅适用于 InnoDB，且必须在事务块 BEGIN/COMMIT 中才能生效。在进行事务操作时，通过 for update 语句，MySQL 会对查询结果集中每行数据都添加排他锁，其他线程对该记录的更新与删除操作都会阻塞。排他锁包含行锁、表锁。
+update goods set stock = stock - 1 where id = 1;
+commit;
+
+-- 乐观锁方案：每次获取商品时，不对该商品加锁。在更新数据的时候需要比较程序中的库存量与数据库中的库存量是否相等，如果相等则进行更新，反之程序重新获取库存量，再次进行比较，直到两个库存量的数值相等才进行数据更新。乐观锁适合读取频繁的场景
+select * from goods where id = 1;
+start transaction;
+update goods set stock = stock - 1 where id = 1 and stock = cur_stock;
+commit;
+
+-- 乐观锁方案：每次获取商品时，不对该商品加锁。在更新数据的时候需要比较程序中的库存量是否充足
+start transaction;
+update goods set stock = stock - 1 where id = 1 and stock &gt;= 1; -- 返回成功修改行数应该为 1，否则判定失败，需要回滚
+commit;
+</code></pre>
+</li>
+<li><p>页级锁定（page-level）<br>  开销和加锁时间界于表锁和行锁之间；会出现死锁；锁定粒度界于表锁和行锁之间，并发度一般。<br>  使用页级锁定的主要是 BerkeleyDB 存储引擎</p>
+</li>
+</ul>
+</li>
+<li><p>共享锁（读锁）/ 排它锁（写锁）</p>
+<ul>
+<li>共享锁又叫读锁，是读取操作创建的锁。其他用户可以同步读取数据，但是不能够写数据。</li>
+<li>排它锁又叫写锁，是更新操作创建的锁。其他用户不可以同步读取数据更不能写数据。</li>
+</ul>
+</li>
+<li><p>MyIsam锁模式<br>  MyIsam引擎在执行查询语句前，会自动给涉及到的表添加读锁；在更新操作前会自动给涉及到的表加写锁。</p>
+<ol>
+<li>对MyIsam中的表进行读取操作，其他用户可以进行读取，但是不能修改；</li>
+<li>对MyIsam中的表进行更新操作，其他用户不能进行读取，更不能进行操作。</li>
+</ol>
+</li>
+<li><p>InnoDb锁模式<br>  对于insert、update、delete，InnoDB会自动给涉及的数据加排他锁（X）；对于一般的Select语句，InnoDB不会加任何锁，事务可以通过以下语句给显示加共享锁或排他锁。<br>  共享锁：SELECT … LOCK IN SHARE MODE;<br>  排他锁：SELECT … FOR UPDATE; SELECT … FOR UPDATE NOWAIT;</p>
+</li>
+</ul>
+</li>
+<li><p>Hint</p>
+<pre><code class="sql">-- 强制索引 FORCE INDEX 
+SELECT * FROM TABLE1 FORCE INDEX (FIELD1) …
+-- 以上的SQL语句只使用建立在FIELD1上的索引，而不使用其它字段上的索引。
+
+-- 忽略索引 IGNORE INDEX 
+SELECT * FROM TABLE1 IGNORE INDEX (FIELD1, FIELD2) …
+-- 在上面的SQL语句中，TABLE1表中FIELD1和FIELD2上的索引不被使用。 
+
+-- 关闭查询缓冲 SQL_NO_CACHE 
+SELECT SQL_NO_CACHE field1, field2 FROM TABLE1;
+-- 有一些SQL语句需要实时地查询数据，或者并不经常使用（可能一天就执行一两次）,这样就需要把缓冲关了,不管这条SQL语句是否被执行过，服务器都不会在缓冲区中查找，每次都会执行它。
+
+-- 强制查询缓冲 SQL_CACHE
+SELECT SQL_CALHE * FROM TABLE1;
+-- 如果在my.ini中的query_cache_type设成2，这样只有在使用了SQL_CACHE后，才使用查询缓冲。
+
+-- 优先操作 HIGH_PRIORITY
+-- HIGH_PRIORITY可以使用在select和insert操作中，让MYSQL知道，这个操作优先进行。
+SELECT HIGH_PRIORITY * FROM TABLE1;
+
+-- 滞后操作 LOW_PRIORITY
+-- LOW_PRIORITY可以使用在insert和update操作中，让mysql知道，这个操作滞后。
+update LOW_PRIORITY table1 set field1= where field1= …
+
+-- 延时插入 INSERT DELAYED
+INSERT DELAYED INTO table1 set field1= …
+-- INSERT DELAYED INTO，是客户端提交数据给MySQL，MySQL返回OK状态给客户端。而这是并不是已经将数据插入表，而是存储在内存里面等待排队。当mysql有空余时，再插入。另一个重要的好处是，来自许多客户端的插入被集中在一起，并被编写入一个块。这比执行许多独立的插入要快很多。坏处是，不能返回自动递增的ID，以及系统崩溃时，MySQL还没有来得及插入数据的话，这些数据将会丢失。
+
+-- 强制连接顺序 STRAIGHT_JOIN
+SELECT TABLE1.FIELD1, TABLE2.FIELD2 FROM TABLE1 STRAIGHT_JOIN TABLE2 WHERE …
+-- 由上面的SQL语句可知，通过STRAIGHT_JOIN强迫MySQL按TABLE1、TABLE2的顺序连接表。如果你认为按自己的顺序比MySQL推荐的顺序进行连接的效率高的话，就可以通过STRAIGHT_JOIN来确定连接顺序。
+
+-- 强制使用临时表 SQL_BUFFER_RESULT
+SELECT SQL_BUFFER_RESULT * FROM TABLE1 WHERE … 
+-- 当我们查询的结果集中的数据比较多时，可以通过SQL_BUFFER_RESULT.选项强制将结果集放到临时表中，这样就可以很快地释放MySQL的表锁（这样其它的SQL语句就可以对这些记录进行查询了），并且可以长时间地为客户端提供大记录集。
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>DDL（数据定义语言）</p>
+<blockquote>
+<p>MySQL 的 DDL 语句是非事务的，即不能对 DLL 语句进行回滚操作</p>
+</blockquote>
+<ul>
+<li><p>数据库管理</p>
+<ul>
+<li>创建数据库 commerce<br>  <code>create database commerce;</code>  </li>
+<li>删除数据库 commerce<br>  <code>drop database commerce;</code></li>
+</ul>
+</li>
+<li><p>数据表管理</p>
+<ul>
+<li><p>创建数据表 users</p>
+<pre><code class="sql">use commerce;
+
+-- create table users (
+--     name varchar(20),
+--     sex char(1),
+--     birth date
+-- );
+
+create table if not exists users (
+    id int not null auto_increment,
+    name varchar(32) not null,
+    -- age int not null,
+    sex enum(&#39;male&#39;, &#39;female&#39;) not null default &#39;male&#39;,
+    -- check(sex like &#39;男&#39; or sex like &#39;女&#39;), -- mysql 中 check 无效，使用 enum 替代
+    birth date null,
+    telephone char(11) not null,
+    -- check(len(telephone) = 11),
+    address varchar(255) null,
+    updatetime datetime not null default now(),
+    primary key(id)
+    -- primary key(id, name) -- 联合主键
+) engine = InnoDB default charset = utf8;
+</code></pre>
+<blockquote>
+<p>引擎类型，多为 engine = InnoDB，如果省略了 engine = … 语句，则使用默认的引擎 MyISAM</p>
+</blockquote>
+</li>
+<li><p>删除数据表 users<br>  <code>drop table users;</code></p>
+</li>
+<li><p>修改数据表</p>
+<pre><code class="sql">-- 删除字段
+alter table users drop telephone;
+
+-- 添加字段
+alter table users add telephone char(11);
+
+-- 修改字段类型
+-- alter table users modify telephone varchar(20);
+
+-- 修改字段名称及类型
+-- alter table users change telephone telephone2 char(14) not null;
+
+-- 修改字段默认值
+-- alter table users alter telephone set default &#39;13212345678&#39;;
+
+-- 修改表名
+-- alter table users rename to users2;
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>创建索引</p>
+<pre><code class="sql">-- 主键索引，一种特殊的唯一索引，不允许有空值。
+alter table `users` add primary key(`id`);
+
+-- 唯一索引，与“普通索引”类似，不同的就是：索引列的值必须唯一，但允许有空值。
+alter table `users` add unique(`id`);
+
+-- 普通索引，最基本的索引，没有任何限制
+alter table `users` add index index04(`id`);
+
+-- 全文索引，仅可用于 MyISAM 表，针对较大的数据，生成全文索引很耗时好空间。
+alter table `users` add fulltext(`id`);
+
+-- 组合索引，为了更多的提高 mysql 效率可建立组合索引，遵循“最左前缀”原则。
+alter table `users` add index index04(`id`, `name`);
+</code></pre>
+</li>
+<li><p>外键约束</p>
+<pre><code class="sql">create table orders (
+    ...
+    user_id int not null,
+    ...
+    -- constraint constraint_name -- （可选）为外键约束定义约束名称，默认将自动生成一个名称
+    foreign key fk_user(user_id) -- 指定子表（当前所在表）中引用父表中主键列的列
+    references users(id) -- 指定父表及其子表中列的引用
+    -- on update action -- （可选）指定在父表中的行更新时，子表中的行会怎样执行操作
+    -- on delete action -- （可选）
+);
+
+alter orders drop foreign key fk_user;
+
+alter orders add constraint constraint_name foreign key fk_user(user_id) references users(id) on update action on delete action;
+
+-- 查看 orders 表的外键
+-- show create table orders;
+</code></pre>
+</li>
+<li><p>存储过程</p>
+<pre><code class="sql">drop procedure if exists fake_users;
+
+delimiter $$
+create procedure fake_users(count int)
+begin
+    declare i int default 0;
+    -- declare r int default 0;
+    declare rand_name varchar(32);
+    declare rand_sex enum(&#39;male&#39;, &#39;female&#39;);
+    declare rand_date date;
+    declare rand_phone char(11);
+
+    set @charset = &#39;abcdefghijklmnopqrstuvwxyz&#39;;
+    set @numberset = &#39;0123456789&#39;;
+
+    while i &lt; count
+    do
+        set @j = 0;
+        set rand_name = &#39;&#39;;
+        while @j &lt; floor(3 + rand() * 6) -- 随机生成值为 [3, 8] 的整数（FLOOR(min + RAND() * (max – min + 1))）
+        do
+            set rand_name = concat(rand_name, substr(@charset, floor(rand() * length(@charset)) + 1, 1));
+            set @j = @j + 1;
+        end while;
+
+        if round(rand()) = 0 then
+            set rand_sex = &#39;male&#39;;
+        else
+            set rand_sex = &#39;female&#39;;
+        end if;
+
+        set rand_date = date_add(&#39;1990-01-01&#39;, interval floor(1 + (rand() * 3650)) day); -- 随机生成起始日期为 1990-1-1，最高 10 年的日期
+
+        set @j = 1;
+        set rand_phone = &#39;1&#39;;
+        while @j &lt; 11
+        do
+            set rand_phone = concat(rand_phone, substring(@numberset, floor(1 + rand() * 10), 1));
+            set @j = @j + 1;
+        end while;
+
+        insert into users(name, sex, birth, telephone) values(rand_name, rand_sex, rand_date, rand_phone);
+
+        set i = i + 1;
+    end while;
+end
+$$
+delimiter ;
+
+call fake_users(20); -- 随机生成 20 条 users 数据
+</code></pre>
+</li>
+<li><p>触发器</p>
+<ul>
+<li><p>查看触发器<br>  <code>show triggers;</code></p>
+</li>
+<li><p>创建触发器</p>
+<pre><code class="sql">drop trigger if exists `users_trigger`;
+
+delimiter //
+create trigger users_trigger before update
+on users for each row
+begin
+    set NEW.updatetime = now(); -- 当 users 表有数据更新时，修改该记录的 updatetime 为当前时间
+end //
+
+delimiter ;
+</code></pre>
+<blockquote>
+<p>创建触发器格式如下</p>
+<pre><code class="sql">CREATE TRIGGER [触发器名] [触发时机: BEFORE|AFTER] [触发事件: INSERT|DELETE|UPDATE]
+ON [表名] FOR EACH ROW
+BEGIN
+    [执行语句列表]
+END
+</code></pre>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>视图</p>
+<ul>
+<li><p>创建视图</p>
+<pre><code class="sql">create view v_users as select id, name, sex from users;
+-- create view v_users(ID, 姓名, 性别) as select id, name, sex from users;
+</code></pre>
+</li>
+<li><p>修改、删除视图</p>
+<pre><code class="sql">-- 创建视图，已存在则替换
+create or replace view v_users as select id, name, sex from users;
+
+-- 修改视图
+alter view v_users as select * from users;
+
+-- 删除视图
+drop view v_users;
+</code></pre>
+</li>
+<li><p>查看视图</p>
+<pre><code class="sql">-- 查看所有视图
+show table status where comment = &#39;view&#39;;
+
+-- 查看视图 v_users
+show create view v_users;
+</code></pre>
+</li>
+<li><p>使用视图</p>
+<pre><code class="sql">select * from v_users;
+
+update v_users set name = &#39;小红&#39; WHERE id = 2;
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>事务</p>
+<ul>
+<li><p>手动执行事务</p>
+<pre><code class="sql">start transaction; -- 开启事务
+
+...
+
+commit;
+-- rollback;
+</code></pre>
+</li>
+<li><p>事务管理</p>
+<pre><code class="sql">-- 查看当前运行的事务
+select * from information_schema.innodb_trx;
+-- kill [trx_mysql_thread_id]; -- 杀掉指定事务线程，其中 trx_mysql_thread_id 来自上一步查询的事务线程 id
+
+-- 查看当前运行的事务的账户和事务开始的时间，及其事务语句
+select a.id, a.user, a.host, b.trx_started, b.trx_query from information_schema.processlist a right outer join information_schema.innodb_trx b on a.id = b.trx_mysql_thread_id;
+</code></pre>
+</li>
+<li><p>事务隔离级别设置</p>
+<pre><code class="sql">-- 查看当前会话的事务隔离级别
+show variables like &#39;%transaction_isolation%&#39;;
+
+-- 设置全局事务隔离级别，事务的隔离级别有：未提交读(read uncommitted)、已提交读(read committed)、可重复读(repeatable read)、串行化(serializable)
+set global transaction isolation level read committed;
+
+-- 设置当前会话的事务隔离级别
+set session transaction isolation level read committed;
+</code></pre>
+<blockquote>
+<ul>
+<li>嵌套事务：有多个 begin / commit / rollback 这样的事务块的事务，并且有父子关系。子事务的提交完成后不会真的提交，而是等到父事务提交才会真正的提交。</li>
+<li>MySQL 不支持事务嵌套：已经开启事务后，再开启事务（start transaction），会隐式的提交（commit）上一个事务（即第二个 begin 语句默认会变为 commit;begin;）。可以通过部分事务（savepoint）来实现嵌套。</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>锁管理</p>
+<pre><code class="sql">-- 查询是否锁表
+show OPEN TABLES where In_Use &gt; 0;
+
+-- 查看所有进程
+show processlist; -- MySQL
+show full processlist; -- MariaDB
+
+-- 根据查询的进程，kill 指定连接的进程
+kill $pid
+
+-- 查看正在锁的事务
+select * from information_schema.innodb_locks;
+select * from performance_schema.data_locks; -- MySQL 版本 ≥ 8.0.13
+-- 查看等待锁的事务
+select * from information_schema.innodb_lock_waits;
+select * from performance_schema.data_lock_waits; -- MySQL 版本 ≥ 8.0.13
+
+-- 查看 innodb 引擎的运行时信息
+show engine innodb status\G;
+
+-- 查看服务器状态
+show status like &#39;%lock%&#39;;
+
+-- 查看超时时间
+show variables like &#39;%timeout%&#39;;
+</code></pre>
+</li>
+<li><p>日志<br>  general_log：该日志用于记录 MySQL 中所有运行过的 SQL</p>
+<pre><code class="sql">-- 查看 general_log 是否开启，及文件名
+show variables like &#39;%general_log%&#39;;
+
+-- 开启 general_log
+set global general_log = 1;
+
+-- 关闭 general_log
+set global general_log = 0;
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>DCL（数据控制语言）</p>
+<ul>
+<li><p>用户管理、授权</p>
+<ul>
+<li><p>添加用户</p>
+<ul>
+<li><p>方法一：新增一个用户 test01，允许任意远程主机可以登录，并设置其密码为 123456<br>  <code>create user &#39;test01&#39;@&#39;%&#39; identified by &#39;123456&#39;;</code></p>
+<blockquote>
+<p>新增用户命令的格式为<br><code>CREATE USER &#39;username&#39;@&#39;host&#39; IDENTIFIED BY &#39;password&#39;;</code><br>其中，  </p>
+<ul>
+<li>username 表示将创建的用户名；</li>
+<li>host 指定该用户在哪个主机上可以登录，如 “localhost” 只允许本地用户；”%” 允许任意远程主机。</li>
+<li>password 表示该用户的登录密码，密码可以为空,即无需密码可以直接登录。</li>
+</ul>
+</blockquote>
+</li>
+<li><p>方法二：新增一个用户 test02，密码为 123，只允许本地访问<br>  <code>insert into mysql.user(Host, User, Password) values(&quot;localhost&quot;, &quot;test02&quot;, password(&quot;123&quot;));</code></p>
+</li>
+<li><p>方法三：不使用以上方法创建用户，直接<a href="#grant-user">对一个新用户授权</a></p>
+</li>
+</ul>
+</li>
+<li><p>用户授权</p>
+<ol>
+<li><p><span id="grant-user">授权</span><br> 授权用户 test03 拥有数据库 db01 的所有权限<br> <code>grant all privileges on db01.* to test03@localhost identified by &#39;123&#39;;</code><br> 授权用户 test03 可以在任何主机上登录，并对所有数据库的表有查询、插入、修改、删除的权限<br> <code>grant select, insert, update, delete on *.* to &quot;test03&quot; Identified by &quot;123&quot;;</code></p>
+<blockquote>
+<p>授权命令的格式为<br><code>GRANT privileges ON database.table TO username@host IDENTIFIED BY &quot;password&quot;;</code><br>其中，</p>
+<ul>
+<li>权限 privileges 可以为 select、delete、update、create、drop</li>
+<li>数据库、数据表表示格式为 <code>database.table</code>，如 “<em>.</em>“ 表示所有数据库的所有表，”db01.user” 表示数据库 db01 的 user 表</li>
+<li>授权的用户（如 test03）如果不存在，则会自动创建该用户</li>
+</ul>
+</blockquote>
+</li>
+<li><p><span id="flush-privileges">刷新系统权限表</span><br> <code>flush privileges;</code></p>
+</li>
+</ol>
+</li>
+<li><p>删除用户</p>
+<ol>
+<li>删除用户 test03<ul>
+<li>方法一：<br>  <code>drop user test03@&#39;localhost&#39;;</code></li>
+<li>方法二：<br>  <code>delete from user where User = &#39;test03&#39;;</code></li>
+</ul>
+</li>
+<li><a href="#flush-privileges">刷新系统权限表</a></li>
+</ol>
+</li>
+<li><p>修改密码<br>  设置（mysql 用户中的）root 用户的密码为 123456<br>  <code>set password for root=password(&quot;123456&quot;);</code></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Troubleshooting"><a href="#Troubleshooting" class="headerlink" title="Troubleshooting"></a>Troubleshooting</h2><ul>
+<li><p>远程访问连接拒绝</p>
+<ul>
+<li><p><span id="allow-root-remote">设置允许 mysql 用户中的 root 用户远程访问</span><br>  默认情况下，mysql 用户中的 root 用户只允许本地访问（Host 为 localhost），远程无法访问。<br>  如需要允许 root 用户远程访问，则需修改数据库 mysql 下的表 user 中相关 Host 的值为 “%”<br>  <code>mysql -u root –p</code></p>
+<pre><code class="bash">use mysql;
+
+update user set host = &#39;%&#39; where user = &#39;root&#39;;
+</code></pre>
+</li>
+<li><p>mysql 可以用 localhost 连接，但不能用 ip 连接的问题解决方法<br>  在本机上通过 “mysql -h locathost -P 3306 -u test -p123456” 可以访问，但是通过 “mysql -h 192.168.128.137 -P 3306 -u test -p123456” 无法访问，把mysql 里面 user 表里面的 Host 设置为了 % 也没有作用，最后通过修改配置文件 /etc/mysql/my.cnf，注释掉 bind-address 所在行即可<br>  <code>sed -i &#39;s/^bind-address/#bind-address/g&#39; /etc/mysql/my.cnf</code><br>  <a href="#restart-mysqld">重启 mysql 服务</a></p>
+</li>
+</ul>
+</li>
+<li><p><span id="error-1290"><a target="_blank" rel="noopener" href="http://blog.csdn.net/HHTNAN/article/details/78520511">导出文件时抛出异常 “ERROR 1290 (HY000): The MySQL server is running with the –secure-file-priv option so it cannot execute this statement”</a></span><br>  默认情况下，mysql 限制了导出文件的路径，执行以下命令查看当前 secure-file-priv 的值<br>  <code>show variables like &#39;%secure%&#39;;</code><br>  编辑配置文件 /etc/mysql/conf.d/mysql.cnf，在 “[mysqld]” 节点下添加/修改 secure-file-priv 配置项<br>  <code>echo &#39;[mysqld]&#39; &gt;&gt; /etc/mysql/conf.d/mysql.cnf</code><br>  <code>echo &#39;secure_file_priv = &quot;/&quot;&#39; &gt;&gt; /etc/mysql/conf.d/mysql.cnf</code><br>  <a href="#restart-mysqld">重启 mysql 服务</a></p>
+</li>
+<li><p>中文乱码<br>  查看编码格式<br>  <code>show variables like &#39;char%&#39;;</code><br>  设置编码格式<br>  <del><code>set character_set_database = utf8;</code></del><br>  <del><code>set character_set_server = utf8;</code></del><br>  <code>set names utf8</code></p>
+</li>
+</ul>
+<h2 id="mysql-数据类型"><a href="#mysql-数据类型" class="headerlink" title="mysql 数据类型"></a><a target="_blank" rel="noopener" href="http://www.cnblogs.com/JemBai/archive/2009/08/20/1550683.html">mysql 数据类型</a></h2><table>
+<thead>
+<tr>
+<th align="left">mysql 数据类型</th>
+<th align="left">说明</th>
+<th align="left">java 数据类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>boolean</code> 或 <code>tinyint(1)</code></td>
+<td align="left">insert value：true、false</td>
+<td align="left"><code>java.lang.Boolean</code></td>
+</tr>
+</tbody></table>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><details>
+<summary>在 docker 中运行 mysql</summary>
+
+<ol>
+<li>启动 mysql 实例<br> <del><code>docker run --name mysql01 -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql:tag</code></del><br> <code>docker run --name mysql01 -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql</code><blockquote>
+<p>其中，<br><code>mysql01</code> 为容器别名<br><code>123456</code> 为初始化设置的 root 用户的密码<br><code>tag</code> 为 mysql 的版本，不写默认使用最新版<br><code>-p 3306:3306</code> 表示在这个容器中使用 3306 端口（第二个）映射到本机的端口号也为 3306（第一个）</p>
+</blockquote>
+</li>
+<li>连接到 mysql 实例<ul>
+<li>连接到本地 mysql<br>  <code>docker run -it --link mysql01:mysql --rm mysql sh -c &#39;exec mysql -h&quot;$MYSQL_PORT_3306_TCP_ADDR&quot; -P&quot;$MYSQL_PORT_3306_TCP_PORT&quot; -uroot -p&quot;$MYSQL_ENV_MYSQL_ROOT_PASSWORD&quot;&#39;</code></li>
+<li>连接其他地方的 mysql<br>  <code>docker run -it --rm mysql mysql -hsome.mysql.host -umysql01-user -p</code></li>
+</ul>
+</li>
+<li>切换到容器 shell 中<br> <code>docker exec -it mysql01 bash</code><br> 退出输入<br> <code>exit</code></li>
+<li>查看日志<br> <code>docker logs mysql01</code></li>
+</ol>
+</details>
+
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_39703170/article/details/79011704">SQL语言的分类（DQL、DML、DDL、DCL的概念与区别）</a></p>
+<p><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000008131735">MySQL 性能优化神器 Explain 使用分析</a></p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2025/03/22/linux/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2025/03/22/nginx/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg" alt="Dim.Ke's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        904243852@qq.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto: 904243852@qq.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/algorithm/">algorithm<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/css/">css<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/deno/">deno<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/docker/">docker<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/elasticsearch/">elasticsearch<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/ffmpeg/">ffmpeg<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/golang/">golang<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/javascript/">javascript<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/kubernetes/">kubernetes<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/linux/">linux<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/mysql/">mysql<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/nginx/">nginx<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/nodejs/">nodejs<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/solr/">solr<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/tomcat/">tomcat<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/webassembly/">webassembly<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/isunk" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+
+    <!-- Gitee -->
+    
+        <a href="https://gitee.com/isunk" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background: url('https://gitee.com/static/images/logo-en.svg'); background-size: cover;">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;Dim.Ke
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/bollnh/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<!-- <script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('
+<link rel="stylesheet" href="/css/uc.css">
+');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script> -->
+
+<!-- Import prettify js  -->
+
+    
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
+        
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 2020;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/bollnh/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>

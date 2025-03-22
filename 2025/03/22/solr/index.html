@@ -1,0 +1,1843 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/bollnh/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            Solr | 
+        
+        Dim.Ke
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg">
+    <link rel="icon" href="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content=",solr">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/github-v2.min.css?AfzKxt++K+/lhZBlSjnxwg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+            
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Dim.Ke">
+    <meta name="msapplication-starturl" content="https://isunk.github.io/2025/03/22/solr/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Dim.Ke">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg">
+
+    <!-- Site Verification -->
+    
+    <meta name="baidu-site-verification" content="code-ibxIxWHREM" />
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://isunk.github.io/2025/03/22/solr/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Solr | Dim.Ke">
+    <meta property="og:image" content="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg">
+    <meta property="og:description" content="">
+    <meta property="og:article:tag" content="solr"> 
+
+    
+        <meta property="article:published_time" content="Sat Mar 22 2025 06:39:26 GMT+0000">
+        <meta property="article:modified_time" content="Sat Mar 22 2025 02:25:41 GMT+0000">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="https://isunk.github.io/2025/03/22/solr/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://isunk.github.io/2025/03/22/solr/index.html",
+    "headline": "Solr",
+    "datePublished": "Sat Mar 22 2025 06:39:26 GMT+0000",
+    "dateModified": "Sat Mar 22 2025 02:25:41 GMT+0000",
+    "author": {
+        "@type": "Person",
+        "name": "Dim.Ke",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Dim.Ke",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg"
+        }
+    },
+    "keywords": ",solr",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+    <script src="https://kulroakonsu.net/88/tag.min.js" data-zone="137717" async data-cfasync="false"></script><!-- Monetag 广告 -->
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Solr"><span class="post-toc-text">Solr</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Document%EF%BC%88%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%EF%BC%89"><span class="post-toc-text">Document（官方文档）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Usage"><span class="post-toc-text">Usage</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Troubleshooting"><span class="post-toc-text">Troubleshooting</span></a></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                Solr
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Dim.Ke</strong>
+        <span>3月 22, 2025</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-none-link" href="/tags/solr/" rel="tag">solr</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Solr&url=https://isunk.github.io/2025/03/22/solr/index.html&pic=https://isunk.github.iohttps://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Solr&url=https://isunk.github.io/2025/03/22/solr/index.html&via=Dim.Ke" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://isunk.github.io/2025/03/22/solr/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://isunk.github.io/2025/03/22/solr/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="Solr"><a href="#Solr" class="headerlink" title="Solr"></a>Solr</h1><h2 id="Document（官方文档）"><a href="#Document（官方文档）" class="headerlink" title="Document（官方文档）"></a><a target="_blank" rel="noopener" href="https://lucene.apache.org/solr/guide/7_5/">Document（官方文档）</a></h2><h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><ul>
+<li><p><a target="_blank" rel="noopener" href="http://lucene.apache.org/solr/guide/7_3/solr-tutorial.html">下载、部署与运行</a></p>
+<ol>
+<li><p>下载二进制包（需安装 java 1.8 版本）<br> <code>wget http://mirrors.hust.edu.cn/apache/lucene/solr/7.3.1/solr-7.3.1.zip</code></p>
+<blockquote>
+<p>下载源码包<br>  <code>wget http://mirrors.hust.edu.cn/apache/lucene/solr/7.3.1/solr-7.3.1-src.tgz</code></p>
+</blockquote>
+</li>
+<li><p>解压缩<br> <code>unzip -q solr-7.3.1.zip</code></p>
+</li>
+<li><p>启动</p>
+<ul>
+<li><p>单机模式</p>
+<ol>
+<li><p>方法一：使用 jetty 启动 solr<br> <code>cd solr-7.3.1/</code><br> <code>./bin/solr start</code><br> <del><code>./bin/solr start -p 8984</code></del><br> 浏览器中访问 <a target="_blank" rel="noopener" href="http://localhost:8983/solr/">http://localhost:8983/solr/</a> 进入管理页面  </p>
+<blockquote>
+<p>查看 solr 服务状态<br><code>./bin/solr status</code><br>停止 solr 服务<br><code>./bin/solr stop</code><br>创建 solr 库 core4<br><code>.bin/solr create -c core4</code></p>
+</blockquote>
+</li>
+<li><p>方法二：<span id="single_run_with_tomcat"><a target="_blank" rel="noopener" href="http://blog.csdn.net/happyzwh/article/details/51741204">使用 tomcat 运行</a></span></p>
+<ol>
+<li><p>搭建 tomcat 环境</p>
+<ol>
+<li>下载 tomcat<br> <code>curl -O http://mirror.bit.edu.cn/apache/tomcat/tomcat-8/v8.5.31/bin/apache-tomcat-8.5.31.zip</code></li>
+<li>解压到当前目录下<br> <code>unzip -q apache-tomcat-8.5.31.zip</code></li>
+<li>创建 tomcat 软连接<br> <code>ln -s apache-tomcat-8.5.31 tomcat</code></li>
+<li>删除 tomcat/webapps 无用的工程<br> <code>rm -rf tomcat/webapps/*</code></li>
+<li>设置启动、停止脚本可执行权限<br> <code>chmod +x tomcat/bin/*.sh</code></li>
+</ol>
+</li>
+<li><p>创建 solrhome<br> <code>mkdir tomcat/solrhome</code><br> <code>cp solr-7.3.1/server/solr/solr.xml tomcat/solrhome/</code><br> <del>复制 solr-7.3.1/server/solr/ 目录下所有文件到 tomcat/solrhome/ 目录下</del><br> <del><code>cp -r solr-7.3.1/server/solr/* tomcat/solrhome/</code></del></p>
+</li>
+<li><p><span id="deploy_solr_in_tomcat_webapp">部署 solr 工程至 tomcat 中</span></p>
+<ol>
+<li><p>在 tomcat/webapps/ 目录下创建文件夹 solr<br> <code>mkdir tomcat/webapps/solr</code></p>
+</li>
+<li><p>将 solr-7.3.1/server/solr-webapp/webapp 下的所有文件拷贝到 tomcat/webapps/solr/ 目录下<br> <code>cp -r solr-7.3.1/server/solr-webapp/webapp/* tomcat/webapps/solr/</code></p>
+</li>
+<li><p>复制 solr 依赖的 jar 包到 WEB-INF/lib 目录下<br> <code>cp solr-7.3.1/server/lib/metrics-* tomcat/webapps/solr/WEB-INF/lib/</code><br> <code>cp solr-7.3.1/server/lib/ext/* tomcat/webapps/solr/WEB-INF/lib/</code></p>
+</li>
+<li><p>复制日志配置文件到 WEB-INF/classes 目录下<br> <code>mkdir tomcat/webapps/solr/WEB-INF/classes</code><br> <code>cp solr-7.3.1/server/resources/log4j.properties tomcat/webapps/solr/WEB-INF/classes/</code></p>
+</li>
+<li><p>配置 solrhome 路径</p>
+<ul>
+<li>方法一：在 tomcat 中配置 solrhome 路径<br>  修改文件 context.xml，在 <code>\\Context</code> 节点下添加 Environment 配置项<pre><code class="xml">&lt;Environment name=&quot;solr/home&quot; type=&quot;java.lang.String&quot; value=&quot;../solrhome&quot; override=&quot;false&quot; /&gt;
+</code></pre>
+</li>
+<li>方法二：在 web.xml 中配置 solrhome 路径<br>  修改文件 web.xml，在 <code>\web-app</code> 节点下，添加（或取消注释并修改 env-entry-value）配置如下<pre><code class="xml">&lt;env-entry&gt;
+    &lt;env-entry-name&gt;solr/home&lt;/env-entry-name&gt;
+    &lt;env-entry-value&gt;../solrhome&lt;/env-entry-value&gt;
+    &lt;env-entry-type&gt;java.lang.String&lt;/env-entry-type&gt;
+&lt;/env-entry&gt;
+</code></pre>
+  <!-- 修改文件 web.xml，取消配置项 "\<env-entry>" 的注释  
+  `sed -i '40d;46d' tomcat/webapps/solr/WEB-INF/web.xml`  
+  修改文件 web.xml，将配置项 "\<env-entry-value>" 中的值修改为 solrhome 目录所在位置  
+  ~~`sed -i "s#\/put\/your\/solr\/home\/here#$(pwd)\/tomcat\/solrhome#" tomcat/webapps/solr/WEB-INF/web.xml`~~  
+  `sed -i "s#\/put\/your\/solr\/home\/here#..\/solrhome#" tomcat/webapps/solr/WEB-INF/web.xml` --></li>
+<li>方法三：在启动命令中使用 jvm 启动参数 <code>-Dsolr.solr.solrhome=../solrhome</code></li>
+</ul>
+</li>
+<li><p>修改文件 web.xml，注释节点 <code>\web-app\security-constraint</code>（该配置限制了对 solr 资源的访问，若不注释，则抛出异常 “HTTP Status 403 - Access to the requested resource has been denied”）<br> <code>sed -i &#39;s/&lt;security-constraint&gt;/&lt;!-- &lt;security-constraint&gt;/&#39; tomcat/webapps/solr/WEB-INF/web.xml</code><br> <code>sed -i &#39;s/&lt;\/security-constraint&gt;/&lt;\/security-constraint&gt; --&gt;/&#39; tomcat/webapps/solr/WEB-INF/web.xml</code></p>
+ <!-- `sed -i '161i<!--' tomcat/webapps/solr/WEB-INF/web.xml`  
+ `sed -i '177i--\>' tomcat/webapps/solr/WEB-INF/web.xml` --></li>
+<li><p>（可选）配置安全认证  </p>
+<ol>
+<li><p>编辑文件 tomcat/conf/tomcat-users.xml，在 <code>\tomcat-users</code> 节点下添加用户、角色配置如下</p>
+<pre><code class="xml">&lt;role rolename=&quot;solr_admin&quot; /&gt;
+&lt;role rolename=&quot;core3_admin&quot; /&gt;
+&lt;user username=&quot;solr_admin&quot; password=&quot;solr_admin&quot; roles=&quot;solr_admin&quot; /&gt;
+&lt;user username=&quot;core3_admin&quot; password=&quot;core3_admin&quot; roles=&quot;core3_admin&quot; /&gt;
+</code></pre>
+</li>
+<li><p><a href="tomcat.md#tomcat_setup_ssl">配置 SSL</a></p>
+</li>
+<li><p>编辑文件 web.xml，在 <code>\web-app</code> 节点下添加 security-constraint 配置如下  </p>
+<pre><code class="xml">&lt;!-- 查询接口无需认证 --&gt;
+&lt;security-constraint&gt;
+    &lt;web-resource-collection&gt;
+        &lt;web-resource-name&gt;Solr Select Interface&lt;/web-resource-name&gt;
+        &lt;url-pattern&gt;/core3/select&lt;/url-pattern&gt;
+        &lt;http-method&gt;GET&lt;/http-method&gt;&lt;!-- 仅允许（未认证用户）使用 GET 方法访问该接口 --&gt;
+    &lt;/web-resource-collection&gt;
+&lt;/security-constraint&gt;
+
+&lt;!-- core 管理接口需 core admin 角色认证 --&gt;
+&lt;security-constraint&gt;
+    &lt;web-resource-collection&gt;
+        &lt;web-resource-name&gt;Core3 Admin&lt;/web-resource-name&gt;
+        &lt;url-pattern&gt;/core3/*&lt;/url-pattern&gt;
+    &lt;/web-resource-collection&gt;
+    &lt;auth-constraint&gt;
+        &lt;role-name&gt;core3_admin&lt;/role-name&gt;
+    &lt;/auth-constraint&gt;
+    &lt;user-data-constraint&gt;&lt;!-- 需转换成 https 访问，即禁止以 http 访问该接口 --&gt;
+        &lt;transport-guarantee&gt;CONFIDENTIAL&lt;/transport-guarantee&gt;
+    &lt;/user-data-constraint&gt;
+&lt;/security-constraint&gt;
+
+&lt;!-- solr admin 管理接口、页面需 solr admin 角色认证 --&gt;
+&lt;security-constraint&gt;
+    &lt;web-resource-collection&gt;
+        &lt;web-resource-name&gt;Solr Admin&lt;/web-resource-name&gt;
+        &lt;!-- &lt;url-pattern&gt;/admin/*&lt;/url-pattern&gt; --&gt;
+        &lt;url-pattern&gt;/*&lt;/url-pattern&gt;
+    &lt;/web-resource-collection&gt;
+    &lt;auth-constraint&gt;
+        &lt;role-name&gt;solr_admin&lt;/role-name&gt;
+    &lt;/auth-constraint&gt;
+    &lt;user-data-constraint&gt;&lt;!-- 需转换成 https 访问，即禁止以 http 访问该接口 --&gt;
+        &lt;transport-guarantee&gt;CONFIDENTIAL&lt;/transport-guarantee&gt;
+    &lt;/user-data-constraint&gt;
+&lt;/security-constraint&gt;
+&lt;login-config&gt;
+    &lt;auth-method&gt;DIGEST&lt;/auth-method&gt;
+&lt;/login-config&gt;
+</code></pre>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>启动 tomcat<br> <code>tomcat/bin/startup.sh</code></p>
+</li>
+<li><p>访问 <a target="_blank" rel="noopener" href="http://127.0.0.1:8080/solr/index.html">http://127.0.0.1:8080/solr/index.html</a> 可进入 solr 管理页面</p>
+</li>
+<li><p>创建一个 Core 实例（Core 实例配置可参考<a href="#create_core3">创建、配置 Core 实例 core3</a>）</p>
+<ul>
+<li><p>快速创建一个 Core 实例 core1</p>
+<ol>
+<li>创建一个空文件夹 core1<br> <code>mkdir tomcat/solrhome/core1</code></li>
+<li>复制示例配置文件<br> <code>cp -r solr-7.3.1/server/solr/configsets/sample_techproducts_configs/conf/ tomcat/solrhome/core1</code></li>
+<li>登录进入 solr 管理页面添加 Core</li>
+</ol>
+</li>
+<li><p>创建一个极简配置的 Core 实例 core2</p>
+<pre><code class="bash"># 递归创建一个空文件夹 core2/conf
+mkdir -p tomcat/solrhome/core2/conf
+
+# 创建配置文件 solrconfig.xml
+cat &gt; tomcat/solrhome/core2/conf/solrconfig.xml &lt;&lt; EOF
+&lt;config&gt;
+    &lt;luceneMatchVersion&gt;7.3.1&lt;/luceneMatchVersion&gt;
+    &lt;requestHandler name=&quot;/select&quot; class=&quot;solr.SearchHandler&quot; &gt;
+        &lt;lst name=&quot;defaults&quot;&gt;
+            &lt;str name=&quot;df&quot;&gt;text&lt;/str&gt;
+        &lt;/lst&gt;
+    &lt;/requestHandler&gt;
+&lt;/config&gt;
+EOF
+
+# 创建配置文件 managed-schema
+cat &gt; tomcat/solrhome/core2/conf/managed-schema &lt;&lt; EOF
+&lt;schema name=&quot;example&quot; version=&quot;1.6&quot;&gt;
+    &lt;field name=&quot;text&quot; type=&quot;text_general&quot; indexed=&quot;true&quot; stored=&quot;true&quot; multiValued=&quot;true&quot; /&gt;
+    &lt;dynamicField name=&quot;*&quot; type=&quot;string&quot; indexed=&quot;true&quot; stored=&quot;false&quot;  multiValued=&quot;true&quot; /&gt;
+    &lt;copyField source=&quot;*&quot; dest=&quot;text&quot; /&gt;
+    &lt;fieldType name=&quot;string&quot; class=&quot;solr.StrField&quot; /&gt;
+    &lt;fieldType name=&quot;text_general&quot; class=&quot;solr.TextField&quot;&gt;
+        &lt;analyzer&gt;
+            &lt;tokenizer class=&quot;solr.LowerCaseTokenizerFactory&quot; /&gt;
+        &lt;/analyzer&gt;
+    &lt;/fieldType&gt;
+&lt;/schema&gt;
+EOF
+</code></pre>
+<p>  登录进入 solr 管理页面添加 Core</p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>集群模式（SolrCloud）</p>
+<ol>
+<li><p>方法一：使用 jetty 启动 solr<br> <code>cd solr-7.3.1/</code><br> <code>./bin/solr start -e cloud</code><br> 访问 <a target="_blank" rel="noopener" href="http://localhost:8983/solr/">http://localhost:8983/solr/</a> 进入管理页面</p>
+</li>
+<li><p>方法二：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/4e00db4f8c47">使用 tomcat 运行</a></p>
+<ol>
+<li><p>部署 zookeeper（原则上，zookeeper 节点数量应大于 tomcat 节点数量的一半。如 zookeeper 有 3 个，tomcat 有 4 个）</p>
+<ol>
+<li>分别在不同的主机上<a href="zookeeper.md">部署 zookeeper</a><ol>
+<li>下载 zookeeper<br> <code>wget http://mirror.bit.edu.cn/apache/zookeeper/zookeeper-3.4.11/zookeeper-3.4.11.tar.gz</code></li>
+<li>解压到 zookeeper 目录下<br> <code>tar -zxvf zookeeper-3.4.11.tar.gz &amp;&amp; mv zookeeper-3.4.11 zookeeper</code></li>
+<li>新建配置文件 zoo.cfg<pre><code class="bash">cat &gt; zookeeper/conf/zoo.cfg &lt;&lt; EOF
+tickTime=2000
+initLimit=10
+syncLimit=5
+dataDir=/tmp/zookeeper
+clientPort=2181
+server.1=192.168.1.101:2888:3888
+server.2=192.168.1.102:2888:3888
+server.3=192.168.1.103:2888:3888
+EOF
+</code></pre>
+</li>
+<li><del>为每个主机建立一个 myid 文件，文件内容不应相同，可以为 1、2、3…<br> <code>echo 1 &gt; ./zookeeper/data/myid</code></del></li>
+</ol>
+</li>
+<li>分别启动各主机上的 zookeeper 实例<br> <del><code>./zookeeper/bin/zkServer.sh start</code></del><br> <code>./zookeeper/bin/zkServer.sh</code></li>
+</ol>
+</li>
+<li><p>部署 solr</p>
+<ol>
+<li><p>分别在不同的主机上部署 solr，部署方法同<a href="#single_run_with_tomcat">使用 tomcat 运行单机模式下的 solr</a>（需要配置 solrhome，但不需要创建 Core 实例）</p>
+</li>
+<li><p>修改每个主机中 solrhome 目录下的 solr.xml<br> 编辑 solrhome/solr.xml 文件，修改 <code>/solr/solrcloud</code> 节点下的配置 host、hostPort （即当前主机提供的 solr 服务的 ip 和端口号）如下</p>
+<pre><code class="xml">&lt;solrcloud&gt;
+    &lt;str name=&quot;host&quot;&gt;192.168.1.101&lt;/str&gt;
+    &lt;int name=&quot;hostPort&quot;&gt;8080&lt;/int&gt;
+    ...
+&lt;/solrcloud&gt;
+</code></pre>
+<blockquote>
+<p>各主机应根据自身实际 ip 设置 host 内容。伪分布式情况下，各 solr 实例的 host、hostPort 不应相同</p>
+</blockquote>
+</li>
+<li><p>分别在不同的主机上设置 tomcat 启动参数<br> 编辑 tomcat/bin/catalina.sh，添加以下 jvm 参数<br> <code>JAVA_OPTS=&quot;-DzkHost=192.168.1.101:2181,192.168.1.101:2181,192.168.1.101:2181&quot;</code></p>
+</li>
+<li><p>将 solr 配置文件上传到 zookeeper 中，进行统一管理  </p>
+ <!-- `./zookeeper/bin/zkCli.sh -zkhost 192.168.1.101:2181,192.168.1.101:2181,192.168.1.101:2181 -cmd upconfig -confdir tomcat/solrhome/configsets/_default/conf/ -confname collection1` -->
+<p> <code>java -cp tomcat/webapps/solr/WEB-INF/lib/* org.apache.solr.cloud.ZkCLI -zkhost 192.168.1.101:2181,192.168.1.101:2181,192.168.1.101:2181 -cmd upconfig -confdir tomcat/solrhome/configsets/_default/conf/ -confname collection1</code></p>
+<blockquote>
+<p>删除配置文件<br><code>java -cp tomcat/webapps/solr/WEB-INF/lib/* org.apache.solr.cloud.ZkCLI -zkhost 192.168.1.101:2181,192.168.1.101:2181,192.168.1.101:2181 -cmd clear /configs/collection1</code></p>
+</blockquote>
+</li>
+<li><p>分别启动各主机上的 solr 实例，参考<a href="#single_run_with_tomcat">使用 tomcat 运行单机模式下的 solr</a>中的 “启动 tomcat” 步骤</p>
+</li>
+<li><p>访问 <a target="_blank" rel="noopener" href="http://192.168.1.101:8080/solr/index.html">http://192.168.1.101:8080/solr/index.html</a> 可进入 solr 管理页面</p>
+</li>
+<li><p>创建 Collection 实例<br> <code>curl http://192.168.1.101:8080/solr/admin/collections?action=CREATE&amp;name=collection1&amp;numShards=2&amp;replicationFactor=2</code><br> 删除 Collection 实例<br> <code>curl http://192.168.1.101:8080/solr/admin/collections?action=DELETE&amp;name=collection1</code></p>
+<blockquote>
+<ul>
+<li>实测，linux 环境中 solr 以 cloud 模式运行时，collection 名称（如 test_test）中带有 “_” 的需要指定 collection.configName<br><code>curl http://127.0.0.1:8080/solr/admin/collections?action=CREATE&amp;name=test_test&amp;numShards=2&amp;replucationFactor=2&amp;collection.configName=test_test</code></li>
+</ul>
+</blockquote>
+</li>
+</ol>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://www.cnblogs.com/xiazh/articles/4084025.html">伪分布式情况</a>下，ip 相同，zookeeper 的 dataDir、clientPort 不应相同，server 的路径和端口号不应相同，其他操作步骤同以上的集群模式搭建过程。伪分布式 solr cloud 环境自动化搭建脚本见 <a href="#/Source/shell/setup_fake_solr_cloud.sh">setup_fake_solr_cloud.sh</a>。</p>
+</blockquote>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p><span id="create_core3">创建、配置 Core 实例 core3</span></p>
+<ol>
+<li><p>在 solrhome 目录下创建配置文件<br> <code>mkdir -p tomcat/solrhome/core3/conf &amp;&amp; cd tomcat/solrhome/core3/conf</code><br> <code>touch solrconfig.xml managed-schema</code></p>
+</li>
+<li><p><span id="config_core3">编辑配置文件</span></p>
+<ul>
+<li><p>solrconfig.xml</p>
+<pre><code class="xml">&lt;config&gt;
+    &lt;luceneMatchVersion&gt;7.3.1&lt;/luceneMatchVersion&gt;
+    &lt;requestHandler name=&quot;/select&quot; class=&quot;solr.SearchHandler&quot; &gt;
+        &lt;lst name=&quot;defaults&quot;&gt;
+            &lt;str name=&quot;df&quot;&gt;text&lt;/str&gt;
+        &lt;/lst&gt;
+    &lt;/requestHandler&gt;
+&lt;/config&gt;
+</code></pre>
+</li>
+<li><p>managed-schema</p>
+<pre><code class="xml">&lt;schema name=&quot;example&quot; version=&quot;1.6&quot;&gt;
+    &lt;field name=&quot;id&quot; type=&quot;string&quot; indexed=&quot;true&quot; stored=&quot;true&quot; required=&quot;true&quot; multiValued=&quot;false&quot; /&gt;
+    &lt;uniqueKey&gt;id&lt;/uniqueKey&gt;
+
+    &lt;field name=&quot;text&quot; type=&quot;text_general&quot; indexed=&quot;true&quot; stored=&quot;true&quot; multiValued=&quot;true&quot; /&gt;
+    &lt;dynamicField name=&quot;*&quot; type=&quot;string&quot; indexed=&quot;true&quot; stored=&quot;false&quot;  multiValued=&quot;true&quot; /&gt;
+
+    &lt;fieldType name=&quot;string&quot; class=&quot;solr.StrField&quot; /&gt;
+    &lt;fieldType name=&quot;text_general&quot; class=&quot;solr.TextField&quot;&gt;
+        &lt;analyzer&gt;
+            &lt;tokenizer class=&quot;solr.LowerCaseTokenizerFactory&quot; /&gt;
+        &lt;/analyzer&gt;
+    &lt;/fieldType&gt;
+&lt;/schema&gt;
+</code></pre>
+</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="http://www.cnblogs.com/blog-zuo/p/4819058.html">配置拼写检查（纠错）</a></p>
+<ol>
+<li>编辑 solrconfig.xml，在 <code>/config</code> 节点下，新增 searchComponent 配置项并替换 requestHandler 配置项，如下<pre><code class="xml">&lt;config&gt;
+    ...
+    &lt;searchComponent name=&quot;spellcheck&quot; class=&quot;solr.SpellCheckComponent&quot;&gt;
+        &lt;!-- 将输入关键词当做text_general类型进行处理 --&gt;
+        &lt;str name=&quot;queryAnalyzerFieldType&quot;&gt;text_general&lt;/str&gt;
+        &lt;!-- a spellchecker built from a field of the main index --&gt;
+        &lt;lst name=&quot;spellchecker&quot;&gt;
+            &lt;!-- 拼写检查模块名 --&gt;
+            &lt;str name=&quot;name&quot;&gt;default&lt;/str&gt;
+            &lt;!-- 对索引中的哪个字段进行拼写检查 --&gt;
+            &lt;str name=&quot;field&quot;&gt;text&lt;/str&gt;
+            &lt;!-- 自定义拼写检查，可以用自定义拼写检查类代替默认类 --&gt;
+            &lt;str name=&quot;classname&quot;&gt;solr.DirectSolrSpellChecker&lt;/str&gt;
+            &lt;!-- 拼写检查编辑距离, 默认使用internal levenshtein --&gt;
+            &lt;str name=&quot;distanceMeasure&quot;&gt;internal&lt;/str&gt;
+            &lt;!-- minimum accuracy needed to be considered a valid spellcheck suggestion --&gt;
+            &lt;float name=&quot;accuracy&quot;&gt;0.5&lt;/float&gt;
+            &lt;!-- 最大编辑距离，与输入字符串编辑距离小于等于2的字符串被检索出来作为纠错结果 --&gt;
+            &lt;int name=&quot;maxEdits&quot;&gt;2&lt;/int&gt;
+            &lt;!-- 与输入字符串最少有一个字符相等，才能被检索出来 --&gt;
+            &lt;int name=&quot;minPrefix&quot;&gt;1&lt;/int&gt;
+            &lt;!-- maximum number of inspections per result. 一次纠错探测最大数量 --&gt;
+            &lt;int name=&quot;maxInspections&quot;&gt;5&lt;/int&gt;
+            &lt;!-- 纠错元词最小长度，元词长度小于4不进行纠错 --&gt;
+            &lt;int name=&quot;minQueryLength&quot;&gt;4&lt;/int&gt;
+            &lt;!-- maximum threshold of documents a query term can appear to be considered for correction --&gt;
+            &lt;float name=&quot;maxQueryFrequency&quot;&gt;0.01&lt;/float&gt;
+        &lt;/lst&gt;
+        &lt;lst name=&quot;spellchecker&quot;&gt;
+            &lt;str name=&quot;name&quot;&gt;wordbreak&lt;/str&gt;
+            &lt;str name=&quot;classname&quot;&gt;solr.WordBreakSolrSpellChecker&lt;/str&gt;
+            &lt;str name=&quot;field&quot;&gt;text&lt;/str&gt;
+            &lt;str name=&quot;combineWords&quot;&gt;true&lt;/str&gt;
+            &lt;str name=&quot;breakWords&quot;&gt;true&lt;/str&gt;
+            &lt;int name=&quot;maxChanges&quot;&gt;10&lt;/int&gt;
+        &lt;/lst&gt;
+        &lt;!-- 拼写检查器，使用 JaroWinklerDistance 距离算法 --&gt;
+        &lt;!-- &lt;lst name=&quot;spellchecker&quot;&gt;
+            &lt;str name=&quot;name&quot;&gt;jarowinkler&lt;/str&gt;
+            &lt;str name=&quot;classname&quot;&gt;solr.IndexBasedSpellChecker&lt;/str&gt;
+            &lt;str name=&quot;field&quot;&gt;spell&lt;/str&gt;
+            &lt;str name=&quot;distanceMeasure&quot;&gt;org.apache.lucene.search.spell.JaroWinklerDistance&lt;/str&gt;
+            &lt;str name=&quot;spellcheckIndexDir&quot;&gt;./spellchecker2&lt;/str&gt;
+            &lt;str name=&quot;buildOnCommit&quot;&gt;true&lt;/str&gt;
+        &lt;/lst&gt; --&gt;
+    &lt;/searchComponent&gt;
+    ...
+    &lt;requestHandler name=&quot;/select&quot; class=&quot;solr.SearchHandler&quot; startup=&quot;lazy&quot;&gt;
+        &lt;lst name=&quot;defaults&quot;&gt;
+            &lt;str name=&quot;df&quot;&gt;text&lt;/str&gt;
+            &lt;!-- 下边配置了两个拼写检查子模块，是前边定义好的default和wordbreak，solr会分别用两个模块对输入进行拼写检查，最终将结果整合到一块 --&gt;
+            &lt;str name=&quot;spellcheck.dictionary&quot;&gt;default&lt;/str&gt;
+            &lt;str name=&quot;spellcheck.dictionary&quot;&gt;wordbreak&lt;/str&gt;
+            &lt;str name=&quot;spellcheck&quot;&gt;on&lt;/str&gt;
+            &lt;!-- 为纠错后的提示词添加额外信息，如在索引中的频率 --&gt;
+            &lt;str name=&quot;spellcheck.extendedResults&quot;&gt;true&lt;/str&gt;
+            &lt;!-- 一次纠错返回结果数量 --&gt;
+            &lt;str name=&quot;spellcheck.count&quot;&gt;10&lt;/str&gt;
+            &lt;!-- The maximum number of suggestions to return for terms that exist in the index --&gt;
+            &lt;str name=&quot;spellcheck.alternativeTermCount&quot;&gt;5&lt;/str&gt;
+            &lt;!-- The maximum number of results the query can return while still triggering spelling suggestions --&gt;
+            &lt;str name=&quot;spellcheck.maxResultsForSuggest&quot;&gt;5&lt;/str&gt;
+            &lt;!-- 是否添加校验结果 --&gt;
+            &lt;str name=&quot;spellcheck.collate&quot;&gt;true&lt;/str&gt;
+            &lt;!-- 是否添加校验拓展结果 --&gt;
+            &lt;str name=&quot;spellcheck.collateExtendedResults&quot;&gt;true&lt;/str&gt;
+            &lt;!-- The maximum # of collation possibilities to try before giving up. --&gt;
+            &lt;str name=&quot;spellcheck.maxCollationTries&quot;&gt;10&lt;/str&gt;
+            &lt;!-- 返回校验结果的最大数目 --&gt;
+            &lt;str name=&quot;spellcheck.maxCollations&quot;&gt;5&lt;/str&gt;
+        &lt;/lst&gt;
+        &lt;!-- 必须将拼写检查控件添加到搜索控件序列中，若无此项则不进行拼写检查 --&gt;
+        &lt;arr name=&quot;last-components&quot;&gt;
+            &lt;str&gt;spellcheck&lt;/str&gt;
+        &lt;/arr&gt;
+    &lt;/requestHandler&gt;
+    ...
+&lt;/config&gt;
+</code></pre>
+</li>
+<li>重启 solr 服务，执行查询操作，查询结果的 spellcheck.suggestions.suggestion 下将会显示检查纠正的单词 word 和频率 freq<blockquote>
+<p>参考 <a target="_blank" rel="noopener" href="http://wiki.apache.org/solr/SpellCheckComponent">http://wiki.apache.org/solr/SpellCheckComponent</a></p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://www.cnblogs.com/wander1129/p/6658828.html">配置 solr 自带的中文分词（和 iK 的区别是不能自己添加词库）</a></p>
+<ol>
+<li><span id="setup_smartcn_analyzer">复制 lucene-analyzers-smartcn-7.3.1.jar 到 tomcat/webapps/solr/WEB-INF/lib/ 目录下</span><br> <code>cp solr-7.3.1/contrib/analysis-extras/lucene-libs/lucene-analyzers-smartcn-7.3.1.jar tomcat/webapps/solr/WEB-INF/lib/</code></li>
+<li>编辑 managed-schema，在 <code>/schema/fieldType[@name=&quot;text_general&quot;]</code> 节点下，添加 analyzer 配置项，如下<pre><code class="xml">&lt;schema ...&gt;
+    ...
+    &lt;fieldType name=&quot;text_general&quot; class=&quot;solr.TextField&quot; positionIncrementGap=&quot;0&quot;&gt;
+        ...
+        &lt;analyzer type=&quot;index&quot;&gt;
+            &lt;tokenizer class=&quot;org.apache.lucene.analysis.cn.smart.HMMChineseTokenizerFactory&quot;/&gt;
+        &lt;/analyzer&gt;
+        &lt;analyzer type=&quot;query&quot;&gt;
+            &lt;tokenizer class=&quot;org.apache.lucene.analysis.cn.smart.HMMChineseTokenizerFactory&quot;/&gt;
+        &lt;/analyzer&gt;
+    &lt;/fieldType&gt;
+    ...
+&lt;/schema&gt;
+</code></pre>
+</li>
+</ol>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://www.cnblogs.com/wander1129/p/6658828.html">配置 ik 中文分词器</a><!-- http://www.cnblogs.com/zhuxiaojie/p/5764680.html --></p>
+<ol>
+<li><span id="setup_ik_analyzer">下载 <a target="_blank" rel="noopener" href="http://files.cnblogs.com/files/wander1129/ikanalyzer-solr6.5.zip">IKAnalyzer</a></span><ol>
+<li>复制 <a target="_blank" rel="noopener" href="https://github.com/EugenePig/ik-analyzer-solr5">ik-analyzer-solr5-5.x.jar</a> 至 tomcat/webapps/solr/WEB-INF/lib 目录下</li>
+<li>将 IKAnalyzer.cfg.xml、ext.dic、stopword.dic 复制到 tomcat/webapps/solr/WEB-INF/classes 目录下<blockquote>
+<p>其中，文件  </p>
+<ul>
+<li>ext.dic 为扩展字典，可增加自己的扩展词典，如：唯品会 聚美优品  </li>
+<li>stopword.dic 为停止词字典  </li>
+<li>IKAnalyzer.cfg.xml 为配置文件  </li>
+<li>solr-analyzer-ik-5.1.0.jar、ik-analyzer-solr5-5.x.jar 为分词 jar 包<br>stopword.dic、ext.dic 的编码方式为 UTF-8 无 BOM 的编码方式</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+</li>
+<li>编辑 managed-schema，在 <code>/schema/fieldType[@name=&quot;text_general&quot;]</code> 节点下，添加 analyzer 配置项，如下<pre><code class="xml">&lt;schema ...&gt;
+    ...
+    &lt;fieldType name=&quot;text_ik&quot; class=&quot;solr.TextField&quot;&gt;
+        &lt;analyzer type=&quot;index&quot;&gt;
+            &lt;tokenizer class=&quot;org.wltea.analyzer.lucene.IKTokenizerFactory&quot; useSmart=&quot;true&quot;/&gt;
+        &lt;/analyzer&gt;
+        &lt;analyzer type=&quot;query&quot;&gt;
+            &lt;tokenizer class=&quot;org.wltea.analyzer.lucene.IKTokenizerFactory&quot; useSmart=&quot;true&quot;/&gt;
+        &lt;/analyzer&gt;
+    &lt;/fieldType&gt;
+    ...
+&lt;/schema&gt;
+</code></pre>
+<blockquote>
+<p>测试：</p>
+<ol>
+<li>建立字段如 summary，字段类型为 text_ik</li>
+<li>建立索引数据如 { “id”: 1, “summary”: “明月装饰了你的窗子，你装饰了别人的梦。” }</li>
+<li>执行查询语句如 <a target="_blank" rel="noopener" href="http://localhost:8080/solr/xxx/select?q=summary:%E6%98%8E%E6%9C%88">http://localhost:8080/solr/xxx/select?q=summary:明月</a></li>
+</ol>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><p>配置拼音检索&amp;简拼检索</p>
+<ol>
+<li>复制 pinyin4j-2.5.0.jar、<a target="_blank" rel="noopener" href="https://github.com/liangbaolin/pinyinAnalyzer">pinyinAnalyzer.jar</a>（可从 <a target="_blank" rel="noopener" href="http://files.cnblogs.com/files/wander1129/pinyin.zip">pinyin.zip</a> 中解压获取）至 tomcat/webapps/solr/WEB-INF/lib 目录下</li>
+<li>下载并安装分词器 <a href="#setup_ik_analyzer">ik 中文分词器</a> <del>或 <a href="#setup_smartcn_analyzer">lucene-analyzers-smartcn 中文分词器</a></del></li>
+<li>编辑 managed-schema，在 <code>/schema/fieldType[@name=&quot;text_pinyin&quot;]</code> 节点下，添加 analyzer 配置项，如下<pre><code class="xml">&lt;schema ...&gt;
+    ...
+    &lt;fieldType name=&quot;text_pinyin&quot; class=&quot;solr.TextField&quot; positionIncrementGap=&quot;0&quot;&gt;
+        &lt;analyzer type=&quot;index&quot;&gt;
+            &lt;tokenizer class=&quot;org.apache.lucene.analysis.ik.IKTokenizerFactory&quot;/&gt;&lt;!-- 依赖 ik 中文分词器 --&gt;
+            &lt;!-- &lt;tokenizer class=&quot;org.apache.lucene.analysis.cn.smart.HMMChineseTokenizerFactory&quot;/&gt; --&gt;&lt;!-- 依赖 lucene-analyzers-smartcn 中文分词器 --&gt;
+            &lt;filter class=&quot;com.shentong.search.analyzers.PinyinTransformTokenFilterFactory&quot; minTermLenght=&quot;2&quot; /&gt;
+            &lt;filter class=&quot;com.shentong.search.analyzers.PinyinNGramTokenFilterFactory&quot; minGram=&quot;1&quot; maxGram=&quot;20&quot; /&gt;
+        &lt;/analyzer&gt;
+        &lt;analyzer type=&quot;query&quot;&gt;
+            &lt;tokenizer class=&quot;org.apache.lucene.analysis.ik.IKTokenizerFactory&quot;/&gt;
+            &lt;!-- &lt;tokenizer class=&quot;org.apache.lucene.analysis.cn.smart.HMMChineseTokenizerFactory&quot;/&gt; --&gt;
+            &lt;filter class=&quot;com.shentong.search.analyzers.PinyinTransformTokenFilterFactory&quot; minTermLenght=&quot;2&quot; /&gt;
+            &lt;filter class=&quot;com.shentong.search.analyzers.PinyinNGramTokenFilterFactory&quot; minGram=&quot;1&quot; maxGram=&quot;20&quot; /&gt;
+        &lt;/analyzer&gt;
+    &lt;/fieldType&gt;
+    ...
+&lt;/schema&gt;
+</code></pre>
+<blockquote>
+<p>测试：</p>
+<ol>
+<li>建立字段如 summary，字段类型为 text_pinyin</li>
+<li>建立索引数据如 { “id”: 1, “summary”: “明月装饰了你的窗子，你装饰了别人的梦。” }</li>
+<li>执行查询语句如 <a target="_blank" rel="noopener" href="http://localhost:8080/solr/xxx/select?q=summary:minyue">http://localhost:8080/solr/xxx/select?q=summary:minyue</a>、<a target="_blank" rel="noopener" href="http://localhost:8080/solr/xxx/select?q=summary:my">http://localhost:8080/solr/xxx/select?q=summary:my</a>（简拼暂只适用于 ik 分词器）</li>
+</ol>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><p><span id="config_uuid">配置自动生成 id</span></p>
+<ol>
+<li>编辑 managed-schema，在 <code>/schema</code> 节点下，新增 uuid 字段类型<pre><code class="xml">&lt;fieldType name=&quot;uuid&quot; class=&quot;solr.UUIDField&quot; indexed=&quot;true&quot; /&gt;
+</code></pre>
+ 在 <code>/schema/field[@name=&quot;id&quot;]</code> 节点中，修改字段 id 的类型为 uuid<br> <code>sed -i &#39;s/&lt;field name=&quot;id&quot; type=&quot;string&quot;/&lt;field name=&quot;id&quot; type=&quot;uuid&quot;/g&#39; managed-schema</code>  </li>
+<li>编辑 solrconfig.xml，在 <code>/config</code> 节点下，新增更新策略配置，调用 Solr 中的 UUIDUpdateProcessorFactory 生成全局唯一的 UUID<pre><code class="xml">&lt;updateRequestProcessorChain name=&quot;uuid&quot;&gt;
+    &lt;processor class=&quot;solr.UUIDUpdateProcessorFactory&quot;&gt;
+        &lt;str name=&quot;fieldName&quot;&gt;id&lt;/str&gt;
+    &lt;/processor&gt;
+    &lt;processor class=&quot;solr.LogUpdateProcessorFactory&quot; /&gt;
+    &lt;processor class=&quot;solr.DistributedUpdateProcessorFactory&quot; /&gt;
+    &lt;processor class=&quot;solr.RunUpdateProcessorFactory&quot; /&gt;
+&lt;/updateRequestProcessorChain&gt;
+</code></pre>
+ 在 <code>/config/requestHandler/lst</code> 节点下（配置 requestHandler 如 /dataimport、/update 等，使其能够自动生成 UUID），新增<span id="chain_uuid">自动生成 UUID 的策略</span>如下<pre><code class="xml">&lt;str name=&quot;update.chain&quot;&gt;uuid&lt;/str&gt;
+</code></pre>
+</li>
+</ol>
+</li>
+<li><p>从 mysql 数据库中导入数据</p>
+<ol>
+<li><p>添加依赖 jar 包</p>
+<ol>
+<li>复制 solr-dataimporthandler-7.3.1.jar、solr-dataimporthandler-extras-7.3.1.jar 到 solr 的 lib 中<br> <code>cp solr-7.3.1/dist/solr-dataimporthandler-*.jar tomcat/webapps/solr/WEB-INF/lib/</code></li>
+<li>下载 mysql 驱动包<br> <code>curl -O http://repo1.maven.org/maven2/mysql/mysql-connector-java/6.0.6/mysql-connector-java-6.0.6.jar</code></li>
+<li>编辑 solrconfig.xml，在 <code>/config</code> 节点下，新增 DataImport、mysql-connector 的 lib 配置项如下<pre><code class="xml">&lt;lib dir=&quot;~/tomcat/webapps/solr/WEB-INF/lib&quot; regex=&quot;solr-dataimporthandler-\d.*\.jar&quot; /&gt;
+&lt;lib dir=&quot;~/tomcat/webapps/solr/WEB-INF/lib&quot; regex=&quot;mysql-connector-java-\d.*\.jar&quot; /&gt;
+</code></pre>
+</li>
+</ol>
+</li>
+<li><p>配置数据源</p>
+<blockquote>
+<p>例如，远程主机 192.168.128.137 上安装有 mysql 数据库服务，其中用户名为 test，密码为 test，现需要获取数据库 mysql 下数据表 user 中的数据，且取该表中列 Host、User、Password 数据并将其导入到索引库中。<br>默认情况下，mysql 中的 root 用户禁止远程访问，需要远程访问可参考配置 <a href="mysql.md#allow_root_remote">mysql 设置允许 root 用户远程访问</a></p>
+</blockquote>
+<ol>
+<li>在 solrconfig.xml 同级目录下，新建配置文件 data-config.xml 并配置 dataConfig 信息<ul>
+<li><span id="config_solr_dataConfig">方法一：直接配置数据源，配置内容如下</span><pre><code class="xml">&lt;dataConfig&gt;
+    &lt;dataSource driver=&quot;com.mysql.jdbc.Driver&quot; url=&quot;jdbc:mysql://192.168.128.137:3306/mysql&quot; user=&quot;test&quot; password=&quot;test&quot; /&gt;
+    &lt;document&gt;
+        &lt;entity name=&quot;user&quot; query=&quot;select Host, User, Password as Pass from user;&quot;&gt;
+            &lt;field column=&quot;Host&quot; name=&quot;host&quot; /&gt;
+            &lt;field column=&quot;User&quot; name=&quot;user&quot; /&gt;
+            &lt;field column=&quot;Pass&quot; name=&quot;pass&quot; /&gt;
+        &lt;/entity&gt;
+    &lt;/document&gt;
+&lt;/dataConfig&gt;
+</code></pre>
+</li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/edwinchen/p/3975004.html">方法二：使用 tomcat 数据源，即 jndi</a><ol>
+<li><a href="tomcat.md#config_datasource">在 tomcat 中配置数据源</a></li>
+<li>配置 dataConfig 信息同<a href="#config_solr_dataConfig">方法一</a>，其中节点 <code>/dataConfig/dataSource</code> 替换为以下内容<pre><code class="xml">&lt;dataSource name=&quot;solr&quot; jndiName=&quot;java:comp/env/jdbc/solr&quot; type=&quot;JdbcDataSource&quot;/&gt;
+</code></pre>
+ 可配置多个 dataSource 节点可实现多数据源配置</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>编辑 managed-schema，在 <code>/schema</code> 节点下，新增字段（用于映射第一步中配置的 field）如下<pre><code class="xml">&lt;field name=&quot;host&quot; type=&quot;string&quot; indexed=&quot;true&quot; stored=&quot;true&quot; multiValued=&quot;false&quot; /&gt;
+&lt;field name=&quot;user&quot; type=&quot;string&quot; indexed=&quot;true&quot; stored=&quot;true&quot; multiValued=&quot;false&quot; /&gt;
+&lt;field name=&quot;pass&quot; type=&quot;string&quot; indexed=&quot;true&quot; stored=&quot;true&quot; multiValued=&quot;false&quot; /&gt;
+</code></pre>
+</li>
+<li>编辑 solrconfig.xml 文件，在 <code>/config</code> 节点下，新增 requestHandler 配置项如下<pre><code class="xml">&lt;requestHandler name=&quot;/dataimport&quot; class=&quot;org.apache.solr.handler.dataimport.DataImportHandler&quot;&gt;
+    &lt;lst name=&quot;defaults&quot;&gt;
+        &lt;str name=&quot;config&quot;&gt;data-config.xml&lt;/str&gt;
+    &lt;/lst&gt;
+&lt;/requestHandler&gt;
+</code></pre>
+</li>
+<li>参照<a href="#config_uuid">配置自动生成 id</a>，在文件 solrconfig.xml 的 <code>/config/requestHandler[@name=&quot;/dataimport&quot;]/lst</code> 节点下，新增<a href="#chain_uuid">自动生成 UUID 的策略</a></li>
+<li>进入页面 <a target="_blank" rel="noopener" href="http://localhost:8080/solr/index.html#/core3/dataimport//dataimport">http://localhost:8080/solr/index.html#/core3/dataimport//dataimport</a> 执行导入操作</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/2ac7dac7f6f2">solr 配置说明</a></p>
+<ul>
+<li>schema<ul>
+<li><p><span id="schema_field"><a target="_blank" rel="noopener" href="http://lucene.apache.org/solr/guide/6_6/defining-fields.html">field</a></span><br>  用于字段的定义（位于 <code>/schema</code> 节点下），如</p>
+<pre><code class="xml">&lt;field name=&quot;title&quot; type=&quot;string&quot; indexed=&quot;true&quot; stored=&quot;true&quot; multiValued=&quot;false&quot; /&gt;
+</code></pre>
+<blockquote>
+<p>其中，属性  </p>
+<ul>
+<li><code>name</code> 标示这个字段的名称</li>
+<li><code>type</code> 标示字段的类型，值对应 <a href="#schema_fieldType">fieldType</a> 元素的 name 属性值 <code>/schema/fieldType/@name</code></li>
+<li><code>indexed</code> 定义文档是否被索引（也可以理解为是否在此字段上进行搜索），值为 true 或 false</li>
+<li><code>stored</code> 定义这个字段内容是否存储（也可以理解为是否可以作为返回结果的一部分），值为 true 或 false<br><a href="#field_config_with_indexed_and_stored">字段 field 定义中的 indexed、stored 配置</a></li>
+<li><code>multiValued</code> 这个字段是否存在多个值，如果存在多个值设置为 true</li>
+</ul>
+</blockquote>
+</li>
+<li><p><span id="schema_fieldType">fieldType</span></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>solr 接口调用</p>
+<ol>
+<li><p><a href="#config_core3">创建配置基本 Core 实例 core3</a></p>
+</li>
+<li><p>接口调用</p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="http://lucene.apache.org/solr/guide/7_2/using-solrj.html">使用 solrj 调用 solr 接口</a></p>
+<ol>
+<li><p>引入 maven 依赖</p>
+<pre><code class="xml">&lt;dependency&gt;
+    &lt;groupId&gt;org.apache.solr&lt;/groupId&gt;
+    &lt;artifactId&gt;solr-solrj&lt;/artifactId&gt;
+    &lt;version&gt;7.3.1&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+</li>
+<li><p>调用（完整实例可参考 <a target="_blank" rel="noopener" href="https://gitee.com/904243852/Source/tree/master/java/snippets/3rdparty/SolrJExample.java">SolrJExample.java</a>）</p>
+<ul>
+<li><p>添加或修改索引</p>
+<pre><code class="java">SolrClient client = new HttpSolrClient.Builder(&quot;http://127.0.0.1:8080/solr&quot;).build();
+
+SolrInputDocument doc = new SolrInputDocument();
+
+doc.addField(&quot;id&quot;, &quot;0a8f4e36-0f20-42d5-9d2d-c68343f6861f&quot;);
+doc.addField(&quot;text&quot;, &quot;hello, world&quot;);
+
+client.add(&quot;core3&quot;, doc);
+client.commit(&quot;core3&quot;);
+
+client.close();
+</code></pre>
+</li>
+<li><p>查询</p>
+<pre><code class="java">SolrClient client = new HttpSolrClient.Builder(&quot;http://127.0.0.1:8080/solr&quot;).build();
+
+Map&lt;String, String&gt; queryParamMap = new HashMap&lt;String, String&gt;();
+queryParamMap.put(&quot;q&quot;, &quot;*:*&quot;);
+queryParamMap.put(&quot;fl&quot;, &quot;id, text&quot;);
+MapSolrParams params = new MapSolrParams(queryParamMap);
+
+QueryResponse response = client.query(&quot;core3&quot;, params);
+SolrDocumentList documents = response.getResults();
+
+for (SolrDocument document : documents) &#123;
+    assertTrue(document.getFieldNames().contains(&quot;id&quot;));
+
+    List&lt;String&gt; text = (List&lt;String&gt;) document.getFieldValue(&quot;text&quot;);
+    assertEquals(&quot;hello, world&quot;, text.get(0));
+&#125;
+
+client.close();
+</code></pre>
+</li>
+<li><p>删除索引</p>
+<pre><code class="java">SolrClient client = new HttpSolrClient.Builder(&quot;http://127.0.0.1:8080/solr/core3&quot;).build();
+
+client.deleteById(&quot;0a8f4e36-0f20-42d5-9d2d-c68343f6861f&quot;);
+// client.deleteByQuery(&quot;id:0a8f4e36-0f20-42d5-9d2d-c68343f6861f&quot;);
+// client.deleteByQuery(&quot;*:*&quot;);
+
+client.commit();
+client.close();
+</code></pre>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>使用 python 调用 solr 接口</p>
+<pre><code class="python">import json
+import requests
+
+# 查询
+r = requests.get(&#39;http://127.0.0.1:8080/solr/core3/select?q=*:*&amp;wt=json&#39;, verify = False)
+assert 0 &lt; r.json()[&#39;response&#39;][&#39;numFound&#39;]
+print r.json()
+
+# 索引
+r = requests.post(&#39;http://127.0.0.1:8080/solr/core3/update?wt=json&#39;, json = &#123;
+    &quot;add&quot;: &#123;
+        &quot;doc&quot;: &#123; &quot;id&quot;: &quot;doc_2&quot;, &quot;text&quot;: &quot;hello, doc 2&quot; &#125;
+    &#125;
+&#125;, params = &#123; &quot;boost&quot;: 1.0, &quot;overwrite&quot;: &quot;true&quot;, &quot;commitWithin&quot;: 1000 &#125;, headers = &#123; &quot;Content-Type&quot;: &quot;application/json&quot; &#125;)
+print r.text
+</code></pre>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/shaosks/p/7845576.html">使用 pysolr 调用 solr 接口</a></p>
+<blockquote>
+<p>安装 pysolr 模块<br>  <code>python -m pip install pysolr</code></p>
+</blockquote>
+<pre><code class="python">import pysolr
+
+solr = pysolr.Solr(&#39;http://127.0.0.1:8080/solr/core3/&#39;, timeout = 10)
+
+# 索引
+result = solr.add([
+    &#123; &quot;id&quot;: &quot;doc_1&quot;, &quot;text&quot;: &quot;hello, doc 1&quot; &#125;,
+    &#123; &quot;id&quot;: &quot;doc_2&quot;, &quot;text&quot;: &quot;hello, doc 2&quot; &#125;
+])
+print result
+</code></pre>
+</li>
+<li><p>直接调用 solr 接口</p>
+<ul>
+<li><p>单机（standalone）模式下添加/删除 core</p>
+<ul>
+<li>卸下 core 实例的同时，删除对应的 core 实例目录<br>  <code>curl http://127.0.0.1:8080/solr/admin/cores?action=UNLOAD&amp;deleteInstanceDir=true&amp;core=test</code></li>
+</ul>
+</li>
+<li><p>新增/修改</p>
+<ul>
+<li>使用 post 方法提交 json 格式数据<br>  <code>curl -X POST -H &#39;Content-Type: application/json&#39; http://localhost:8080/solr/test/update?commit=true -d &#39;[&#123; &quot;name&quot;: &quot;zhangsan&quot;, &quot;age&quot;: 19, &quot;sex&quot;: &quot;male&quot; &#125;]&#39;</code><br>  <del><code>curl -X POST -H &#39;Content-Type: application/json&#39; http://localhost:8983/solr/xxx/update/json/docs -d &#39;&#123; &quot;id&quot;: &quot;1&quot;, &quot;name&quot;: &quot;zhangsan&quot; &#125;&#39;</code></del></li>
+<li>上传 json 文件<br>  <code>curl http://localhost:8080/solr/test/update?commit=true --data-binary @/temp/userinfo.json -H &#39;Content-type: application/json&#39;</code></li>
+</ul>
+</li>
+<li><p>删除</p>
+<ul>
+<li>删除所有数据<br>  <code>curl -X POST -H &#39;Content-type: application/json&#39; http://localhost:8080/solr/test/update?commit=true -d &#39;&#123; delete: &#123; query: &quot;*:*&quot; &#125; &#125;&#39;</code><br>  <del><code>curl -X POST -H &#39;Content-type: application/json&#39; http://localhost:8080/solr/test/update -d &#39;&#123; delete: &#123; query: &quot;name:zhangsan&quot; &#125;, commit: &#123;&#125; &#125;&#39;</code></del></li>
+<li>根据 id 删除数据<br>  <code>curl -X POST -H &#39;Content-type: application/json&#39; http://localhost:8080/solr/test/update?commit=true -d &#39;&#123; delete: &#123; &quot;id&quot;: &quot;0a8f4e36-0f20-42d5-9d2d-c68343f6861f&quot; &#125;, delete: &#123; &quot;id&quot;: &quot;550e8400-e29b-41d4-a716-446655440000&quot; &#125; &#125;&#39;</code></li>
+</ul>
+</li>
+<li><p>查询</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://www.cnblogs.com/zhangweizhong/p/5056884.html">查询参数</a></p>
+<ul>
+<li><code>q</code> 指定查询的关键字。例如，q=id:1，默认为 q=<em>:</em></li>
+<li><code>fl</code> 指定返回哪些字段，用逗号或空格分隔，字段区分大小写。例如，fl=id,title,sort</li>
+<li><code>start</code> 返回结果的第几条记录开始，一般分页用，默认 0 开始</li>
+<li><code>rows</code> 指定返回结果最多有多少条记录，默认值为 10，配合 start 实现分页</li>
+<li><code>sort</code> 排序方式，例如 id desc 表示按照 “id” 降序</li>
+<li><code>wt</code> 指定输出格式，有 xml、json、php 等</li>
+<li><code>fq</code> 过虑查询，提供一个可选的筛选器查询。返回在 q 查询符合结果中同时符合的 fq 条件的查询结果。例如，q=id:1&amp;fq=sort:[1 TO 5]，找关键字 id 为 1 的，并且 sort 是 1 到 5 之间的</li>
+<li><code>df</code> 默认的查询字段，一般默认指定</li>
+<li><code>qt</code> 指定那个类型来处理查询请求，一般不用指定，默认是 standard</li>
+<li><code>indent</code> 返回的结果是否缩进，默认关闭，用 indent=true|on 开启，一般调试 json、php、phps、ruby 输出才有必要用这个参数</li>
+<li><code>version</code> 查询语法的版本，建议不使用它，由服务器指定默认值</li>
+</ul>
+</blockquote>
+<ul>
+<li><p>常用查询<br>  查询 name 字段为 zhangsan 的数据，且在返回结果中只展示 name 字段<br>  <a target="_blank" rel="noopener" href="http://localhost:8080/solr/test/select?name=zhangsan&amp;fl=name">http://localhost:8080/solr/test/select?name=zhangsan&amp;fl=name</a><br>  其他<br>  <a target="_blank" rel="noopener" href="http://localhost:8080/solr/test/select?q=name:zhang">http://localhost:8080/solr/test/select?q=name:zhang</a><br>  <a target="_blank" rel="noopener" href="http://localhost:8080/solr/test/select?q=name:&quot;zhang">http://localhost:8080/solr/test/select?q=name:&quot;zhang</a> san”<br>  <a target="_blank" rel="noopener" href="http://localhost:8080/solr/test/select?q=zhang">http://localhost:8080/solr/test/select?q=zhang</a> san&amp;df=name</p>
+</li>
+<li><p>词权重查询<br>  使用 dismax 查询解析器查询关键词 zhangsan<br>  <a target="_blank" rel="noopener" href="http://localhost:8080/solr/test/select?defType=dismax&fl=name,age&q=zhangsan&qf=name%5E0+age%5E1.0">http://localhost:8080/solr/test/select?defType=dismax&amp;fl=name,age&amp;q=zhangsan&amp;qf=name^0 age^1.0</a><br>  使用 edismax 查询解析器查询关键词 zhangsan<br>  <a target="_blank" rel="noopener" href="http://localhost:8080/solr/test/select?bq=sex:female%5E3&defType=edismax&fl=name,age&q=zhangsan&qf=name%5E0+age%5E1.0">http://localhost:8080/solr/test/select?bq=sex:female^3.0&amp;defType=editmax&amp;fl=name,age&amp;q=zhangsan&amp;qf=name^0 age^1.0</a></p>
+<blockquote>
+<p>其中，查询参数  </p>
+<ul>
+<li><code>defType</code> 指定查询（词权重）解析器，值可以为 dismax、edismax  </li>
+<li><code>qf</code> 即 query field，指定 q 中的词项要在哪些字段上执行查询。可以设置多列以及每一列的权重。如 name^0.1 age^2.0</li>
+<li><code>bq</code>（edismax）接受一个和 q 一样的查询，它和 q 的区别是不影响返回的结果集，只会影响排名</li>
+<li><code>bf</code>（edismax）提升函数，通过数学公式来影响评分，而且不局限在 qf 中的字段  </li>
+</ul>
+</blockquote>
+<blockquote>
+<p>通过附加参数 <code>fl=name, age, [explain]</code>，可以直接在结果中查看 name、age、权重计算详细值</p>
+</blockquote>
+</li>
+<li><p>其他查询参数</p>
+<ul>
+<li>使用 facet 聚合查询<br>  <code>facet=on&amp;facet.field=color&amp;facet.field=memory</code></li>
+<li>开启 debug 调试<br>  <code>debugQuery=on</code></li>
+</ul>
+</li>
+<li><p>DateField 类型的查询<br>  例如，字段 publishTime 为 DateField 类型</p>
+<pre><code class="javascript">// [] 包含范围检索，如检索某时间段记录，包含头尾，date:[200707 TO 200710]，&#123;&#125; 不包含范围检索，如检索某时间段记录，不包含头尾
+
+// 查询 2015 年 8 月 28 日当天的数据
+publishTime:[publishTime:[2015-08-28T00:00:00Z TO 2015-08-28T23:59:59.999Z]
+// 查询 2015 年 8 月 28 日以后的数据，包含当天的数据
+publishTime:[publishTime:[2015-08-28T00:00:00Z TO *]
+
+// 查询 2015 年 8 月 28 日以前的数据
+publishTime:[publishTime:[* TO 2015-08-28T00:00:00Z]
+// 或
+publishTime:[publishTime:[* TO 2015-08-27T23:59:59.999Z]
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>Schema API<br>  使用 curl 发送 post 请求，格式如下<br>  <code>curl -X POST -H &#39;Content-type:application/json&#39; http://localhost:8080/solr/test/schema --data-binary &#39;$JSON_REQUEST&#39;</code><br>  其中请求的正文 $JSON_REQUEST 内容可参考以下</p>
+<ul>
+<li>field（field 各属性可参考 <a href="#schema_field">field 定义</a>）<ul>
+<li>创建 field<pre><code class="json">&#123; &quot;add-field&quot;: &#123; &quot;name&quot;:&quot;sell-by&quot;, &quot;type&quot;:&quot;tdate&quot;, &quot;stored&quot;:true &#125; &#125;
+</code></pre>
+</li>
+<li>删除 field<pre><code class="json">&#123; &quot;delete-field&quot;: &#123; &quot;name&quot;:&quot;sell-by&quot; &#125; &#125;
+</code></pre>
+</li>
+<li>替换 field<pre><code class="json">&#123; &quot;replace-field&quot;: &#123; &quot;name&quot;:&quot;sell-by&quot;, &quot;type&quot;:&quot;tdate&quot;, &quot;stored&quot;:true &#125; &#125;
+</code></pre>
+</li>
+</ul>
+</li>
+<li>dynamic field<ul>
+<li>创建 dynamic field<pre><code class="json">&#123; &quot;add-dynamic-field&quot;: &#123; &quot;name&quot;:&quot;*_s&quot;, &quot;type&quot;:&quot;string&quot;, &quot;stored&quot;:true &#125; &#125;
+</code></pre>
+</li>
+<li>删除 dynamic field<pre><code class="json">&#123; &quot;delete-dynamic-field&quot;: &#123; &quot;name&quot;:&quot;*_s&quot; &#125; &#125;
+</code></pre>
+</li>
+<li>替换 dynamic field<pre><code class="json">&#123; &quot;replace-dynamic-field&quot;: &#123; &quot;name&quot;:&quot;*_s&quot;, &quot;type&quot;:&quot;text_general&quot;, &quot;stored&quot;:false  &#125; &#125;
+</code></pre>
+</li>
+</ul>
+</li>
+<li>field type<ul>
+<li>创建 field type<pre><code class="json">&#123;
+    &quot;add-field-type&quot; : &#123;
+        &quot;name&quot;:&quot;myNewTxtField&quot;,
+        &quot;class&quot;:&quot;solr.TextField&quot;,
+        &quot;positionIncrementGap&quot;:&quot;100&quot;,
+        &quot;analyzer&quot; : &#123;
+            &quot;charFilters&quot;:[&#123;
+            &quot;class&quot;:&quot;solr.PatternReplaceCharFilterFactory&quot;,
+            &quot;replacement&quot;:&quot;$1$1&quot;,
+            &quot;pattern&quot;:&quot;([a-zA-Z])\\\\1+&quot; &#125;],
+            &quot;tokenizer&quot;:&#123;
+            &quot;class&quot;:&quot;solr.WhitespaceTokenizerFactory&quot; &#125;,
+            &quot;filters&quot;:[&#123;
+            &quot;class&quot;:&quot;solr.WordDelimiterFilterFactory&quot;,
+            &quot;preserveOriginal&quot;:&quot;0&quot; &#125;]&#125;&#125;
+&#125;
+</code></pre>
+</li>
+<li>删除 field type<pre><code class="json">&#123; &quot;delete-field-type&quot;:&#123; &quot;name&quot;:&quot;myNewTxtField&quot; &#125; &#125;
+</code></pre>
+</li>
+<li>替换 field type<pre><code class="json">&#123;
+    &quot;replace-field-type&quot;:&#123;
+        &quot;name&quot;:&quot;myNewTxtField&quot;,
+        &quot;class&quot;:&quot;solr.TextField&quot;,
+        &quot;positionIncrementGap&quot;:&quot;100&quot;,
+        &quot;analyzer&quot;:&#123;
+            &quot;tokenizer&quot;:&#123;
+            &quot;class&quot;:&quot;solr.StandardTokenizerFactory&quot; &#125;&#125;&#125;
+&#125;
+</code></pre>
+</li>
+</ul>
+</li>
+<li>copy field<blockquote>
+<p>多个 json 格式请求正文也可同时/批量发送，如</p>
+<pre><code class="json">&#123;
+    &quot;add-field&quot;:&#123;
+        &quot;name&quot;:&quot;shelf&quot;,
+        &quot;type&quot;:&quot;myNewTxtField&quot;,
+        &quot;stored&quot;:true &#125;,
+    &quot;add-field&quot;:&#123;
+        &quot;name&quot;:&quot;location&quot;,
+        &quot;type&quot;:&quot;myNewTxtField&quot;,
+        &quot;stored&quot;:true &#125;,
+    &quot;add-copy-field&quot;:&#123;
+        &quot;source&quot;:&quot;shelf&quot;,
+        &quot;dest&quot;:[ &quot;location&quot;, &quot;catchall&quot; ]&#125;
+&#125;
+</code></pre>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>Config API</p>
+<ul>
+<li><p>查询 requestHandler 配置<br>  <code>curl http://localhost:8080/solr/test/config/requestHandler</code></p>
+<p>使用 curl 发送 post 请求，格式如下<br><code>curl http://localhost:8080/solr/test/config -H &#39;Content-type:application/json&#39;  -d &#39;$JSON_REQUEST&#39;</code><br>其中请求的正文 $JSON_REQUEST 内容可参考以下</p>
+</li>
+<li><p>修改 requesthandler 配置  </p>
+<pre><code class="json">&#123;
+    &quot;update-requesthandler&quot;: &#123;
+        &quot;name&quot;: &quot;/select&quot;,
+        &quot;class&quot;: &quot;solr.SearchHandler&quot;,
+        &quot;defaults&quot;: &#123;
+            &quot;defType&quot;: &quot;dismax&quot;,
+            &quot;qf&quot;: &quot;name^10 summary^1&quot; &#125; &#125; &#125;
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>cloud 模式下，新增、删除副本<br>  删除一个副本<br>  <code>curl http://localhost:8080/admin/collections?action=DELETEREPLICA&amp;collection=prodIndex&amp;shard=shard1&amp;replica=core_node3</code><br>  新增一个副本<br>  <code>curl http://localhost:8080/admin/collections?action=ADDREPLICA&amp;collection=prodIndex&amp;shard=shard1&amp;node=192.168.1.102:8080_</code></p>
+</li>
+<li><p>集群模式下，查询指定的 shard 或 replica</p>
+<pre><code class="bash">curl http://localhost:8080/solr/test?q=*:*&amp;shards=shard1 # 指定 shard，多个分片名称以“,”分隔
+curl http://localhost:8080/solr/test?q=*:*&amp;shards=localhost:8081/solr/test # 指定 replica，多个副本地址以“|”分隔
+</code></pre>
+</li>
+<li><p>检测索引文件<br>  <code>java -cp $CATALINA_HOME/webapps/solr/WEB-INF/lib/lucene-core-*.jar -ea:org.apache.lucene... org.apache.lucene.index.CheckIndex $CATALINA_HOME/solrhome/prodIndex</code></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>solr 源码解析</p>
+<pre><code class="java">// 获取 solrHome 路径
+Path solrHome = org.apache.solr.core.SolrResourceLoader.locateSolrHome();
+</code></pre>
+</li>
+</ul>
+<h2 id="Troubleshooting"><a href="#Troubleshooting" class="headerlink" title="Troubleshooting"></a>Troubleshooting</h2><ul>
+<li><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/rcfeng/p/4287030.html">Recovery 失败造成的宕机原因分析</a><br>  <a target="_blank" rel="noopener" href="http://i.ifeng.com/lady/vnzq/news?cid=0&aid=120274197">solrcloud Recovery 原理及无法选举分片 leader</a></p>
+</li>
+<li><p><span id="field_config_with_indexed_and_stored">字段 field 定义中的 indexed、stored 配置</span></p>
+<blockquote>
+<p>stored、docValues、indexed 未指定为 false 时，默认值均为 true</p>
+</blockquote>
+<ol>
+<li>indexed = false<br> <code>curl -X POST -H &#39;Content-type:application/json&#39; http://localhost:8080/solr/test/schema --data-binary &#39;&#123; &quot;replace-field&quot;: &#123; &quot;name&quot;:&quot;sex&quot;, &quot;type&quot;:&quot;string&quot;, &quot;indexed&quot;:false &#125; &#125;&#39;</code><ul>
+<li>新增数据<br>  <code>&#123; &quot;name&quot;: &quot;zhangsan&quot;, &quot;age&quot;: 18, &quot;sex&quot;: &quot;male&quot; &#125;</code></li>
+<li>查询<ul>
+<li><code>q=*:*</code> 同 4</li>
+<li><code>q=sex:male</code><pre><code class="json">&#123; &quot;name&quot;:&quot;zhangsan&quot;, &quot;age&quot;:18, &quot;sex&quot;:&quot;male&quot;, &quot;id&quot;:&quot;...&quot;, &quot;_version_&quot;:... &#125;,
+&#123; &quot;name&quot;:&quot;zhaoliu&quot;, &quot;age&quot;:21, &quot;id&quot;:&quot;...&quot;, &quot;_version_&quot;:..., &quot;sex&quot;:&quot;male&quot; &#125;
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>stored = false, docValues = false<br> <code>curl -X POST -H &#39;Content-type:application/json&#39; http://localhost:8080/solr/test/schema --data-binary &#39;&#123; &quot;replace-field&quot;: &#123; &quot;name&quot;:&quot;sex&quot;, &quot;type&quot;:&quot;string&quot;, &quot;stored&quot;:false, &quot;docValues&quot;:false &#125; &#125;&#39;</code><ul>
+<li>新增数据<br>  <code>&#123; &quot;name&quot;: &quot;lisi&quot;, &quot;age&quot;: 19, &quot;sex&quot;: &quot;female&quot; &#125;</code></li>
+<li>查询<ul>
+<li><code>q=*:*</code> 同 4</li>
+<li><code>q=sex:male</code> 同 4</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>stored = false, docValues = false, indexed = false<br> <code>curl -X POST -H &#39;Content-type:application/json&#39; http://localhost:8080/solr/test/schema --data-binary &#39;&#123; &quot;replace-field&quot;: &#123; &quot;name&quot;:&quot;sex&quot;, &quot;type&quot;:&quot;string&quot;, &quot;stored&quot;:false, &quot;docValues&quot;:false, &quot;indexed&quot;:false &#125; &#125;&#39;</code><ul>
+<li>新增数据<br>  <code>&#123; &quot;name&quot;: &quot;wangwu&quot;, &quot;age&quot;: 20, &quot;sex&quot;: &quot;unknow&quot; &#125;</code></li>
+<li>查询<ul>
+<li><code>q=*:*</code> 同 4</li>
+<li><code>q=sex:male</code> 同 4</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>stored = false<br> <code>curl -X POST -H &#39;Content-type:application/json&#39; http://localhost:8080/solr/test/schema --data-binary &#39;&#123; &quot;replace-field&quot;: &#123; &quot;name&quot;:&quot;sex&quot;, &quot;type&quot;:&quot;string&quot;, &quot;stored&quot;:false &#125; &#125;&#39;</code><ul>
+<li>新增数据<br>  <code>&#123; &quot;name&quot;: &quot;zhaoliu&quot;, &quot;age&quot;: 21, &quot;sex&quot;: &quot;male&quot; &#125;</code></li>
+<li>查询<ul>
+<li><code>q=*:*</code><pre><code class="json">&#123; &quot;name&quot;:&quot;zhangsan&quot;, &quot;age&quot;:18, &quot;sex&quot;:&quot;male&quot;, &quot;id&quot;:&quot;...&quot;, &quot;_version_&quot;:... &#125;,
+&#123; &quot;name&quot;:&quot;lisi&quot;, &quot;age&quot;:19, &quot;id&quot;:&quot;...&quot;, &quot;_version_&quot;:..., &quot;sex&quot;:&quot;female&quot; &#125;,
+&#123; &quot;name&quot;:&quot;wangwu&quot;, &quot;age&quot;:20, &quot;id&quot;:&quot;...&quot;, &quot;_version_&quot;:... &#125;,
+&#123; &quot;name&quot;:&quot;zhaoliu&quot;, &quot;age&quot;:21, &quot;id&quot;:&quot;...&quot;, &quot;_version_&quot;:..., &quot;sex&quot;:&quot;male&quot; &#125;
+</code></pre>
+</li>
+<li><code>q=sex:male</code><pre><code class="json">&#123; &quot;name&quot;:&quot;zhaoliu&quot;, &quot;age&quot;:21, &quot;id&quot;:&quot;...&quot;, &quot;_version_&quot;:..., &quot;sex&quot;:&quot;male&quot; &#125;
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>indexed = true, stored = false<br> 可搜索（到这条记录），但不返回结果（不能返回该字段的值或原始文档）</li>
+</ol>
+</li>
+</ul>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2025/03/22/nodejs/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2025/03/22/elasticsearch/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg" alt="Dim.Ke's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        904243852@qq.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto: 904243852@qq.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/algorithm/">algorithm<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/css/">css<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/deno/">deno<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/docker/">docker<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/elasticsearch/">elasticsearch<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/ffmpeg/">ffmpeg<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/golang/">golang<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/javascript/">javascript<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/kubernetes/">kubernetes<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/linux/">linux<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/mysql/">mysql<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/nginx/">nginx<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/nodejs/">nodejs<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/solr/">solr<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/tomcat/">tomcat<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/webassembly/">webassembly<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/isunk" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+
+    <!-- Gitee -->
+    
+        <a href="https://gitee.com/isunk" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background: url('https://gitee.com/static/images/logo-en.svg'); background-size: cover;">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;Dim.Ke
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/bollnh/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<!-- <script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('
+<link rel="stylesheet" href="/css/uc.css">
+');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script> -->
+
+<!-- Import prettify js  -->
+
+    
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
+        
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 2020;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/bollnh/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>

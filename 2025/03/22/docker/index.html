@@ -1,0 +1,1661 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/bollnh/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            Docker | 
+        
+        Dim.Ke
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg">
+    <link rel="icon" href="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content=",docker">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/github-v2.min.css?AfzKxt++K+/lhZBlSjnxwg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+            
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Dim.Ke">
+    <meta name="msapplication-starturl" content="https://isunk.github.io/2025/03/22/docker/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Dim.Ke">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg">
+
+    <!-- Site Verification -->
+    
+    <meta name="baidu-site-verification" content="code-ibxIxWHREM" />
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://isunk.github.io/2025/03/22/docker/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Docker | Dim.Ke">
+    <meta property="og:image" content="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg">
+    <meta property="og:description" content="">
+    <meta property="og:article:tag" content="docker"> 
+
+    
+        <meta property="article:published_time" content="Sat Mar 22 2025 06:39:26 GMT+0000">
+        <meta property="article:modified_time" content="Sat Mar 22 2025 02:25:41 GMT+0000">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="https://isunk.github.io/2025/03/22/docker/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://isunk.github.io/2025/03/22/docker/index.html",
+    "headline": "Docker",
+    "datePublished": "Sat Mar 22 2025 06:39:26 GMT+0000",
+    "dateModified": "Sat Mar 22 2025 02:25:41 GMT+0000",
+    "author": {
+        "@type": "Person",
+        "name": "Dim.Ke",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Dim.Ke",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg"
+        }
+    },
+    "keywords": ",docker",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+    <script src="https://kulroakonsu.net/88/tag.min.js" data-zone="137717" async data-cfasync="false"></script><!-- Monetag 广告 -->
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Docker"><span class="post-toc-text">Docker</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%AE%89%E8%A3%85"><span class="post-toc-text">安装</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BD%BF%E7%94%A8"><span class="post-toc-text">使用</span></a></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                Docker
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Dim.Ke</strong>
+        <span>3月 22, 2025</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-none-link" href="/tags/docker/" rel="tag">docker</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Docker&url=https://isunk.github.io/2025/03/22/docker/index.html&pic=https://isunk.github.iohttps://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Docker&url=https://isunk.github.io/2025/03/22/docker/index.html&via=Dim.Ke" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://isunk.github.io/2025/03/22/docker/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://isunk.github.io/2025/03/22/docker/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ul>
+<li><p>从 <a target="_blank" rel="noopener" href="http://get.daocloud.io/">DaoCloud</a> 下载并安装（推荐，速度快）</p>
+<ul>
+<li>安装 docker<pre><code class="bash">curl -sSL https://get.daocloud.io/docker | sh
+</code></pre>
+</li>
+<li>安装 docker-compose<pre><code class="bash">curl -L https://get.daocloud.io/docker/compose/releases/download/1.25.4/docker-compose-`uname -s`-`uname -m` &gt; /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+</code></pre>
+</li>
+<li>配置 docker 镜像站<pre><code class="bash">curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://f1361db2.m.daocloud.io
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>Debian/Ubuntu 环境安装 docker 社区版</p>
+<ol>
+<li><p>新增 docker apt repository</p>
+<pre><code class="bash"># curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+# sudo add-apt-repository &quot;deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable&quot;
+
+curl -fsSL http://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository &quot;deb [arch=amd64] http://mirrors.aliyun.com/docker-ce/linux/ubuntu $(lsb_release -cs) stable&quot;
+</code></pre>
+</li>
+<li><p>安装 docker-ce<br> <code>sudo apt-get update</code><br> <code>sudo apt-get install docker-ce</code></p>
+<blockquote>
+<p>非官方源是不可信任的，可能会出现异常 “W: GPG error: <a target="_blank" rel="noopener" href="https://download.docker.com/">https://download.docker.com</a> trusty Release: The following signatures couldn’t be verified because the public key is not available: NO_PUBKEY 7EA0A9C3F273FCD8”，解决办法是导入该源的公钥<br>  <del><code>gpg --keyserver download.docker.com --recv 7EA0A9C3F273FCD8 &amp;&amp; gpg --export --armor 7EA0A9C3F273FCD8 | sudo apt-key add -</code><br>  或</del><br>  <code>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</code><br>  <code>sudo apt-get update</code></p>
+</blockquote>
+<blockquote>
+<p>启动 docker 服务<br><code>service docker start</code><br>停止 docker 服务<br><code>service docker stop</code></p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://www.cnblogs.com/xiaoff/p/8176819.html">ubuntu 14.04 离线安装 docker 和 docker compose</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://blog.csdn.net/mideagroup/article/details/52052618">使用 registry 搭建 docker 私有 hub</a></p>
+<ol>
+<li><p>下载 registry 镜像<br> <code>docker pull registry</code></p>
+</li>
+<li><p>创建一个 registry 的容器并运行（”-p 5000:5000” 表示将容器内部的 5000 端口映射到宿主机的 5000 端口）</p>
+<pre><code class="bash">docker run -d -p 5000:5000 registry
+</code></pre>
+<pre><code class="bash">docker run \
+    -d \ # 作为 daemon 进程启动，即后台启动
+    -v /myrepo:/var/lib/registry \ # 将容器 /var/lib/registry 目录映射到宿主机的 /myrepo，用于存放镜像数据
+    -p 5000:5000 \ # 将容器的 5000 端口映射到 Host 的 5000 端口（5000 是 registry 服务端口）
+    registry:latest
+</code></pre>
+</li>
+<li><p>验证 registry 容器是否启动成功<br> <code>curl http://127.0.0.1:5000/v2/_catalog</code></p>
+</li>
+<li><p>使用 registry 管理仓库和镜像</p>
+<ul>
+<li>上传镜像<ol>
+<li>使用 tag 命令让本地镜像 hello-world 指向到 registry 仓库中<br> <code>docker tag hello-world localhost:5000/hello-world:latest</code></li>
+<li>推送到 registry 仓库中<br> <code>docker push localhost:5000/hello-world</code></li>
+</ol>
+</li>
+<li>下载镜像<br>  <code>docker pull localhost:5000/hello-world</code></li>
+</ul>
+</li>
+<li><p>开启 TLS 认证</p>
+<ol>
+<li><p>启动服务</p>
+<pre><code class="bash"># 生成证书
+openssl req -newkey rsa:4096 -nodes -sha256 -keyout myhub.key -subj &quot;/CN=myhub.com&quot; -x509 -days 365 -out myhub.crt
+
+# 生成账号密码 zhangsan/123456
+docker run --rm --entrypoint htpasswd httpd:2 -Bbn zhangsan 123456 &gt; htpasswd
+
+# 启动 registry 容器
+docker run -d -p 5000:5000 --restart=always --name registry \
+    # -v /myrepo:/var/lib/registry \
+    -v $(pwd):/certs \ # 将证书和私钥文件挂载进容器内 /certs 目录下
+    -e REGISTRY_HTTP_TLS_CERTIFICATE=/certs/myhub.crt \ # 指定（容器内的）证书和私钥文件路径
+    -e REGISTRY_HTTP_TLS_KEY=/certs/myhub.key \
+    -v $(pwd):/auth \ # 将账号密码文件挂载进容器内 /auth 目录下
+    -e &quot;REGISTRY_AUTH=htpasswd&quot; \
+    -e &quot;REGISTRY_AUTH_HTPASSWD_REALM=Registry Realm&quot; \
+    -e REGISTRY_AUTH_HTPASSWD_PATH=/auth/htpasswd \ # 指定（容器内的）账号密码文件路径
+    registry
+</code></pre>
+</li>
+<li><p>配置访问</p>
+<pre><code class="bash"># 配置 host
+echo &quot;127.0.0.1 myhub.com&quot; &gt;&gt; /etc/hosts
+
+# 验证服务是否启动
+curl --cacert myhub.crt https://myhub.com:5000/v2/_catalog
+
+# 下发证书
+mkdir -p /etc/docker/certs.d/myhub.com\:5000
+cp myhub.crt /etc/docker/certs.d/myhub.com\:5000
+
+# 账号密码登录
+docker login myhub.com:5000
+# username: zhangsan
+# password: 123456
+
+# 上传镜像
+docker tag hello-world myhub.com:5000/hello-world:latest
+docker push myhub.com:5000/hello-world
+
+# 下载镜像
+docker pull myhub.com:5000/hello-world
+
+# 退出登录
+docker logout myhub.com:5000
+</code></pre>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>使用 Harbor 搭建 docker 私有 hub</p>
+<ol>
+<li>搭建</li>
+<li>配置域名访问，如 <a target="_blank" rel="noopener" href="https://www.mydockerhub.com/">https://www.mydockerhub.com</a></li>
+<li>上传镜像<ol>
+<li>在 /etc/docker/certs.d 目录下配置 Harbor 服务的公钥证书<pre><code class="bash">cd /etc/docker/certs.d
+
+mkdir www.mydockerhub.com
+
+cd www.mydockerhub.com
+
+openssl s_client -showcerts -connect www.mydockerhub.com:443 &lt; /dev/null 2&gt; /dev/null | openssl x509 -outform PEM &gt; www.mydockerhub.com.crt
+</code></pre>
+</li>
+<li>登录 Harbor 服务<br> <code>docker login www.mydockerhub.com</code></li>
+<li>推送镜像<br> <code>docker push www.mydockerhub.com/hello-world:latest</code></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://cr.console.aliyun.com/?spm=a2c4g.11186623.2.3.LLTrnr#/accelerator">配置阿里云镜像加速器</a></p>
+<ol>
+<li><p>修改 daemon 配置文件 /etc/docker/daemon.json 来使用加速器（其中 “<a target="_blank" rel="noopener" href="https://0cx54rhx.mirror.aliyuncs.com&quot;/">https://0cx54rhx.mirror.aliyuncs.com&quot;</a> 为已申请的专属加速器地址）</p>
+<pre><code class="bash">tee /etc/docker/daemon.json &lt;&lt;-&#39;EOF&#39;
+&#123;
+    &quot;registry-mirrors&quot;: [&quot;https://0cx54rhx.mirror.aliyuncs.com&quot;]
+&#125;
+EOF
+</code></pre>
+</li>
+<li><p><span id="restart-docker-server">重启 docker 服务</span>  </p>
+<pre><code class="bash"># ubuntu
+service docker restart
+
+# centos
+# systemctl restart docker
+
+# 如果是在容器中（如 docker:dind）重启 docker 服务，则直接在宿主机上执行 docker restart 重启容器即可
+</code></pre>
+</li>
+</ol>
+</li>
+<li><p>开启 docker 实验功能</p>
+<ol>
+<li>修改配置文件 /etc/docker/daemon.json，在 <code>/</code> 节点下新增配置项<pre><code class="json">&quot;experimental&quot;: true
+</code></pre>
+</li>
+<li><a href="#restart-docker-server">重启 docker 服务</a></li>
+</ol>
+</li>
+</ul>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><ul>
+<li><p>查看 docker 版本信息<br>  <code>docker version</code><br>  查看 docker 系统的信息<br>  <code>docker info</code></p>
+</li>
+<li><p>镜像（Image）管理</p>
+<pre><code class="bash"># 列出远程仓库 Docker Hub 中所有名称为 ubuntu 的镜像
+docker search ubuntu
+# 从远程仓库 Docker Hub 中下载名称为 ubuntu 的镜像到本地
+docker pull ubuntu
+# 推送/发布镜像至远程仓库 Docker Hub 中
+docker push new_image_name
+
+# 列出本地仓库中所有的 docker 镜像
+docker images
+# 删除本地仓库中名称为 ubuntu 的镜像
+docker rmi ubuntu
+# # 删除本地仓库中所有镜像
+# docker rmi $(docker images -q)
+
+# 生成一个镜像 ubuntu 的实例（即容器），并执行该容器中的 /bin/bash，从而交互式进入到该容器中（键入 Ctrl + P + Q 键退出容器但不停止，键入 Ctrl + D 键或执行命令 exit 即可退出容器且停止容器）
+docker run -it ubuntu /bin/bash
+# # 创建一个镜像 ubuntu 的容器，新建的容器处于停止状态，可以使用 docker start 命令启动
+# docker create -it ubuntu
+# # 生成一个新的容器，并运行命令 ping www.google.com
+# docker run ubuntu ping www.google.com
+# # 通过 “-v” 参数可以支持把一个宿主机上的目录挂载到容器中
+# docker run -it -v /home/downloads:/usr/downloads ubuntu /bin/bash
+# 使用 &quot;--entrypoint bash&quot; 覆盖容器中 entrypoint 的默认启动命令，可用于启动因原 entrypoint 命令存在问题而导致无法启动容器的镜像
+# docker run --entrypoint bash -it nginx
+# 创建一个 redis 的只读容器
+# docker run -- read-only redis
+
+# 根据当前目录下的文件 Dockerfile 构建出一个名称为 IMAGE[:VERSION] 的镜像
+docker build -t IMAGE[:VERSION] .
+docker build --squash -t IMAGE[:VERSION] . # 参数 &quot;--squash&quot; 表示压缩镜像，需要开启 docker 实验功能
+
+# # 查看指定镜像的创建历史
+# docker history IMAGE[:VERSION]
+
+# 打包镜像 ubuntu，并导出到文件 ubuntu.tar 中
+docker save -o ubuntu.tar ubuntu
+# 从文件 ubuntu.ta 中导入镜像到本地仓库中
+docker load -i ubuntu.tar
+# docker load &lt; ubuntu.tar
+</code></pre>
+</li>
+<li><p>容器（Container）管理</p>
+<pre><code class="bash"># 列出本地所有正在运行的容器
+docker ps
+# 列出本地所有的容器
+docker ps -a
+# # 列出本地所有的容器和体积大小
+# docker ps -as
+
+# 登录一个正在执行的容器
+docker attach [CONTAINER ID|NAMES]
+
+# 启动容器 # 其中 CONTAINER ID 为容器 ID、NAMES 为容器名称，可由 docker ps 查得。如启动 ID 为 5bf9b7645ed2 的容器：docker start 5bf9b7645ed2
+docker start [CONTAINER ID|NAMES]
+# 停止容器 # 如停止 NAMES 为 focused_bardeen 的容器：docker stop focused_bardeen
+docker stop [CONTAINER ID|NAMES]
+# 杀死容器
+docker kill [CONTAINER ID|NAMES]
+# docker kill $(docker ps -a -q) # 杀死所有正在运行的容器
+# 重启容器
+docker restart [CONTAINER ID|NAMES]
+# 删除容器
+docker rm [CONTAINER ID|NAMES]
+# docker rm $(docker ps -a -q) # 删除所有已经停止的容器
+
+# 从一个容器中取日志
+docker logs [CONTAINER ID|NAMES]
+
+# 列出一个容器里面被改变的文件或者目录，list 列表会显示出三种事件，A 增加的，D 删除的，C 被改变的
+docker diff [CONTAINER ID|NAMES]
+
+# 显示一个运行的容器里面的进程信息
+docker top [CONTAINER ID|NAMES]
+
+# 从容器里面拷贝文件/目录到本地一个路径
+# docker cp [CONTAINER ID|NAMES]:/container_path to_path
+docker cp /sbin/ifconfig 5bf9b7645ed2:/sbin
+
+# 使用已启动的容器，运行命令 ping www.google.com
+docker exec 5bf9b7645ed2 ping www.google.com
+# 使用已启动的容器，交互运行 /bin/sh
+docker exec -it b7542f84a6c3 /bin/sh
+
+# 导出容器到文件 /tmp/container01.tar 中
+docker export [CONTAINER ID|NAMES] &gt; /tmp/container01.tar
+# 从文件 /tmp/container01.tar 中导入容器，并设置其 NAMES 为 focused_bardeen
+cat /tmp/container01.tar | docker import - focused_bardeen
+# # 导出容器并重新导入到镜像中，可用于压缩镜像。ref https://blog.csdn.net/qq_36763896/article/details/53293088
+# docker export &lt;container id&gt; | docker import - &lt;image name&gt;
+
+# 将容器 a404c6c174a2 保存为新的镜像 hello，并添加提交人信息和说明信息
+docker commit -a &quot;author&quot; -m &quot;describe&quot; a404c6c174a2  hello:v1
+# docker commit --change=&#39;ENTRYPOINT [&quot;entrypoint.sh&quot;]&#39; a404c6c174a2  hello:v1
+# docker commit -c &#39;ENV JAVA_HOME=/opt/jdk&#39; -c &#39;ENV PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:$JAVA_HOME/bin&#39; -c &#39;ENTRYPOINT service ssh start &amp;&amp; /bin/bash&#39; a404c6c174a2 ubuntu-jdk-ssh
+
+# 查看容器端口映射
+docker port a404c6c174a2
+docker port a404c6c174a2 8080
+</code></pre>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://www.cnblogs.com/sammyliu/p/5894191.html">网络管理</a></p>
+<pre><code class="bash"># 创建一个 overlay 网络 overlay1
+docker network create -d overlay --attachable overlay1
+
+# 查看网络 overlay1 的信息
+network inspect overlay1
+</code></pre>
+<pre><code class="bash"># 查看 NAT 表中的 PREROUTING 链（iptables 将满足条件的数据都转发到了 DOCKER 链上去了）
+iptables -t nat --list-rules PREROUTING
+
+# 查看 NAT 表中的 DOCKER 链
+iptables -t nat --list-rules DOCKER
+
+# 查看容器的 ip
+docker inspect &lt;容器id&gt; | grep &#39;&quot;IPAddress&quot;:&#39; | grep -o -E [0-9.]+ | head -n 1
+
+# 端口映射
+iptables -t nat -A DOCKER -p tcp --dport &lt;容器外部端口&gt; -j DNAT --to-destination &lt;容器ip&gt;:&lt;容器内部端口&gt;
+# iptables -t nat -A POSTROUTING -j MASQUERADE -p tcp --source &lt;容器ip&gt; --destination &lt;容器ip&gt; --dport &lt;容器内部端口&gt;
+iptables -A DOCKER -j ACCEPT -p tcp --destination &lt;容器ip&gt; --dport &lt;容器内部端口&gt;
+
+# 取消端口映射规则
+iptables -t nat -D DOCKER -p tcp -d 0/0 --dport &lt;容器外部端口&gt; -j DNAT --to-destination &lt;容器ip&gt;:&lt;容器内部端口&gt;
+iptables -D DOCKER -j ACCEPT -p tcp --destination &lt;容器ip&gt; --dport &lt;容器内部端口&gt;
+</code></pre>
+</li>
+<li><p>删除那些已停止的容器、dangling 镜像、未被容器引用的 network 和构建过程中的 cache<br>  <code>docker system prune</code><br>  强制清理<br>  <code>docker system prune --all --force --volumes</code></p>
+</li>
+<li><p>资源限制</p>
+<pre><code class="bash">docker run --rm -it \
+    --cpu-period=100000 --cpu-quota=20000 \ # 每 100 毫秒(即 100000 微秒)内，运行进程使用的 cpu 时间最多为 20 毫秒
+    --cpuset-cpus=&quot;1&quot; \ # 指定运行容器编号为 1 的 cpu。https://m.jb51.net/article/135395.htm?from=singlemessage
+    -m 50M --memory-swap 50M \ # 容器可以使用 50M 的物理内存，且不能使用 swap。https://www.cnblogs.com/sparkdev/p/8032330.html
+    --device-write-bps /dev/sda:30MB \ # 限制容器写 /dev/sda 的速率为 30MB/s。http://m.hangge.com/news/cache/detail_2413.html
+    u-stress:latest /bin/bash
+
+stress -c 4 # 启动压力测试
+</code></pre>
+</li>
+<li><p>示例</p>
+<pre><code class="bash"># 创建一个（虚拟的）网络接口名称为 docker1、网络 NAME 为 bridge1、子网网段为 10.0.1.* 的网桥
+docker network create -o &quot;com.docker.network.bridge.name&quot;=&quot;docker1&quot; --subnet=10.0.1.0/24 bridge1
+
+# 停用网络接口 docker1
+# ifconfig docker1 down
+#apt-get install bridge-utils
+#brctl delbr docker1
+
+# 创建一个镜像为 ubuntu、网桥为 bridge1、ip 地址为 10.0.1.2、名称为 client1 的容器，并将宿主机目录 /sbin 挂载到容器中目录 /sbin 下，交互式启动容器中 /bin/bash
+docker run -it --network bridge1 --ip 10.0.1.2 --name client1 -v /sbin:/sbin ubuntu /bin/bash
+</code></pre>
+</li>
+<li><p>构建镜像</p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/3a2a96ba6b44">构建极简镜像（镜像中应用存在依赖关系）</a><br>  例如，基于一个空的基础镜像完成一个 /bin/hello 的镜像</p>
+<ol>
+<li><p>查看 /bin/hello 的依赖库，并将 /bin/hello 以及其依赖的动态库，打包至文件 rootfs.tar.gz 中<br> <code>ldd /bin/hello | perl -p -e &#39;s#^\s*(\S+ =&gt; )?(/\S+) \(0x[0-9a-z]+\)$#$2#g&#39; | grep -v &#39;linux-vdso&#39; | sed &#39;$a/bin/hello&#39; | xargs tar zcvf rootfs.tar.gz</code></p>
+</li>
+<li><p>编辑文件 Dockerfile 构建镜像</p>
+<pre><code class="dockerfile">FROM scratch 
+
+ADD rootfs.tar.gz / 
+
+# COPY redis.conf /etc/redis/redis.conf 
+# EXPOSE 6379
+
+# CMD [&quot;redis-server&quot;]
+CMD [&quot;/bin/hello&quot;]
+</code></pre>
+</li>
+<li><p>构建镜像 hello<br> <code>docker build -t hello .</code></p>
+</li>
+</ol>
+</li>
+<li><p>构建简单镜像（镜像中应用无依赖）</p>
+<ol>
+<li><p>编辑文件 <a href="/Source/docker/hello.sh">Dockerfile</a></p>
+<pre><code class="dockerfile">FROM scratch
+ADD hello /
+CMD [&quot;/hello&quot;]
+</code></pre>
+<blockquote>
+<p>Docker registry 中，有一个被称为 scratch 的使用空 tar 文件构建的特殊镜像<br><code>tar cv --files-from /dev/null | docker import - scratch</code><br>基于该映像可构建新的无冗余的镜像</p>
+</blockquote>
+</li>
+<li><p>构建镜像 hello<br> <code>docker build -t hello .</code></p>
+</li>
+</ol>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://m.toutiaocdn.com/i6807657333934522891/?app=news_article&timestamp=1585054531&req_id=202003242055310101450260140F1D4D28&group_id=6807657333934522891&wxshare_count=1&tt_from=weixin&utm_source=weixin&utm_medium=toutiao_android&utm_campaign=client_share&from=singlemessage">多阶段构建</a>  </p>
+<pre><code class="dockerfile">FROM gcc AS mybuildstage
+COPY hello.c .
+RUN gcc -o hello hello.c
+FROM alpine
+COPY --from=mybuildstage hello .
+CMD [&quot;./hello&quot;]
+</code></pre>
+<!--</li>
+<li><p>使用 <a target="_blank" rel="noopener" href="https://github.com/jwilder/docker-squash">docker-squash</a> 压缩镜像体积</p>
+<ol>
+<li><p>下载<br> <code>curl -k -O -L https://github.com/jwilder/docker-squash/releases/download/v0.2.0/docker-squash-linux-amd64-v0.2.0.tar.gz --retry 3 --retry-delay 2</code></p>
+</li>
+<li><p>解压并添加至 /usr/bin 目录下</p>
+<pre><code class="bash">tar -C /usr/bin -xzvf docker-squash-linux-amd64-v0.2.0.tar.gz
+chown root:root /usr/bin/docker-squash
+chmod 755 /usr/bin/docker-squash
+</code></pre>
+</li>
+<li><p>使用命令压缩镜像  </p>
+<pre><code class="bash"># docker save IMAGE_ID | sudo docker-squash -t NEW_TAG | docker load
+
+docker save IMAGE_ID &gt; image.tar
+sudo docker-squash -i image.tar -o squashed.tar -t NEW_TAG
+cat squashed.tar | docker load
+</code></pre>
+</li>
+</ol>
+</li>
+<li><p>使用 <a target="_blank" rel="noopener" href="https://github.com/docker-slim/docker-slim">docker-slim</a> 压缩镜像体积（不推荐，实测新镜像在运行时出现异常）</p>
+<ol>
+<li>下载<br> <code>curl -O https://downloads.dockerslim.com/releases/1.25.3/dist_linux.tar.gz</code></li>
+<li>解压并添加至 /usr/bin 目录下  <pre><code class="bash">tar zxvf dist_linux.tar.gz
+(cd ./dist_linux &amp;&amp; &#123;
+    chown root:root ./docker-slim ./docker-slim-sensor
+    chmod 755 ./docker-slim ./docker-slim-sensor
+    mv ./docker-* /usr/bin/
+&#125;)
+rm -d dist_linux
+</code></pre>
+</li>
+<li>使用命令压缩镜像<br> <code>docker-slim build --http-probe IMAGE[:VERSION]</code></li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>-&gt;</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://openvz.org/Download/templates/precreated">基础镜像包下载</a></p>
+</blockquote>
+</li>
+<li><p><a href="#docker_client_in_docker">连接宿主机 docker 服务（daemon）</a></p>
+</li>
+<li><p>连接远程 docker 服务（daemon）</p>
+<ol>
+<li>配置 docker.service 启用 remote api<pre><code class="bash">mkdir -p /etc/systemd/system/docker.service.d
+cat &gt; /etc/systemd/system/docker.service.d/override.conf &lt;&lt; EOF
+[Service]
+ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock -H tcp://0.0.0.0:2376
+EOF
+</code></pre>
+ 或者配置 daemon.json<pre><code class="bash">vim /etc/docker/daemon.json
+&#123;
+    &quot;hosts&quot;: [&quot;tcp://0.0.0.0:2376&quot;, &quot;unix:///var/run/docker.sock&quot;]
+&#125;
+</code></pre>
+</li>
+<li>重启服务使配置生效<pre><code class="bash">systemctl daemon-reload &amp;&amp; systemctl restart docker.service
+</code></pre>
+</li>
+<li>查看 dockerd 进程<pre><code class="bash">ps aux | grep dockerd
+# root       2471  0.8  1.7 723016 67808 ?        Ssl  09:38   0:00 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock -H tcp://0.0.0.0:2376
+</code></pre>
+</li>
+<li>远程主机 docker 客户端执行命令验证<pre><code class="bash">docker -H tcp://192.168.93.9:2375 version
+</code></pre>
+</li>
+<li>curl 命令验证<pre><code class="bash">curl -XGET http://192.168.93.9:2376/version
+</code></pre>
+</li>
+<li>变量方式使用示例<pre><code class="bash">docker run -it \
+    -e DOCKER_HOST=tcp://192.168.93.9:2376 \
+    docker version
+</code></pre>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="故障解决"><a href="#故障解决" class="headerlink" title="故障解决"></a>故障解决</h2><ul>
+<li><p>拉取镜像过程中，报 x509:certificate 错误</p>
+<ul>
+<li><p>方法一：设置 insecure-registries</p>
+<pre><code class="bash">vim /etc/docker/daemon.json
+&#123;
+    &quot;insecure-registries&quot;: [&quot;myhub.com:443&quot;]
+&#125;
+
+# 重启 docker 服务
+</code></pre>
+</li>
+<li><p>方法二：添加信任证书</p>
+<pre><code class="bash"># 把网站的 https 证书内容加载到系统 ca-bundle 中
+echo -n | openssl s_client -showcerts -connect myhub.com:443 2&gt;/dev/null | sed -ne &#39;/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p&#39; &gt;&gt; /etc/pki/tls/certs/ca-bundle.crt
+
+# 重启 docker 服务
+systemctl daemon-reload &amp;&amp; systemctl restart docker
+</code></pre>
+<blockquote>
+<p>当我们在用 docker pull 等命令时，docker 调用的是系统的 CA 证书，这些证书保存在 /etc/pki/certs/ca-bundle.crt 中（centos），所以我们把网站的 https 证书加入到这个文件，重启服务即可</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><details>
+<summary>Docker Swarm</summary>
+
+</details>
+
+<details>
+<summary>Docker Compose</summary>
+
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/52fhy/p/5991344.html">Docker 之 Compose 服务编排</a></p>
+<ol>
+<li><p>安装</p>
+<ul>
+<li><p>方法一：从 github 上下载 docker-compose 脚本</p>
+<pre><code class="bash"># 下载
+sudo curl -L https://github.com/docker/compose/releases/download/1.20.1/docker-compose-Linux-x86_64 -o /usr/local/bin/docker-compose
+
+# 设置可执行权限
+chmod +x /usr/local/bin/docker-compose
+</code></pre>
+</li>
+<li><p>方法二：使用 pip 安装<br>  <code>pip install docker-compose</code>  </p>
+</li>
+</ul>
+</li>
+<li><p>验证安装（查看 docker-compose 版本）<br> <code>docker-compose version</code></p>
+</li>
+<li><p>使用</p>
+<ol>
+<li><p>创建并编辑配置文件 docker-compose.yml 如下</p>
+<pre><code class="yml">version: &#39;2&#39;
+services:
+  web:
+    build: .
+    ports:
+      - &quot;5000:5000&quot;
+  redis:
+    image: &quot;redis:alpine&quot;
+</code></pre>
+</li>
+<li><p>启动服务<br> <code>docker-compose up</code><br> 在后台启动服务<br> <code>docker-compose up -d</code><br> 查看启动的服务<br> <code>docker-compose ps</code><br> 停止服务<br> <code>docker-compose stop</code><br> 其他常用命令</p>
+<pre><code class="bash"># 查看帮助
+docker-compose -h
+
+# -f 指定使用的 Compose 模板文件，默认为 docker-compose.yml，可以多次指定。
+docker-compose -f docker-compose.yml up -d 
+
+# 启动所有容器，-d 将会在后台启动并运行所有的容器
+docker-compose up -d
+
+# 停用移除所有容器以及网络相关
+docker-compose down
+
+# 查看服务容器的输出
+docker-compose logs
+
+# 列出项目中目前的所有容器
+docker-compose ps
+
+# 构建（重新构建）项目中的服务容器。服务容器一旦构建后，将会带上一个标记名，例如对于 web 项目中的一个 db 容器，可能是 web_db。可以随时在项目目录下运行 docker-compose build 来重新构建服务
+docker-compose build
+
+# 拉取服务依赖的镜像
+docker-compose pull
+
+# 重启项目中的服务
+docker-compose restart
+
+# 删除所有（停止状态的）服务容器。推荐先执行 docker-compose stop 命令来停止容器。
+docker-compose rm 
+
+# 在指定服务上执行一个命令。
+docker-compose run ubuntu ping docker.com
+
+# 设置指定服务运行的容器个数。通过 service=num 的参数来设置数量
+docker-compose scale web=3 db=2
+
+# 启动已经存在的服务容器。
+docker-compose start
+
+# 停止已经处于运行状态的容器，但不删除它。通过 docker-compose start 可以再次启动这些容器。
+docker-compose stop
+</code></pre>
+</li>
+</ol>
+</li>
+</ol>
+</details>
+
+<h2 id="第三方镜像"><a href="#第三方镜像" class="headerlink" title="第三方镜像"></a>第三方镜像</h2><ul>
+<li><p>alpine（轻量级 linux 发行版，体积 &lt; 5 MB，内置 apk 软件包管理工具，可通过 apk –help 命令查看完整的包管理命令）</p>
+<pre><code class="bash"># 创建一个新的 alpine 容器并运行 sh 命令
+docker run -it alpine /bin/sh
+</code></pre>
+</li>
+<li><p>mysql</p>
+<pre><code class="bash">docker run --name mysql01 -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.7
+docker exec -it mysql01 /bin/bash
+# mysql -uroot -p123456
+</code></pre>
+</li>
+<li><p>java</p>
+<pre><code class="bash"># jre 8
+docker run -it openjdk:8u292-jre-slim bash
+
+# jre 11
+docker run -it openjdk:11.0.12-jre-slim bash
+</code></pre>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/eclipse/che">eclipse che（在线 IDE 服务）</a></p>
+<pre><code class="bash"># 创建并启动 che 服务
+docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock -v /home/data:/data eclipse/che start
+</code></pre>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/ghostplant/web-ubuntu-mate">Ubuntu Classic Desktop (GTK3-based Desktop Environment)</a>  </p>
+<blockquote>
+<p>Default VNC password: 123456, and you can update it via ‘vncpasswd’ command inside VNC X session.</p>
+</blockquote>
+<pre><code class="bash"># Download/Update latest Ubuntu image
+docker pull ghostplant/flashback
+
+# Chioce 1 - Web as Client: Using web browser to login - http://localhost:8443/
+docker run -it --rm -p 8443:8443 -v /external:/root ghostplant/flashback
+
+# Chioce 2 - VNCViewer as Client: Using VNC client to login &#39;localhost:1&#39;
+# docker run -it --rm -p 5901:5901 -v /external:/root ghostplant/flashback
+</code></pre>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/cdr/code-server">code-server（在线 VS Code）</a></p>
+<pre><code class="bash">docker run --rm -it -p 8080:8080 -v &quot;$PWD:/home/coder/project&quot; codercom/code-server --auth none
+</code></pre>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://docs.min.io/cn/minio-docker-quickstart-guide.html">minio</a></p>
+<pre><code class="bash">docker run -p 9000:9000 --name minio1 \
+    -e &quot;MINIO_ACCESS_KEY=AKIAIOSFODNN7EXAMPLE&quot; \
+    -e &quot;MINIO_SECRET_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY&quot; \
+    -v /mnt/data:/data \
+    -v /mnt/config:/root/.minio \
+    minio/minio server /data
+</code></pre>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/theia-ide/theia-apps#theia-docker">theia（在线 IDE）</a></p>
+<pre><code class="bash">docker run -it --init -p 3000:3000 -v &quot;$(pwd):/home/project:cached&quot; theiaide/theia:next
+</code></pre>
+</li>
+<li><p>clickhouse</p>
+<pre><code class="bash">docker run -d \
+    --name clickhouse-server \
+    -p 9000:9000 \
+    -p 8123:8123 \
+    -p 9009:9009 \
+    --ulimit nofile=262144:262144 \
+    yandex/clickhouse-server
+</code></pre>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/cloudreve/Cloudreve">cloudreve</a></p>
+<pre><code class="bash">docker run -d \
+    --name cloudreve \
+    -v /etc/cloudreve:/etc/cloudreve \
+    -v /data/cloudreve:/data \
+    -p 8081:8080 \
+    littleplus/cloudreve-3.0.0-rc-1:sqlite
+</code></pre>
+<blockquote>
+<ul>
+<li>访问路径 <a href="http://127.0.0.1:8081，默认管理员账号">http://127.0.0.1:8081，默认管理员账号</a> admin@cloudreve.org，密码见控制台启动日志</li>
+<li>配置使用 Aria2 离线下载文件<ol>
+<li><a href="linux.md#aria2">安装、启动 Aria2 RPC 服务</a></li>
+<li>管理员登录 cloudreve，进入 “管理面板” -&gt; “参数设置” -&gt; “离线下载”。配置 “RPC 服务器地址” 为 “<a target="_blank" rel="noopener" href="http://127.0.0.1:6800/&quot;%EF%BC%8C&quot;RPC">http://127.0.0.1:6800/&quot;，&quot;RPC</a> Secret” 为 “yourpassword”，”临时下载目录” 为 “/home/aria2/data”，点击 “保存” 按钮</li>
+</ol>
+</li>
+</ul>
+</blockquote>
+</li>
+<li><p>轻量级搜索引擎 <a target="_blank" rel="noopener" href="https://github.com/meilisearch/MeiliSearch">MeiliSearch</a><br>  内置 webui，开箱即用，包含词干提取、停用词、同义词、排名、过滤器和分页等功能</p>
+<pre><code class="bash">docker run \
+    -p 7700:7700 \
+    -v &quot;$(pwd)/data.ms:/data.ms&quot; \
+    getmeili/meilisearch
+</code></pre>
+</li>
+<li><p>基于 <a target="_blank" rel="noopener" href="https://github.com/GoogleContainerTools/distroless">distroless</a> 镜像（多阶段）构建精简镜像</p>
+<pre><code class="dockerfile"># Start by building the application.
+FROM golang:1.13-buster as build
+WORKDIR /go/src/app
+ADD . /go/src/app
+RUN go get -d -v ./...
+RUN go build -o /go/bin/app
+
+# Now copy it into our base image.
+FROM gcr.io/distroless/base-debian10
+COPY --from=build /go/bin/app /
+CMD [&quot;/app&quot;]
+</code></pre>
+</li>
+<li><p>使用 <a target="_blank" rel="noopener" href="https://github.com/nocodb/nocodb">nocodb</a> 将关系数据库转变为智能电子表格</p>
+<pre><code class="bash">docker run -d --name nocodb -p 8080:8080 nocodb/nocodb
+</code></pre>
+</li>
+<li><p>使用 <a target="_blank" rel="noopener" href="https://github.com/inbucket/inbucket">inbucket</a>（轻量级邮件接受平台，基于 golang 开发，占用内存 15 MB，仅支持 POP3 和 SMTP 服务）搭建邮件测试服务</p>
+<pre><code class="bash">docker run \
+    -d \
+    --name inbucket \
+    -p 9000:9000 \ # 控制台监听接口
+    -p 2500:2500 \ # SMTP 服务监听接口
+    -p 1100:1100 \ # POP3 服务监听接口
+    inbucket/inbucket
+
+start http://127.0.0.1:9000
+</code></pre>
+</li>
+<li><p>基于 Go 实现的搜索引擎 <a target="_blank" rel="noopener" href="https://github.com/prabhatsharma/zinc">zinc</a></p>
+<pre><code class="bash">docker run \
+    -v /full/path/of/data:/data \
+    -e DATA_PATH=&quot;/data&quot; \
+    -e FIRST_ADMIN_USER=admin \
+    -e FIRST_ADMIN_PASSWORD=Admin_1234 \
+    -p 4080:4080 \
+    --name zinc \
+    public.ecr.aws/m5j1b6u0/zinc:v0.1.1
+
+start http://127.0.0.1:4080
+</code></pre>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/networken/article/details/108218569">docker in docker</a></p>
+<ul>
+<li><p><span id="docker_client_in_docker">客户端</span></p>
+<ol>
+<li>方法一：挂载主机上的 docker.sock 以及 docker 二进制文件<pre><code class="bash">docker run -it \
+    -v /var/run/docker.sock:/var/run/docker.sock \ # 将宿主机的 docker 服务（daemon）挂载进容器内，使的容器内部 docker 客户端可以访问宿主机的 docker 服务
+    -v $(which docker):/usr/bin/docker \
+    -v /usr/lib64/libltdl.so.7:/usr/lib/x86_64-linux-gnu/libltdl.so.7 \
+    ubuntu:xenial docker version
+</code></pre>
+</li>
+<li>方法二：使用官方 docker 客户端<pre><code class="bash">docker run -it \
+    -v /var/run/docker.sock:/var/run/docker.sock docker:latest \ # docker:latest 只包含 docker 客户端
+    docker version
+</code></pre>
+<blockquote>
+<p>本质上还是连接到主机节点上的 docker 引擎执行 docker 命令，实际容器中执行 docker 操作与在主机节点直接执行 docker 命令没有区别。</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><p>服务端 + 客户端</p>
+<pre><code class="bash">docker run -it \
+    --privileged \
+    -d \
+    --name docker-dind \
+    docker:dind # docker:dind 包含 docker 客户端和 docker 服务端
+
+# 使用带有 docker 客户端的容器连接到 dind 容器
+docker run -it --link docker-dind:docker docker:latest version
+</code></pre>
+<pre><code class="bash"># 启用 TLS
+docker network create dind
+
+docker run \
+    --privileged \
+    --name docker-dind \
+    -d \
+    --network dind --network-alias docker \
+    -e DOCKER_TLS_CERTDIR=/certs \
+    -v docker-certs-ca:/certs/ca \
+    -v docker-certs-client:/certs/client \
+    docker:dind
+</code></pre>
+<blockquote>
+<p>docker dind 方式有所不同，所有的 docker 操作真正在容器内部进行，包括创建的容器、拉取的镜像都保留在容器内部。<br>docker in docker 的原理是挂载 cgroup、tmpfs、securityfs、cgroup 的 SUBSYS、关掉不需要的文件描述符、最后启动 dockerd。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/HelloZeroNet/ZeroNet">ZeroNet</a></p>
+<pre><code class="bash">docker run -d -e &quot;ENABLE_TOR=true&quot; -v &lt;local_data_folder&gt;:/root/data -p 15441:15441 -p 127.0.0.1:43110:43110 nofish/zeronet
+</code></pre>
+</li>
+</ul>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2025/03/22/deno/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg" alt="Dim.Ke's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        904243852@qq.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto: 904243852@qq.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/algorithm/">algorithm<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/css/">css<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/deno/">deno<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/docker/">docker<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/elasticsearch/">elasticsearch<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/ffmpeg/">ffmpeg<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/golang/">golang<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/javascript/">javascript<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/kubernetes/">kubernetes<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/linux/">linux<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/mysql/">mysql<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/nginx/">nginx<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/nodejs/">nodejs<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/solr/">solr<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/tomcat/">tomcat<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/webassembly/">webassembly<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/isunk" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+
+    <!-- Gitee -->
+    
+        <a href="https://gitee.com/isunk" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background: url('https://gitee.com/static/images/logo-en.svg'); background-size: cover;">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;Dim.Ke
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/bollnh/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<!-- <script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('
+<link rel="stylesheet" href="/css/uc.css">
+');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script> -->
+
+<!-- Import prettify js  -->
+
+    
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
+        
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 2020;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/bollnh/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>

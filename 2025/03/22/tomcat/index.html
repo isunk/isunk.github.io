@@ -1,0 +1,1953 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/bollnh/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            Tomcat | 
+        
+        Dim.Ke
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg">
+    <link rel="icon" href="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content=",tomcat">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/github-v2.min.css?AfzKxt++K+/lhZBlSjnxwg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+            
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Dim.Ke">
+    <meta name="msapplication-starturl" content="https://isunk.github.io/2025/03/22/tomcat/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Dim.Ke">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg">
+
+    <!-- Site Verification -->
+    
+    <meta name="baidu-site-verification" content="code-ibxIxWHREM" />
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://isunk.github.io/2025/03/22/tomcat/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Tomcat | Dim.Ke">
+    <meta property="og:image" content="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg">
+    <meta property="og:description" content="">
+    <meta property="og:article:tag" content="tomcat"> 
+
+    
+        <meta property="article:published_time" content="Sat Mar 22 2025 06:39:26 GMT+0000">
+        <meta property="article:modified_time" content="Sat Mar 22 2025 02:25:41 GMT+0000">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="https://isunk.github.io/2025/03/22/tomcat/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://isunk.github.io/2025/03/22/tomcat/index.html",
+    "headline": "Tomcat",
+    "datePublished": "Sat Mar 22 2025 06:39:26 GMT+0000",
+    "dateModified": "Sat Mar 22 2025 02:25:41 GMT+0000",
+    "author": {
+        "@type": "Person",
+        "name": "Dim.Ke",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Dim.Ke",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg"
+        }
+    },
+    "keywords": ",tomcat",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+    <script src="https://kulroakonsu.net/88/tag.min.js" data-zone="137717" async data-cfasync="false"></script><!-- Monetag 广告 -->
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Tomcat"><span class="post-toc-text">Tomcat</span></a></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                Tomcat
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Dim.Ke</strong>
+        <span>3月 22, 2025</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-none-link" href="/tags/tomcat/" rel="tag">tomcat</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Tomcat&url=https://isunk.github.io/2025/03/22/tomcat/index.html&pic=https://isunk.github.iohttps://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Tomcat&url=https://isunk.github.io/2025/03/22/tomcat/index.html&via=Dim.Ke" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://isunk.github.io/2025/03/22/tomcat/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://isunk.github.io/2025/03/22/tomcat/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="Tomcat"><a href="#Tomcat" class="headerlink" title="Tomcat"></a>Tomcat</h1><ul>
+<li><p>环境搭建</p>
+<ol>
+<li>下载 tomcat-8.5.31.zip<br> <code>curl -O http://mirror.bit.edu.cn/apache/tomcat/tomcat-8/v8.5.31/bin/apache-tomcat-8.5.31.zip</code></li>
+<li>解压 tomcat-8.5.31.zip<br> <code>unzip -q apache-tomcat-8.5.31.zip</code></li>
+<li>创建 tomcat 软连接<br> <code>ln -s apache-tomcat-8.5.31 tomcat</code></li>
+</ol>
+</li>
+<li><p><span id="start-or-stop-tomcat">停止、启动 Tomcat 服务</span></p>
+<ol>
+<li>切换至 $CATALINA_HOME/bin 目录<br> <code>cd tomcat/bin</code></li>
+<li>停止、启动服务<ul>
+<li>停止服务<br>  <code>./shutdown.sh</code><br>  <code>ps -ef | grep tomcat | grep -v grep | awk &#39;&#123;print $2&#125;&#39; | xargs kill -s 9</code></li>
+<li>启动服务<br>  <code>./startup.sh</code></li>
+</ul>
+</li>
+<li>返回目录<br> <code>cd -</code></li>
+</ol>
+</li>
+<li><p><span id="tomcat-setup-ssl">开启 SSL</span></p>
+<ol>
+<li><a href="java.md#createKeystore">创建 keystore 文件</a>(如 tomcat.keystore)<br> <code>keytool -genkeypair -alias tomcat -keyalg RSA -keystore keystore.jks</code><br> 根据提示输入证书信息，如密码为 123456</li>
+<li>将 keystore.jks 移动至 $CATALINA_HOME/conf 目录下<br> <code>mv keystore.jks tomcat/conf</code></li>
+<li>编辑文件 $CATALINA_HOME/conf/server.xml，在 <code>/Server/Service/Connector[@port=&quot;8443&quot;]</code> 节点中，配置 keystoreFile 和 keystorePass，如下<pre><code class="xml">&lt;Connector port=&quot;8443&quot; protocol=&quot;org.apache.coyote.http11.Http11NioProtocol&quot;
+            maxThreads=&quot;150&quot; SSLEnabled=&quot;true&quot; scheme=&quot;https&quot; secure=&quot;true&quot;
+            clientAuth=&quot;false&quot; sslProtocol=&quot;TLS&quot;
+            keystoreFile=&quot;$&#123;catalina.home&#125;/conf/keystore.jks&quot; keystorePass=&quot;123456&quot;/&gt;
+</code></pre>
+</li>
+<li><a href="#start-or-stop-tomcat">重新启动 Tomcat 服务</a></li>
+<li>在浏览器中访问如：<a target="_blank" rel="noopener" href="https://localhost:8443/xxx/">https://localhost:8443/xxx/</a></li>
+</ol>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/Before/p/4244167.html">配置 SSL 双向认证</a></p>
+<ol>
+<li><p><span id="keytool">（在 $CATALINA_HOME/conf 目录下）生成密钥库和证书</span></p>
+<ol>
+<li>生成服务器证书库 server.jks<br> <code>keytool -validity 365 -genkey -v -alias server -keyalg RSA -keystore server.jks -dname &quot;CN=127.0.0.1,OU=NA,O=NA,L=NA,ST=NA,c=NA&quot; -storepass 123456 -keypass 123456</code></li>
+<li>从服务器证书库中导出服务器证书 server.cer<br> <code>keytool -export -v -alias server -keystore server.jks -storepass 123456 -rfc -file server.cer</code></li>
+<li>生成客户端证书库 client.p12<br> <code>keytool -validity 365 -genkeypair -v -alias client -keyalg RSA -storetype PKCS12 -keystore client.p12 -dname &quot;CN=client&quot; -storepass 123456 -keypass 123456</code></li>
+<li>从客户端证书库中导出客户端证书 client.cer<br> <code>keytool -export -v -alias client -keystore client.p12 -storetype PKCS12 -storepass 123456 -rfc -file client.cer</code></li>
+<li>将客户端证书导入到服务器证书库（使得服务器信任客户端证书）<br> <code>keytool -import -v -alias client -file client.cer -keystore server.jks -storepass 123456 -noprompt</code></li>
+<li><del>生成客户端信任证书库（由服务端证书生成的证书库）<br> <code>keytool -import -v -alias server -file server.cer -keystore client.truststore -storepass 123456 -noprompt</code></del><blockquote>
+<ul>
+<li>查看证书库中的全部证书<br><code>keytool -list -keystore server.jks -storepass 123456</code></li>
+</ul>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><p>编辑文件 $CATALINA_HOME/conf/server.xml，在 <code>/Server/Service/Connector[@port=&quot;8443&quot;]</code> 节点中，配置如下</p>
+<pre><code class="xml">&lt;Connector port=&quot;8443&quot; protocol=&quot;org.apache.coyote.http11.Http11NioProtocol&quot; SSLEnabled=&quot;true&quot;
+            maxThreads=&quot;150&quot; scheme=&quot;https&quot; secure=&quot;true&quot;
+            clientAuth=&quot;true&quot; sslProtocol=&quot;TLS&quot;
+            keystoreFile=&quot;$&#123;catalina.base&#125;/conf/server.jks&quot; keystorePass=&quot;123456&quot;
+            truststoreFile=&quot;$&#123;catalina.base&#125;/conf/server.jks&quot; truststorePass=&quot;123456&quot;/&gt;
+</code></pre>
+<blockquote>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/tianjifa/p/9533092.html">servlet 中获取客户端证书</a><pre><code class="java">// HttpServletRequest request = ...
+X509Certificate[] chain = (X509Certificate[]) request.getAttribute(&quot;javax.servlet.request.X509Certificate&quot;);
+</code></pre>
+</li>
+</ul>
+</blockquote>
+</li>
+<li><p>（可选）配置角色权限</p>
+<ol>
+<li><p>编辑文件 $CATALINA_HOME/conf/server.xml，开启 8080 端口（此处用于释放普通权限，对比区别于第二步中配置的权限），配置如下</p>
+<pre><code class="xml">&lt;Connector port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot;
+            connectionTimeout=&quot;20000&quot;
+            redirectPort=&quot;8443&quot; /&gt;
+</code></pre>
+</li>
+<li><p>编辑 $CATALINA_HOME/webapps/*/WEB-INF/web.xml 文件，在 <code>/web-app</code> 节点下，添加 security-constraint、login-config 配置如下</p>
+<pre><code class="xml">&lt;security-constraint&gt;
+    &lt;web-resource-collection&gt;
+        &lt;web-resource-name&gt;SSL&lt;/web-resource-name&gt;
+        &lt;url-pattern&gt;/*&lt;/url-pattern&gt;
+    &lt;/web-resource-collection&gt;
+    &lt;user-data-constraint&gt;
+        &lt;transport-guarantee&gt;CONFIDENTIAL&lt;/transport-guarantee&gt;
+    &lt;/user-data-constraint&gt;
+    &lt;security-role&gt;
+        &lt;role-name&gt;admin4cert&lt;/role-name&gt;
+    &lt;/security-role&gt;
+&lt;/security-constraint&gt;
+&lt;login-config&gt;
+    &lt;auth-method&gt;CLIENT-CERT&lt;/auth-method&gt;
+&lt;/login-config&gt;
+</code></pre>
+</li>
+<li><p>编辑 tomcat-users.xml 文件，在 <code>/tomcat-users</code> 节点下，配置角色、用户如下</p>
+<pre><code class="xml">&lt;role rolename=&quot;admin4cert&quot; /&gt;
+
+&lt;user username=&quot;CN=client&quot; password=&quot;null&quot; roles=&quot;admin4cert&quot; /&gt;
+</code></pre>
+</li>
+</ol>
+</li>
+<li><p><a href="#start-or-stop-tomcat">重新启动 Tomcat 服务</a></p>
+</li>
+<li><p>安装证书 client.p12</p>
+</li>
+<li><p>在浏览器中访问如：<a target="_blank" rel="noopener" href="https://localhost:8443/">https://localhost:8443/</a></p>
+</li>
+</ol>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/2b4a587db5cb">配置多个虚拟主机与 HTTPS 证书</a></p>
+<ol>
+<li><p>编辑 $CATALINA_HOME/conf/server.xml 文件，配置 <code>/Server/Service/Connector</code> 节点如下</p>
+<pre><code class="xml">&lt;Connector port=&quot;443&quot; protocol=&quot;org.apache.coyote.http11.Http11NioProtocol&quot;
+           maxThreads=&quot;150&quot; SSLEnabled=&quot;true&quot; URIEncoding=&quot;UTF-8&quot; defaultSSLHostConfigName=&quot;domain.com&quot;&gt;
+
+    &lt;SSLHostConfig hostName=&quot;domain.com&quot; caCertificateFile=&quot;conf/ca.pem&quot;&gt;
+        &lt;Certificate certificateKeyFile=&quot;conf/domain.key&quot;
+                     certificateFile=&quot;conf/domain.crt&quot;
+                     type=&quot;RSA&quot; /&gt;
+    &lt;/SSLHostConfig&gt;
+
+    &lt;SSLHostConfig hostName=&quot;x1.domain.top&quot; caCertificateFile=&quot;conf/ca.pem&quot;&gt;
+        &lt;Certificate certificateKeyFile=&quot;conf/x1.key&quot;
+                     certificateFile=&quot;conf/x1.crt&quot;
+                     type=&quot;RSA&quot; /&gt;
+    &lt;/SSLHostConfig&gt;
+&lt;/Connector&gt;
+</code></pre>
+</li>
+</ol>
+</li>
+<li><p>全局/局部 url 转换成 https 访问配置（需 <a href="#tomcat-setup-ssl">Tomcat 安装 SSL 证书</a>）<br>  编辑 $CATALINA_HOME/webapps/*/WEB-INF/web.xml 文件，在 <code>/web-app</code> 节点下，添加 security-constraint 配置如下</p>
+<pre><code class="xml">&lt;security-constraint&gt;
+    &lt;web-resource-collection&gt;
+        &lt;web-resource-name&gt;SSL&lt;/web-resource-name&gt;
+        &lt;url-pattern&gt;/*&lt;/url-pattern&gt;&lt;!-- 全局转换成 https 访问 --&gt;
+        &lt;!-- &lt;url-pattern&gt;/test/*&lt;/url-pattern&gt; --&gt;&lt;!-- 局部使用 https 访问，即当访问路径包括 test 的时候，就会强制转换为 https --&gt;
+    &lt;/web-resource-collection&gt;
+    &lt;user-data-constraint&gt;
+        &lt;transport-guarantee&gt;CONFIDENTIAL&lt;/transport-guarantee&gt;
+    &lt;/user-data-constraint&gt;
+&lt;/security-constraint&gt;
+</code></pre>
+<blockquote>
+<p>web-resource-collection 节点可以配置多个，url-pattern 为配置需要强制 https 的 url</p>
+</blockquote>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/30855281/tomcat-support-for-http-2-0">配置 http 2.0（需 tomcat 版本 &gt;= 8.5）</a>  </p>
+<ol>
+<li><a href="#setup-native-connector">安装 Tomcat Native Connector</a></li>
+<li>配置证书（http 2.0 需强制开启 https）<br> <code>openssl req -nodes -new -x509 -keyout $CATALINA_HOME/conf/localhost-rsa-key.pem -out $CATALINA_HOME/conf/localhost-rsa-cert.pem</code></li>
+<li>编辑 $CATALINA_HOME/conf/server.xml 文件，配置 <code>/Server/Service/Connector</code> 节点如下<pre><code class="xml">&lt;Connector port=&quot;8443&quot; protocol=&quot;org.apache.coyote.http11.Http11AprProtocol&quot;
+       maxThreads=&quot;150&quot; SSLEnabled=&quot;true&quot; &gt;
+    &lt;UpgradeProtocol className=&quot;org.apache.coyote.http2.Http2Protocol&quot; /&gt;
+    &lt;SSLHostConfig&gt;
+        &lt;Certificate certificateKeyFile=&quot;conf/localhost-rsa-key.pem&quot;
+                    certificateFile=&quot;conf/localhost-rsa-cert.pem&quot;
+                    type=&quot;RSA&quot; /&gt;
+    &lt;/SSLHostConfig&gt;
+&lt;/Connector&gt;
+</code></pre>
+</li>
+</ol>
+</li>
+<li><p>开启远程调试</p>
+<ul>
+<li>windows 环境下，在 $CATALINA_HOME/bin/catalina.bat 中添加<br>  <code>SET CATALINA_OPTS=-server -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8899</code> </li>
+<li>linux 环境下，在 $CATALINA_HOME/bin/catalina.sh 中添加<br>  <code>CATALINA_OPTS=&quot;-server -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8899&quot;</code></li>
+</ul>
+</li>
+<li><p>监控资源文件，文件修改了，则自动重新加载该应用<br>  编辑配置文件（即<a href="#config-datasource">在 Tomcat 中配置数据源</a>中涉及的配置文件），在 <code>//Context</code> 节点下，添加 WatchedResource 配置如下</p>
+<pre><code class="xml">&lt;WatchedResource&gt;WEB-INF/web.xml&lt;/WatchedResource&gt;
+</code></pre>
+<p>  可配置多个 WatchedResource 节点以监听不同文件，当 WatchedResource 中的文件发生修改变动时，当前的 webapp 将自动重新加载</p>
+</li>
+<li><p><span id="tomcat-protocol"><a target="_blank" rel="noopener" href="https://www.cnblogs.com/dijia478/p/8085143.html">Tomcat 在 Linux 服务器上的 BIO、NIO、APR 模式设置</a></span></p>
+<ul>
+<li>BIO 模式<br>  BIO（blocking I/O），顾名思义，即阻塞式 I/O 操作，表示Tomcat使用的是传统的 Java I/O 操作（即 java.io 包及其子包）。Tomcat 在默认情况下，就是以 bio 模式运行的。遗憾的是，就一般而言，bio 模式是三种运行模式中性能最低的一种。我们可以通过 Tomcat Manager 来查看服务器的当前状态。<pre><code class="xml">&lt;Connector port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot;
+       connectionTimeout=&quot;20000&quot;
+       redirectPort=&quot;8443&quot; /&gt;
+</code></pre>
+</li>
+<li>NIO 模式<br>  NIO 是 Java SE 1.4 及后续版本提供的一种新的 I/O 操作方式（即 java.nio 包及其子包）。Java nio 是一个基于缓冲区、并能提供非阻塞 I/O 操作的 Java API，因此nio也被看成是 non-blocking I/O 的缩写。它拥有比传统 I/O 操作（bio）更好的并发运行性能。<pre><code class="xml">&lt;Connector port=&quot;8080&quot; protocol=&quot;org.apache.coyote.http11.Http11NioProtocol&quot;
+       connectionTimeout=&quot;20000&quot;
+       redirectPort=&quot;8443&quot; /&gt;
+</code></pre>
+</li>
+<li>APR 模式<br>  APR（Apache Portable Runtime/Apache 可移植运行库），是 Apache HTTP 服务器的支持库。你可以简单地理解为，Tomcat 将以 JNI 的形式调用 Apache HTTP 服务器的核心动态链接库来处理文件读取或网络传输操作，从而大大地提高 Tomcat 对静态文件的处理性能。Tomcat apr 也是在 Tomcat 上运行高并发应用的首选模式。（需依赖安装 apr、apr-util、tomcat-native）<ol>
+<li><span id="setup-native-connector">下载并安装 <a target="_blank" rel="noopener" href="https://tomcat.apache.org/download-native.cgi">Tomcat Native Connector</a></span><ul>
+<li>windows<br>  <code>curl -O http://mirror.bit.edu.cn/apache/tomcat/tomcat-connectors/native/1.1.34/binaries/tomcat-native-1.1.34-win32-bin.zip</code><br>  <code>unzip -j -q tomcat-native-1.1.34-win32-bin.zip &#39;bin/x64/tcnative-1.dll&#39; -d $CATALINA_HOME/bin</code></li>
+</ul>
+</li>
+<li>编辑 $CATALINA_HOME/conf/server.xml 文件，修改属性 <code>/Server/Service/Connector@protocol</code> 为 <code>org.apache.coyote.http11.Http11AprProtocol</code> 如下<pre><code class="xml">&lt;Connector port=&quot;8080&quot; protocol=&quot;org.apache.coyote.http11.Http11AprProtocol&quot;
+    connectionTimeout=&quot;20000&quot;
+    redirectPort=&quot;8443&quot; /&gt;
+</code></pre>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p><span id="config-datasource">在 Tomcat 中配置数据源</span></p>
+<ol>
+<li>编辑配置文件<ul>
+<li><span id="config-datasource-method-1">方法一：在 $CATALINA_HOME/conf/Catalina/localhost 目录下创建配置文件（文件名称应与 webapp 同名，如 solr.xml，对应 webapps 目录下的 solr 应用），配置信息如下</span><pre><code class="xml">&lt;?xml version=&#39;1.0&#39; encoding=&#39;utf-8&#39;?&gt;
+&lt;Context path=&quot;/solr&quot; docBase=&quot;solr&quot; workDir=&quot;solr&quot;&gt;
+    &lt;Resource name=&quot;jdbc/solr&quot; type=&quot;javax.sql.DataSource&quot; auth=&quot;Container&quot; driverClassName=&quot;com.mysql.jdbc.Driver&quot; url=&quot;jdbc:mysql://127.0.0.1:3306/solr&quot; validationQuery=&quot;select 1 from dual&quot; username=&quot;test&quot; password=&quot;123456&quot; /&gt;
+&lt;/Context&gt;
+</code></pre>
+</li>
+<li>方法二：编辑 $CATALINA_HOME/conf/context.xml 文件（区别与 server.xml，该文件修改后，tomcat 将会自动重新加载该文件，而无需重启 tomcat）<br>  在 <code>/</code> 节点下，添加 Context 配置信息（同<a href="#config-datasource-method-1">方法一</a>的 Context 配置信息）</li>
+<li>方法三：编辑 $CATALINA_HOME/conf/server.xml 文件（不推荐，server.xml 是不可动态重加载的资源，即修改后必须重启 tomcat 才会生效）<br>  在 <code>/Server/Service/Engine</code> 节点下，添加 Context 配置信息（同<a href="#config-datasource-method-1">方法一</a>的 Context 配置信息）</li>
+</ul>
+</li>
+<li>添加数据库驱动引用（如 mysql-connector-java-6.0.6.jar）至 $CATALINA_HOME/lib 中</li>
+</ol>
+</li>
+<li><p>在 webapp 中引用 Tomcat 中配置的数据源</p>
+<ol>
+<li><p><a href="#config-datasource">在 Tomcat 中配置数据源</a></p>
+</li>
+<li><p>编辑 $CATALINA_HOME/webapps/*/WEB-INF/web.xml 文件，在 <code>/web-app</code> 节点下，添加 resource-ref 配置如下</p>
+<pre><code class="xml">&lt;resource-ref&gt;
+    &lt;res-ref-name&gt;jdbc/solr&lt;/res-ref-name&gt;
+    &lt;res-type&gt;javax.sql.DataSource&lt;/res-type&gt;
+    &lt;res-auth&gt;Container&lt;/res-auth&gt;
+&lt;/resource-ref&gt;
+</code></pre>
+</li>
+<li><p>添加数据库驱动引用（如 mysql-connector-java-6.0.6.jar）至 $CATALINA_HOME/webapps/*/WEB-INF/lib 目录下</p>
+</li>
+<li><p>使用</p>
+<pre><code class="java">&lt;%@ page language=&quot;java&quot; import=&quot;java.util.*&quot; pageEncoding=&quot;UTF-8&quot;%&gt;
+&lt;%@ page import=&quot;java.sql.*,javax.sql.*,javax.naming.*&quot; %&gt;
+
+&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;JNDI Test&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;%
+            Connection connection = null;
+            try &#123;
+                // 初始化名称查找上下文
+                Context ctx = new InitialContext();
+
+                // 通过 JNDI 名称找到 DataSource，格式为 java:comp/env/DataSourceName
+                DataSource ds = (DataSource) ctx.lookup(&quot;java:comp/env/jdbc/solr&quot;);
+
+                // 通过 DataSource 取得一个连接
+                connection = ds.getConnection();
+
+                // 操作数据库，实现增删改查等
+                // ...
+            &#125; catch (NamingException e) &#123;
+                e.printStackTrace();
+            &#125; catch (SQLException e) &#123;
+                e.printStackTrace();
+            &#125; finally &#123;
+                // 关闭数据库，关闭的时候是将连接放回到连接池之中
+                connection.close();
+            &#125;
+        %&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</li>
+</ol>
+</li>
+<li><p>认证配置<br>  Tomcat 支持四种认证方式：<a target="_blank" rel="noopener" href="http://www.cnblogs.com/dengyungao/p/7542241.html">BASIC（基本验证）、DIGEST（摘要验证）、FORM（基于表单的验证）、CLIENT-CERT（客户证书验证）</a></p>
+<ul>
+<li><p>BASIC（基本验证）</p>
+<ol>
+<li><p><span id="config-security-constraint-for-basic">配置 security-constraint</span><br> 编辑 $CATALINA_HOME/webapps/*/WEB-INF/web.xml 文件，在 <code>/web-app</code> 节点下，添加配置如下</p>
+<pre><code class="xml">&lt;security-constraint&gt;
+    &lt;web-resource-collection&gt;
+        &lt;web-resource-name&gt;auth field&lt;/web-resource-name&gt;
+        &lt;url-pattern&gt;/*&lt;/url-pattern&gt;
+        &lt;!-- &lt;url-pattern&gt;/ps/*&lt;/url-pattern&gt; --&gt;
+        &lt;!-- &lt;http-method&gt;GET&lt;/http-method&gt; --&gt;
+    &lt;/web-resource-collection&gt;
+    &lt;auth-constraint&gt;
+        &lt;role-name&gt;admin&lt;/role-name&gt;
+    &lt;/auth-constraint&gt;
+&lt;/security-constraint&gt;
+&lt;login-config&gt;
+    &lt;auth-method&gt;BASIC&lt;/auth-method&gt;
+&lt;/login-config&gt;
+</code></pre>
+<blockquote>
+<p>其中</p>
+<ul>
+<li>url-pattern 配置匹配的 url，可配置多个进行细化管理</li>
+<li>http-method 配置 http 请求的方法，可配置多个，值可为 GET、POST、PUT、DELETE</li>
+<li>role-name 配置角色名称</li>
+<li>auth-method 配置认证方式，值可为 BASIC（基本验证）、DIGEST（摘要验证，只支持 md5 算法？）以及（不常用）FORM（基于表单的验证）、CLIENT-CERT（客户证书验证）</li>
+</ul>
+</blockquote>
+</li>
+<li><p><span id="config-username-and-passwd-for-basic">配置用户名、密码</span></p>
+<ul>
+<li><p>方法一：使用配置文件 $CATALINA_HOME/conf/tomcat-users.xml 管理用户名、密码、角色  </p>
+<ol>
+<li><p>配置 Resource（默认情况下，tomcat 已存在该配置，可跳过）<br> 编辑 $CATALINA_HOME/conf/server.xml 文件，在 <code>/Server/GlobalNamingResources</code> 节点下，配置 Resource 如下</p>
+<pre><code class="xml">&lt;Resource name=&quot;UserDatabase&quot; auth=&quot;Container&quot;
+    type=&quot;org.apache.catalina.UserDatabase&quot;
+    description=&quot;User database that can be updated and saved&quot;
+    factory=&quot;org.apache.catalina.users.MemoryUserDatabaseFactory&quot;
+    pathname=&quot;conf/tomcat-users.xml&quot; /&gt;
+</code></pre>
+</li>
+<li><p><span id="config-tomcat-users-for-basic">配置用户角色、用户名、密码</span><br> 编辑 tomcat-users.xml 文件，在 <code>/tomcat-users</code> 节点下，配置角色、用户如下</p>
+<pre><code class="xml">&lt;role rolename=&quot;admin&quot; /&gt;
+
+&lt;!-- 默认未配置 CredentialHandler，则使用明文密码，不推荐 --&gt;
+&lt;!-- &lt;user username=&quot;admin&quot; password=&quot;admin&quot; roles=&quot;admin&quot; /&gt; --&gt;
+
+&lt;!-- 配置 MessageDigestCredentialHandler 指定使用 MD5 摘要算法 --&gt;
+&lt;!-- &lt;user username=&quot;admin&quot; password=&quot;21232f297a57a5a743894a0e4a801fc3&quot; roles=&quot;admin&quot; /&gt; --&gt;
+&lt;!-- &lt;user username=&quot;admin&quot; password=&quot;03552ca004c4d197a06f769e36825b3666b27b10a74a035089f27cf48d680f27$1$9299434ea39a82833950ef4c6d8d81af&quot; roles=&quot;admin&quot; /&gt; --&gt;
+
+&lt;!-- 配置 MessageDigestCredentialHandler 指定使用 SHA-256 摘要算法 --&gt;
+&lt;!-- &lt;user username=&quot;admin&quot; password=&quot;8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918&quot; roles=&quot;admin&quot; /&gt; --&gt;
+
+&lt;!-- 配置 SecretKeyCredentialHandler 指定使用 PBKDF2WithHmacSHA512 算法 --&gt;
+&lt;user username=&quot;admin&quot; password=&quot;9fac50c23deceebc5884015289b111c9$100000$2087629b338449c8446e11ad5d0f8a0a8264c641af10b0ba4ee7a3a5f2df5ae5&quot; roles=&quot;admin&quot; /&gt;
+</code></pre>
+<blockquote>
+<p>其中，若指定摘要算法，则 password 需要进行摘要处理，可使用 <code>digest.(sh|bat) -a $algorithm (-s 0)? $password</code> 命令获取密码（如 “admin”）的摘要值</p>
+<ul>
+<li><p>指定使用 MD5 摘要算法<br><code>./$CATALINA_HOME/bin/digest.sh -a md5 -s 0 admin</code><br><font color="grey">返回结果如 admin:21232f297a57a5a743894a0e4a801fc3</font><br><code>./$CATALINA_HOME/bin/digest.sh -a md5 admin</code><br><font color="grey">返回结果如 admin:03552ca004c4d197a06f769e36825b3666b27b10a74a035089f27cf48d680f27$1$9299434ea39a82833950ef4c6d8d81af</font></p>
+</li>
+<li><p>指定使用 SHA-256 摘要算法<br><code>./$CATALINA_HOME/bin/digest.sh -a sha-256 -s 0 admin</code><br><font color="grey">返回结果如 admin:8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918</font></p>
+</li>
+<li><p>指定使用 PBKDF2WithHmacSHA512 算法<br><code>./$CATALINA_HOME/bin/digest.sh -a PBKDF2WithHmacSHA512 -i 100000 -s 16 -k 256 -h org.apache.catalina.realm.SecretKeyCredentialHandler admin</code><br><font color="grey">返回结果如 admin:9fac50c23deceebc5884015289b111c9$100000$2087629b338449c8446e11ad5d0f8a0a8264c641af10b0ba4ee7a3a5f2df5ae5</font></p>
+</li>
+</ul>
+</blockquote>
+</li>
+<li><p><span id="config-credentialHandler-for-basic"><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/32178822/tomcat-understanding-credentialhandler">配置 CredentialHandler（可选，仅适用于指定使用摘要算法，其他方式可跳过该步骤）</a></span><br> 编辑 server.xml 文件，在 <code>/Server/Service/Engine/Realm[@className=&quot;org.apache.catalina.realm.LockOutRealm&quot;]/Realm[@className=&quot;org.apache.catalina.realm.UserDatabaseRealm&quot;]</code> 节点下，配置 CredentialHandler 如下</p>
+<pre><code class="xml">&lt;!-- 配置 MessageDigestCredentialHandler 指定使用 MD5 摘要算法 --&gt;
+&lt;!-- &lt;CredentialHandler className=&quot;org.apache.catalina.realm.MessageDigestCredentialHandler&quot; algorithm=&quot;MD5&quot; /&gt; --&gt;
+
+&lt;!-- 配置 MessageDigestCredentialHandler 指定使用 SHA-256 摘要算法 --&gt;
+&lt;!-- &lt;CredentialHandler className=&quot;org.apache.catalina.realm.MessageDigestCredentialHandler&quot; algorithm=&quot;SHA-256&quot; /&gt; --&gt;
+
+&lt;!-- 配置 SecretKeyCredentialHandler 指定使用 PBKDF2WithHmacSHA512 算法 --&gt;
+&lt;CredentialHandler className=&quot;org.apache.catalina.realm.SecretKeyCredentialHandler&quot;
+    algorithm=&quot;PBKDF2WithHmacSHA512&quot;
+    iterations=&quot;100000&quot;
+    keyLength=&quot;256&quot;
+    saltLength=&quot;16&quot; /&gt;
+</code></pre>
+</li>
+</ol>
+</li>
+<li><p>方法二：<a target="_blank" rel="noopener" href="http://lsz1023-126-com.iteye.com/blog/2072066">使用数据库管理用户名、密码、角色</a>  </p>
+<ol>
+<li><p><span id="config-db-users">准备数据库，如下</span></p>
+<pre><code class="sql">create database db_users;
+
+use db_users;
+
+create table t_users (
+    username varchar(20) not null,
+    password varchar(64) not null,
+    primary key(username)
+);
+
+create table t_roles (
+    username varchar(20) not null,
+    rolename varchar(20) not null,
+    primary key(username, rolename)
+);
+
+insert into t_users values(&#39;zhangsan&#39;, &#39;123456&#39;);
+insert into t_users values(&#39;lisi&#39;, &#39;123456&#39;);
+
+insert into t_roles values(&#39;zhangsan&#39;, &#39;admin&#39;);
+insert into t_roles values(&#39;zhangsan&#39;, &#39;tomcat&#39;);
+insert into t_roles values(&#39;lisi&#39;, &#39;tomcat&#39;);
+
+commit;
+</code></pre>
+</li>
+<li><p><span id="config-realm">配置 Context</span><br> 如编辑 $CATALINA_HOME/conf/context.xml 文件，在 <code>/Context</code> 节点下添加 Realm 配置如下</p>
+<pre><code class="xml">&lt;Realm className=&quot;org.apache.catalina.realm.JDBCRealm&quot;
+    connectionName=&quot;test&quot; connectionPassword=&quot;123456&quot;
+    connectionURL=&quot;jdbc:mysql://192.168.128.137:3306/db_users&quot;
+    driverName=&quot;com.mysql.jdbc.Driver&quot;
+    userTable=&quot;t_users&quot;
+    userRoleTable=&quot;t_roles&quot;
+    userNameCol=&quot;username&quot;
+    userCredCol=&quot;password&quot;
+    roleNameCol=&quot;rolename&quot;/&gt;
+</code></pre>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>DIGEST（摘要验证，当前 tomcat 版本仅支持 md5 算法）</p>
+<ol>
+<li>配置 security-constraint<br> 参考配置 <a href="#config-security-constraint-for-basic">BASIC</a><br> 其中 auth-method 需要修改为 DIGEST，且需要定义 realm-name，如下<pre><code class="xml">&lt;security-constraint&gt;
+    ...
+&lt;/security-constraint&gt;
+&lt;login-config&gt;
+    &lt;auth-method&gt;DIGEST&lt;/auth-method&gt;
+    &lt;realm-name&gt;app-realm&lt;/realm-name&gt;
+&lt;/login-config&gt;
+</code></pre>
+</li>
+<li>配置用户名、密码<br> 参考配置 <a href="#config-username-and-passwd-for-basic">BASIC</a><br> 其中<strong>方法一：使用配置文件</strong>中的  <ul>
+<li>步骤 <a href="#config-tomcat-users-for-basic"><strong>配置用户角色、用户名、密码</strong></a>，配置用户信息需要修改如下<pre><code class="xml">&lt;user username=&quot;admin&quot; password=&quot;817440541acc5a8e3ea991b2d43533f3&quot; roles=&quot;admin&quot; /&gt;
+</code></pre>
+<blockquote>
+<p>其中，若指定摘要算法，则 password 需要进行摘要处理，区别于 BASIC 方式，DIGEST 方式需使用 <code>digest.(sh|bat) -a $algorithm (-s 0)? $username:$realm-name:$password</code> 命令获取密码（如 “admin”，同时用户名为 admin、realm-name 为 app-realm）的摘要值</p>
+<ul>
+<li>指定使用 MD5 摘要算法<br><code>./$CATALINA_HOME/bin/digest.sh -a md5 -s 0 admin:app-realm:admin</code><br><font color="grey">返回结果如 admin:app-realm:admin:817440541acc5a8e3ea991b2d43533f3</font></li>
+</ul>
+</blockquote>
+</li>
+<li>步骤 <a href="#config-credentialHandler-for-basic"><strong>配置 CredentialHandler</strong></a>，需要使用 MD5 摘要算法，如下<pre><code class="xml">&lt;CredentialHandler className=&quot;org.apache.catalina.realm.MessageDigestCredentialHandler&quot; algorithm=&quot;MD5&quot; /&gt;
+</code></pre>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>FORM（基于表单的验证）</p>
+<ol>
+<li>配置 security-constraint<br> 参考配置 <a href="#config-security-constraint-for-basic">BASIC</a><br> 其中 login-config 配置需要指定登录页面如下  <pre><code class="xml">&lt;security-constraint&gt;
+    ...
+&lt;/security-constraint&gt;
+&lt;login-config&gt;
+    &lt;auth-method&gt;FORM&lt;/auth-method&gt;
+    &lt;form-login-config&gt;
+        &lt;form-login-page&gt;/form/login.html&lt;/form-login-page&gt;
+        &lt;form-error-page&gt;/form/error.html&lt;/form-error-page&gt;
+    &lt;/form-login-config&gt;
+&lt;/login-config&gt;
+</code></pre>
+</li>
+<li>配置用户名、密码<br> 参考配置 <a href="#config-username-and-passwd-for-basic">BASIC</a></li>
+</ol>
+</li>
+<li><p>CLIENT-CERT（客户证书验证）</p>
+<ol>
+<li>生成证书<ol>
+<li>生成服务器证书容器<br> <code>keytool -validity 36500 -genkey -v -alias server -keyalg RSA -keystore server.jks -dname &quot;CN=192.168.0.104,OU=xx,O=xx,L=shanghai,ST=shanghai,c=cn&quot; -storepass passwd01 -keypass passwd01</code></li>
+<li>生成信赖的客户端证书容器<br> <code>keytool -validity 36500 -genkey -v -alias server_trust -keyalg RSA -keystore server_trust.jks -dname &quot;CN=192.168.0.104,OU=xx,O=xx,L=shanghai,ST=shanghai,c=cn&quot; -storepass passwd02 -keypass passwd02</code></li>
+<li>生成客户端用秘钥对<br> <code>keytool -validity 36500 -genkeypair -v -alias client_01 -keyalg RSA -storetype PKCS12 -keystore client_01.p12 -dname &quot;CN=client_01,OU=xx,O=xx,L=shanghai,ST=shanghai,c=cn&quot; -storepass passwd03 -keypass passwd03</code><br> 导出客户端用证书<br> <code>keytool -export -v -alias client_01 -keystore client_01.p12 -storetype PKCS12 -storepass passwd03 -rfc -file client_01.cer</code></li>
+<li>将客户端用的证书导入至服务端信赖的客户端的证书容器<br> <code>keytool -import -v -alias client_01 -file client_01.cer -keystore server_trust.jks -storepass passwd02</code></li>
+</ol>
+</li>
+<li>配置 https<br> 编辑 $CATALINA_HOME/conf/server.xml，配置 <code>/Server/Service/Connector[@port=&quot;8443&quot;]</code> 节点如下  <pre><code class="xml">&lt;Connector port=&quot;8443&quot; protocol=&quot;HTTP/1.1&quot; SSLEnabled=&quot;true&quot;
+           maxThreads=&quot;150&quot; scheme=&quot;https&quot; secure=&quot;true&quot;
+           clientAuth=&quot;true&quot; sslProtocol=&quot;TLS&quot;
+           keystoreFile=&quot;$&#123;catalina.base&#125;/conf/server.jks&quot; keystorePass=&quot;passwd01&quot;
+           truststoreFile=&quot;$&#123;catalina.base&#125;/conf/server_trust.jks&quot; truststorePass=&quot;passwd02&quot; /&gt;
+</code></pre>
+</li>
+<li>设置强制 ssl 访问<br> 编辑 $CATALINA_HOME/*/web.xml，在 <code>/web-app</code> 节点下添加配置 security-constraint 如下<pre><code class="xml">&lt;!-- 强制SSL，即http请求自动跳转成https --&gt; 
+&lt;security-constraint&gt;
+    &lt;web-resource-collection&gt;
+        &lt;web-resource-name&gt;SSL&lt;/web-resource-name&gt;
+        &lt;url-pattern&gt;/*&lt;/url-pattern&gt;&lt;!-- 全站使用SSL --&gt;
+    &lt;/web-resource-collection&gt;
+    &lt;user-data-constraint&gt;
+        &lt;description&gt;SSL required&lt;/description&gt;
+        &lt;!-- CONFIDENTIAL: 确保传输数据不被修改，不能被查看 --&gt;
+        &lt;!-- INTEGRAL: 确保传输数据不被修改 --&gt;
+        &lt;!-- NONE: 不做特殊限制--&gt;
+        &lt;transport-guarantee&gt;CONFIDENTIAL&lt;/transport-guarantee&gt;
+    &lt;/user-data-constraint&gt;
+&lt;/security-constraint&gt;
+</code></pre>
+</li>
+<li>客户端PC导入上面生成的 client_01.cer 以及 client_01.p12 后，重启浏览器，即可访问。（初次访问会弹出选择证书的对话框，选中导入的cer证书即可）</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>黑白名单配置</p>
+<ol>
+<li>编辑 $CATALINA_HOME/conf/server.xml 文件，在 <code>/Server/Service/Engine</code> 节点下、或在 <code>/Server/Service/Engine/Host</code> 节点下、或在 <code>/Server/Service/Engine/Host/Context</code> 节点下，添加 Valve 配置如下<pre><code class="xml">&lt;Valve className=&quot;org.apache.catalina.valves.RemoteAddrValve&quot; allow=&quot;&quot; deny=&quot;10.17.23.19[1-3]|10.54.233.1(1[6-9]|2[0-6])|62.138.2.(209|12(2|3)|21(3|4))|10.151.(149.222|42.61)|10.239.228.202&quot; denyStatus=&quot;403&quot; /&gt;
+</code></pre>
+ 其中 allow 为白名单，deny 为黑名单，支持正则配置匹配，denyStatus 为黑名单拜访的 http 状态码</li>
+</ol>
+</li>
+<li><p>虚拟主机配置</p>
+<ol>
+<li><p>编辑 $CATALINA_HOME/conf/server.xml 文件，在 <code>/Server/Service/Engine</code> 节点下，添加一个或多个 Host 配置如下</p>
+<pre><code class="xml">&lt;Host name=&quot;www.simple.com&quot;  appBase=&quot;webapps&quot; unpackWARs=&quot;false&quot; autoDeploy=&quot;false&quot;&gt;
+&lt;/Host&gt;
+
+&lt;Host name=&quot;localhost&quot;  appBase=&quot;webapps&quot; unpackWARs=&quot;false&quot; autoDeploy=&quot;false&quot;&gt;
+    &lt;Valve className=&quot;org.apache.catalina.valves.AccessLogValve&quot; directory=&quot;logs&quot; prefix=&quot;localhost_access_log&quot; suffix=&quot;.txt&quot; pattern=&quot;%h %l %u %t &amp;quot;%r&amp;quot; %s %b&quot; /&gt;
+
+    &lt;Context path=&quot;/solr&quot; docBase=&quot;solr&quot; reloadable=&quot;true&quot;/&gt;
+&lt;/Host&gt;
+</code></pre>
+<blockquote>
+<ul>
+<li><p>启动时项目重复加载的问题及解决办法<br>  <font color="grey">Tomcat 在加载工程时首先会根据 <code>//Context</code> 配置内容生成第一个 StandardContext 对象，并加载一次项目。加载完成后会根据 &gt; <code>//Host/appBase</code>（默认不填则为 webapps）配置内容生成第二个 StandardContext，并再加载一次相应的工程（或 war 包）。</font><br>  如配置</p>
+<pre><code class="xml">&lt;Host name=&quot;localhost&quot;  appBase=&quot;webapps&quot; unpackWARs=&quot;false&quot; autoDeploy=&quot;false&quot;&gt;
+    &lt;Context path=&quot;/&quot; docBase=&quot;solr&quot; reloadable=&quot;true&quot;/&gt;
+&lt;/Host&gt;
+</code></pre>
+<p>  既配置 Context，又在 webapps 目录下放置了工程目录，Tomcat 针对同一项目 solr 生成两个 StandardContext 是因为其名称不同，因而当作是两个 Context，&gt; 所以加载了两次。第一个 StandardContext 所对应的名称是由标签 Context 的配置来决定的，而第二个 StandardContext 的名称是由项目名称 “/solr” 决定的。&gt;<br>  <font color="green">解决方法：</p>
+<ul>
+<li><p>方法一：<br>  将对应的工程目录如 $CATALINA_HOME/webapps/solr 重命名为 $CATALINA_HOME/webapps/ROOT</p>
+</li>
+<li><p>方法二：<br>  编辑 server.xml，配置 <code>//Context@path</code> 为任意名称如 /solr</p>
+</li>
+<li><p>方法三：<br>  编辑 server.xml，配置 <code>//Context@name</code> 为项目名称如 /solr（其中根目录符号 “/“ 为必须）</p>
+</font>
+</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://tomcat.apache.org/tomcat-8.5-doc/cluster-howto.html">配置并使用内置的集群功能</a></p>
+<ol>
+<li>配置 web.xml，开启集群功能（web 工程中的 web.xml 文件中需要配置有 <distributable/> 这个元素才能使用 tomcat 内置的 cluster 功能）<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;web-app ...&gt;
+    ...
+    &lt;distributable/&gt;
+&lt;/web-app&gt;
+</code></pre>
+</li>
+<li>配置 server.xml，在 Engine 节点下配置集群组播地址（见 Cluster 节点及其子节点配置，注意两个 tomcat 中的 path 必须一致，不然会报错(Context manager doesn’t exist)。只有 path 一致，两个 tomcat 才能同步 session）<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;Server ...&gt;
+    ...
+    &lt;Service name=&quot;Catalina&quot;&gt;
+        ...
+        &lt;Engine name=&quot;Catalina&quot; defaultHost=&quot;localhost&quot;&gt;
+            &lt;Cluster className=&quot;org.apache.catalina.ha.tcp.SimpleTcpCluster&quot;
+                        channelSendOptions=&quot;8&quot;&gt;
+                &lt;Manager className=&quot;org.apache.catalina.ha.session.DeltaManager&quot;
+                        expireSessionsOnShutdown=&quot;false&quot;
+                        notifyListenersOnReplication=&quot;true&quot;/&gt;
+                &lt;Channel className=&quot;org.apache.catalina.tribes.group.GroupChannel&quot;&gt;
+                &lt;Membership className=&quot;org.apache.catalina.tribes.membership.McastService&quot;
+                            address=&quot;228.0.0.4&quot;
+                            port=&quot;45564&quot;
+                            frequency=&quot;500&quot;
+                            dropTime=&quot;3000&quot;/&gt;
+                &lt;Receiver className=&quot;org.apache.catalina.tribes.transport.nio.NioReceiver&quot;
+                            address=&quot;auto&quot;
+                            port=&quot;4000&quot;
+                            autoBind=&quot;100&quot;
+                            selectorTimeout=&quot;5000&quot;
+                            maxThreads=&quot;6&quot;/&gt;
+                &lt;Sender className=&quot;org.apache.catalina.tribes.transport.ReplicationTransmitter&quot;&gt;
+                    &lt;Transport className=&quot;org.apache.catalina.tribes.transport.nio.PooledParallelSender&quot;/&gt;
+                &lt;/Sender&gt;
+                &lt;Interceptor className=&quot;org.apache.catalina.tribes.group.interceptors.TcpFailureDetector&quot;/&gt;
+                &lt;Interceptor className=&quot;org.apache.catalina.tribes.group.interceptors.MessageDispatchInterceptor&quot;/&gt;
+                &lt;/Channel&gt;
+                &lt;Valve className=&quot;org.apache.catalina.ha.tcp.ReplicationValve&quot;
+                        filter=&quot;&quot;/&gt;
+                &lt;Valve className=&quot;org.apache.catalina.ha.session.JvmRouteBinderValve&quot;/&gt;
+                &lt;Deployer className=&quot;org.apache.catalina.ha.deploy.FarmWarDeployer&quot;
+                        tempDir=&quot;/tmp/war-temp/&quot;
+                        deployDir=&quot;/tmp/war-deploy/&quot;
+                        watchDir=&quot;/tmp/war-listen/&quot;
+                        watchEnabled=&quot;false&quot;/&gt;
+                &lt;ClusterListener className=&quot;org.apache.catalina.ha.session.ClusterSessionListener&quot;/&gt;
+            &lt;/Cluster&gt;
+            ...
+        &lt;/Engine&gt;
+    &lt;/Service&gt;
+&lt;/Server&gt;
+</code></pre>
+</li>
+</ol>
+</li>
+</ul>
+<details>
+<summary>安全加固</summary>
+
+<ul>
+<li><p><span id="security-datasource"><a target="_blank" rel="noopener" href="http://www.cnblogs.com/benefitworld/p/5832668.html">安全加固：Tomcat 数据源连接池加密 password</a></span></p>
+<ol>
+<li><p>构建 DataSourceFactory 包</p>
+<ol>
+<li><p>切换目录至 $CATALINA_HOME/temp 目录下，创建目录<br> <code>mkdir -p ./pers/sunke/tomcat/dbcp</code></p>
+</li>
+<li><p>新建文件 EncryptedDataSourceFactory.java<br> <code>touch ./pers/sunke/tomcat/dbcp/EncryptedDataSourceFactory.java</code><br> 编辑内容如下</p>
+<pre><code class="java">package pers.sunke.tomcat.dbcp;
+
+import java.security.InvalidAlgorithmParameterException;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
+import java.util.Base64;
+import java.util.Enumeration;
+import java.util.Hashtable;
+import java.util.ResourceBundle;
+
+import javax.crypto.BadPaddingException;
+import javax.crypto.Cipher;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.NoSuchPaddingException;
+import javax.crypto.spec.IvParameterSpec;
+import javax.crypto.spec.SecretKeySpec;
+import javax.naming.Context;
+import javax.naming.Name;
+import javax.naming.RefAddr;
+import javax.naming.Reference;
+import javax.naming.StringRefAddr;
+
+import org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory;
+
+public class EncryptedDataSourceFactory extends BasicDataSourceFactory &#123;
+
+    private static final String ALGORITHM = &quot;AES/CBC/PKCS5Padding&quot;;
+    private static final String KEYALGORITHM = &quot;AES&quot;;
+
+    // length of key should be 16 byte for 128 bit, 32 byte for 256 bit.
+    private static final String KEY = &quot;2QKH3XfuIKALMwnk&quot;;
+    // length of iv must be 16 byte.(equal to the length of a data block in aes: 16 byte or 128 bit)
+    private static final String IV = &quot;RAk0ygQXIX2ZpMQH&quot;;
+
+    private static final String PROP_PASSWORD = &quot;password&quot;;
+
+    @Override
+    public Object getObjectInstance(Object obj, Name name, Context nameCtx, Hashtable&lt;?, ?&gt; environment) throws Exception &#123;
+        try &#123;
+            if (obj instanceof Reference) &#123;
+                Reference ref = (Reference) obj;
+                StringRefAddr passwordRefAddr = (StringRefAddr) ref.get(PROP_PASSWORD);
+                if (null != passwordRefAddr) &#123;
+                    String encryptedPwd = (String) passwordRefAddr.getContent();
+                    String cleartextPwd = decrypt(encryptedPwd);
+                    int index = find(PROP_PASSWORD, ref);
+                    if (index &gt;= 0) &#123;
+                        ref.remove(index);
+                        ref.add(index, new StringRefAddr(PROP_PASSWORD, cleartextPwd));
+                    &#125;
+                &#125;
+            &#125;
+        &#125; catch (Exception e) &#123;
+            System.err.println(&quot;Failed to decrypt password. Please check DataSource definition.&quot;);
+            throw e;
+        &#125;
+        return super.getObjectInstance(obj, name, nameCtx, environment);
+    &#125;
+
+    private int find(String addrType, Reference ref) throws Exception &#123;
+        Enumeration&lt;RefAddr&gt; enu = ref.getAll();
+        for (int i = 0; enu.hasMoreElements(); i++) &#123;
+            RefAddr addr = (RefAddr) enu.nextElement();
+            if (addr.getType().equals(addrType))
+                return i;
+        &#125;
+        return -1;
+    &#125;
+
+    public static String encrypt(String source) throws NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeyException, IllegalBlockSizeException, BadPaddingException, InvalidAlgorithmParameterException &#123;
+        Cipher cipher = Cipher.getInstance(ALGORITHM);
+        cipher.init(Cipher.ENCRYPT_MODE, new SecretKeySpec(KEY.getBytes(), KEYALGORITHM), new IvParameterSpec(IV.getBytes()));
+        return new String(Base64.getEncoder().encode(cipher.doFinal(source.getBytes())));
+    &#125;
+
+    public static String decrypt(String encryptSource) throws NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeyException, IllegalBlockSizeException, BadPaddingException, InvalidAlgorithmParameterException &#123;
+        Cipher cipher = Cipher.getInstance(ALGORITHM);
+        cipher.init(Cipher.DECRYPT_MODE, new SecretKeySpec(KEY.getBytes(), KEYALGORITHM), new IvParameterSpec(IV.getBytes()));
+        return new String(cipher.doFinal(Base64.getDecoder().decode(encryptSource.getBytes())));
+    &#125;
+
+    public static void main(String[] args) throws InvalidKeyException, NoSuchAlgorithmException, NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException, InvalidAlgorithmParameterException &#123;
+        try &#123;
+            if (args.length == 1) &#123;
+                System.out.println(encrypt(args[0]));
+            &#125; else if (args.length == 2 &amp;&amp; &quot;-e&quot;.equals(args[0])) &#123;
+                System.out.println(encrypt(args[1]));
+            &#125; else if (args.length == 2 &amp;&amp; &quot;-d&quot;.equals(args[0])) &#123;
+                System.out.println(decrypt(args[1]));
+            &#125; else &#123;
+                ResourceBundle bundle = ResourceBundle.getBundle(&quot;messages&quot;);
+                String usageDescription = bundle.getString(&quot;usage.description&quot;);
+                System.out.println(usageDescription);
+            &#125;
+        &#125; catch (Exception e) &#123;
+            System.out.println(&quot;Failed to encrypt or decrypt.&quot;);
+            e.printStackTrace();
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+</li>
+<li><p>编译<br> <code>javac -cp ../lib/tomcat-dbcp.jar ./pers/sunke/tomcat/dbcp/EncryptedDataSourceFactory.java</code></p>
+</li>
+<li><p>打包<br> <code>jar cvf ../lib/tomcat-dbcp-patch.jar ./pers/sunke/tomcat/dbcp/EncryptedDataSourceFactory.class</code></p>
+</li>
+<li><p>切换目录至 $CATALINA_HOME/lib<br> <code>cd ../lib</code></p>
+</li>
+<li><p>生成密文<br> <code>java -cp &quot;tomcat-dbcp-patch.jar;tomcat-dbcp.jar;../bin/tomcat-juli.jar&quot; pers.sunke.tomcat.dbcp.EncryptedDataSourceFactory -e 123456</code></p>
+<blockquote>
+<p>解密密文<br><code>java -cp &quot;tomcat-dbcp-patch.jar;tomcat-dbcp.jar;../bin/tomcat-juli.jar&quot; pers.sunke.tomcat.dbcp.EncryptedDataSourceFactory -d UkLthpB/fB7z6yZFUnAE1A==</code></p>
+</blockquote>
+</li>
+<li><p>配置数据源如下</p>
+<pre><code class="xml">&lt;?xml version=&#39;1.0&#39; encoding=&#39;utf-8&#39;?&gt;
+&lt;Context path=&quot;/ds01&quot; docBase=&quot;app01&quot;&gt;
+    &lt;Resource name=&quot;jdbc/ds01&quot; type=&quot;javax.sql.DataSource&quot; auth=&quot;Container&quot; driverClassName=&quot;com.mysql.jdbc.Driver&quot; factory=&quot;pers.sunke.tomcat.dbcp.EncryptedDataSourceFactory&quot; url=&quot;jdbc:mysql://127.0.0.1:3306/db01&quot; validationQuery=&quot;select 1 from dual&quot; username=&quot;test&quot; password=&quot;UkLthpB/fB7z6yZFUnAE1A==&quot; /&gt;
+&lt;/Context&gt;
+</code></pre>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>安全加固：Tomcat 鉴权数据源中的用户密码加密（PBKDF2WithHmacSHA256）</p>
+<ol>
+<li><p><a href="#config-db-users">准备数据源</a>，修改字段长度</p>
+<pre><code class="sql">alter table t_users modify password varchar(600) not null;
+
+update t_users set password = &#39;10000:97b10f4dd3f7d5444072b7e57175f069ec1e3b25abaf71386a99fe532212544f:e99cbfcd15d23e93687ccf80d2639746fec83a908062f8b48385908665c8f6c07e65dbdd9b5db62861047a15b35c8653b03f16ac72cef661e4777193056d12c19ec68106fd9f5a9f7d4a6d83029c69ffa54fe795e6ff0b7c3bab97f5c029704e08a6cc4567685c7a8ba42315a4937bc4471a6b280669b9b44e12719beee92e934ff8c0064ef7d08e268c95b73bb506edb484b670e144d25be759485f2be6f50dc4fbe3c119ce8524da7d30a689b8c3a633619acc41e2ebcc431a5ccaca1084910f165812dfcc71889367f8abc1c91c1cc0fcf9330d804a19ace77699190233a24bf87f5126ebc80ef2ef67302ed37fc3bd217aa3d1c7a3e24a0e80fa7b36e530&#39; where username = &#39;zhangsan&#39;;
+</code></pre>
+</li>
+<li><p>继承重写 org.apache.catalina.realm.JDBCRealm，如下</p>
+<pre><code class="java">package pers.sunke.tomcat.realm;
+
+import java.math.BigInteger;
+import java.security.NoSuchAlgorithmException;
+import java.security.Principal;
+import java.security.SecureRandom;
+import java.security.spec.InvalidKeySpecException;
+import java.security.spec.KeySpec;
+
+import javax.crypto.SecretKeyFactory;
+import javax.crypto.spec.PBEKeySpec;
+
+import org.apache.catalina.realm.JDBCRealm;
+
+public class EncryptedJDBCRealm extends JDBCRealm &#123;
+
+    private static final String ALGORITHM = &quot;PBKDF2WithHmacSHA256&quot;;
+    private static final int ITERATIONCOUNT = 10000;
+    private static final int KEYLENGTH = 256;
+    private static final int SALTLENGTH = 32;
+
+    @Override
+    public synchronized Principal authenticate(String username, String credentials) &#123;
+        try &#123;
+            byte[] salt = getSalt(getPassword(username));
+            String credentialsHashed = hash(credentials, salt);
+            return super.authenticate(username, credentialsHashed);
+        &#125; catch (NoSuchAlgorithmException | InvalidKeySpecException e) &#123;
+            e.printStackTrace();
+            return null;
+        &#125;
+    &#125;
+
+    public byte[] generateSalt() &#123;
+        SecureRandom random = new SecureRandom();
+        byte[] salt = new byte[SALTLENGTH];
+        random.nextBytes(salt);
+        return salt;
+    &#125;
+
+    public byte[] getSalt(String code) &#123;
+        String[] params = code.split(&quot;:&quot;);
+        if (3 == params.length) &#123;
+            byte[] salt = fromHex(params[1]);
+            return salt;
+        &#125; else &#123;
+            System.err.println(&quot;Error cipher code format: &quot; + code);
+            return null;
+        &#125;
+    &#125;
+
+    public String hash(String password, byte[] salt) throws NoSuchAlgorithmException, InvalidKeySpecException &#123;
+        SecretKeyFactory factory = SecretKeyFactory.getInstance(ALGORITHM);
+        KeySpec spec = new PBEKeySpec(password.toCharArray(), salt, ITERATIONCOUNT, KEYLENGTH * 8);
+        byte[] key = factory.generateSecret(spec).getEncoded();
+        return String.format(&quot;%d:%s:%s&quot;, ITERATIONCOUNT, toHex(salt), toHex(key));
+    &#125;
+
+    private String toHex(byte[] array) &#123;
+        BigInteger bi = new BigInteger(1, array);
+        String hex = bi.toString(16);
+        int paddingLength = (array.length * 2) - hex.length();
+        if (paddingLength &gt; 0)
+            return String.format(&quot;%0&quot; + paddingLength + &quot;d&quot;, 0) + hex;
+        else
+            return hex;
+    &#125;
+
+    private byte[] fromHex(String hex) &#123;
+        byte[] binary = new byte[hex.length() / 2];
+        for (int i = 0; i &lt; binary.length; i++) &#123;
+            binary[i] = (byte) Integer.parseInt(hex.substring(2 * i, 2 * i + 2), 16);
+        &#125;
+        return binary;
+    &#125;
+
+    public static void main(String[] args) &#123;
+        EncryptedJDBCRealm realm = new EncryptedJDBCRealm();
+        try &#123;
+            if (args.length == 1) &#123;
+                System.out.println(realm.hash(args[0], realm.generateSalt()));
+            &#125; else if (args.length == 2 &amp;&amp; &quot;-h&quot;.equals(args[0])) &#123;
+                System.out.println(realm.hash(args[1], realm.generateSalt()));
+            &#125; else if (args.length == 3 &amp;&amp; &quot;-h&quot;.equals(args[0])) &#123;
+                System.out.println(realm.hash(args[1], realm.fromHex(args[2])));
+            &#125; else &#123;
+                System.out.println(&quot;Usage:&quot;);
+                System.out.println(&quot;\tjava [...] [password]&quot;);
+                System.out.println(&quot;\tjava [...] -h [password]&quot;);
+                System.out.println(&quot;\tjava [...] -h [password] [salt]&quot;);
+            &#125;
+        &#125; catch (Exception e) &#123;
+            System.out.println(&quot;Failed to hash.&quot;);
+            e.printStackTrace();
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+</li>
+<li><p>打包部署，可参考<a href="#security-datasource">数据源安全加固</a>中相关步骤，其中编译、打包、生成密钥 code 命令如下<br> <code>javac -cp &quot;../lib/catalina.jar&quot; ./pers/sunke/tomcat/realm/EncryptedJDBCRealm.java</code><br> <code>jar cvf ../lib/catalina-patch.jar ./pers/sunke/tomcat/realm/EncryptedJDBCRealm.class</code><br> <code>java -cp &quot;catalina-patch.jar;catalina.jar;tomcat-util.jar;../bin/tomcat-juli.jar&quot; pers.sunke.tomcat.realm.EncryptedJDBCRealm -h 123456</code></p>
+</li>
+<li><p>修改<a href="#config-realm">相关配置文件中 Realm 节点</a>的 className 为 pers.sunke.tomcat.realm.EncryptedJDBCRealm</p>
+<blockquote>
+<ul>
+<li>配置文件中 connectionPassword 的安全加固，需重写 getConnectionPassword 方法，方法的实现可参考<a href="#security-datasource">数据源安全加固</a> 中相关实现</li>
+<li>使用 tomcat-users.xml 数据源鉴权的，需继承重写 org.apache.catalina.users.MemoryUserDatabaseFactory 对象，可参考<a href="#security-datasource">数据源安全加固</a> 中相关实现</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><p>安全加固：Tomcat 基本安全配置</p>
+<ol>
+<li><p>删除多余的工程项目<br> 删除 $CATALINA_HOME/webapps 目录下所有不需要的工程项目（包括示例工程、webapp 管理工程，如 docs、example、host-manager、manager、ROOT）等项目（目录）</p>
+</li>
+<li><p>停止 Tomcat shutdown 端口<br> 编辑 $CATALINA_HOME/conf/server.xml，修改 <code>/Server/@port</code> 的值为 -1，如下  </p>
+<pre><code class="xml">&lt;Server port=&quot;-1&quot; shutdown=&quot;SHUTDOWN&quot;&gt;
+</code></pre>
+<blockquote>
+<ul>
+<li>该端口（默认配置的端口号为 8005）用于远程放送命令（命令内容对应 <code>/Server/@shutdown</code> 的值，默认配置的命令内容为 “SHUTDOWN”）给 Tomcat 以停止服务，可通过配置端口号为 -1 来禁用该端口。  </li>
+<li>通过 tcp 连接该端口并发送命令来停止 tomcat 服务<ul>
+<li>方法一：使用 telnet 连接<br>  <code>telnet 127.0.0.1 8005</code><br>  输入命令 SHUTDOWN 并回车，则 tomcat 停止服务</li>
+<li>方法二：使用 netcat 连接<br>  <code>nc 127.0.0.1 8005</code><br>  输入命令 SHUTDOWN 并回车，则 tomcat 停止服务</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+</li>
+<li><p>禁用 AJP<br> 编辑 $CATALINA_HOME/conf/server.xml，注释或删除 <code>/Server/Service/Connector[@protocol=&quot;AJP/1.3&quot;]</code> 节点（即注释或删除使用 AJP/*.* 的 Connector 节点）</p>
+</li>
+<li><p>Tomcat 降权启动<br> 禁止以 root 特权用户启动 Tomcat，即 Tomcat 应以非 root 权限启动，应用部署目录权限和 Tomcat 服务启动用户分离，如 Tomcat 以 tomcat 用户启动，而部署应用的目录设置为 nobody 用户 750 读写权限</p>
+</li>
+<li><p>屏蔽 Tomcat 版本信息</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://jingyan.baidu.com/article/d2b1d102a9dc955c7e37d487.html">自定义服务版本信息</a><br> 编辑 $CATALINA_HOME/lib/catalina.jar!/org/apache/catalina/util/ServerInfo.properties，自定义修改 server.info 配置项如 “Web Server”，修改 server.number 配置项如 “1.0”</li>
+<li>在 http 响应头中屏蔽 Tomcat 版本信息<br> 编辑 $CATALINA_HOME/conf/server.xml，设置 <code>/Server/Service/Connector/@server</code> 的值为与 Tomcat 版本信息无关的名称，如 “Web Server”</li>
+</ol>
+</li>
+<li><p>关闭自动部署<br> 编辑 $CATALINA_HOME/conf/server.xml，设置 <code>/Server/Service/Engine/Host/@unpackWARs</code> 和 <code>/Server/Service/Engine/Host/@autoDeploy</code> 的值为 false</p>
+</li>
+<li><p>自定义错误页面<br> 编辑 $CATALINA_HOME/conf/web.xml 或 $CATALINA_HOME/webapps/*/WEB-INF/web.xml，在 <code>/web-app/</code> 节点下添加错误页面 error-page 配置，如下</p>
+<pre><code class="xml">&lt;error-page&gt;
+    &lt;error-code&gt;404&lt;/error-code&gt;
+    &lt;location&gt;/404.html&lt;/location&gt;
+&lt;/error-page&gt;
+&lt;error-page&gt;
+    &lt;error-code&gt;500&lt;/error-code&gt;
+    &lt;location&gt;/500.html&lt;/location&gt;
+&lt;/error-page&gt;
+</code></pre>
+</li>
+<li><p>启用 Cookie 的 HttpOnly 属性<br> 编辑 $CATALINA_HOME/conf/context.xml，设置 <code>/Context/@useHttpOnly</code> 为 true，如下</p>
+<pre><code class="xml">&lt;Context useHttpOnly=&quot;true&quot;&gt;
+    ...
+&lt;/Context&gt;
+</code></pre>
+</li>
+<li><p>开启日志审核，即 Tomcat 的访问日志（高版本默认已开启）<br> 编辑 $CATALINA_HOME/conf/server.xml，设置或取消注释 <code>/Server/Service/Engine/Host/Valve[@className=&quot;org.apache.catalina.valves.AccessLogValve&quot;]</code> 节点，如下</p>
+<pre><code class="xml">&lt;Valve className=&quot;org.apache.catalina.valves.AccessLogValve&quot; directory=&quot;logs&quot;
+       prefix=&quot;localhost_access_log&quot; suffix=&quot;.txt&quot;
+       pattern=&quot;%h %l %u %t &amp;quot;%r&amp;quot; %s %b&quot; /&gt;
+</code></pre>
+<blockquote>
+<p>其中，参数 pattern 指定记录日志的格式，各项的含义如下<br><code>%h</code> 远程主机名或 IP 地址。如果有 nginx 等反向代理服务器进行请求分发，该主机名或 IP 地址代表的是 nginx，否则代表的是客户端<br><code>%l</code> 远程逻辑用户名，一律是 “-“<br><code>%u</code> 授权的远程用户名，如果没有，则是 “-“<br><code>%t</code> 访问的时间<br><code>%r</code> 请求的第一行，即请求方法（get、post 等）、url、协议<br><code>%s</code> 响应状态，200、404 等<br><code>%b</code> 响应的数据量，不包括请求头，如果为 0，则是 “-“</p>
+</blockquote>
+</li>
+<li><p>禁止列目录（高版本默认已禁止）<br>编辑 web.xml，找到 <code>/web-app/servlet/init-param/param-name</code> 参数名为 listings 的节点，设置其参数值为 false，如下</p>
+<pre><code class="xml">...
+&lt;init-param&gt;
+    &lt;param-name&gt;listings&lt;/param-name&gt;
+    &lt;param-value&gt;false&lt;/param-value&gt;
+&lt;/init-param&gt;
+...
+</code></pre>
+</li>
+<li><p>删除用户权限相关配置（高版本默认已禁止）<br>编辑 $CATALINA_HOME/conf/tomcat-users.xml，在 <code>/tomcat-users</code> 节点下，删除或注释所有 role、user 节点（即删除或注释用户、角色配置）</p>
+</li>
+</ol>
+</li>
+</ul>
+</details>
+
+<details>
+<summary>性能优化</summary>
+
+<ul>
+<li><p><del>性能优化：Tomcat 内存使用优化</del></p>
+<blockquote>
+<p>原则上应尽量避免 Full GC</p>
+</blockquote>
+<ol>
+<li>编辑 $CATALINA_HOME/bin/catalina.sh（Linux），添加以下配置<br> <code>JAVA_OPTS=$JAVA_OPT -server -Xms2048m -Xmx2048m</code> <del>-XX:PermSize=256m -XX:MaxPermSize=512m</del> <code>-Djava.awt.headless=true</code><blockquote>
+<p>其中，参数  </p>
+<ul>
+<li><code>-Xms</code>、<code>-Xmx</code> 指定 jvm 占用最小和最大物理内存。一般两者配置一样大，可以避免内存不够用时申请内存的耗时</li>
+<li><code>-XX:PermSize</code>、<code>-XX:MaxPermSize</code> 指定 Perm 内存大小<br><font color="red">Java 8 中 PermSize 被 MetaspaceSize 代替，MetaspaceSize 共享 heap，不会再有”java.lang.OutOfMemoryError：PermGen space”，可以不设置</font><br><font color="grey">jvm 的内存分为两大类型：perm 和 generation。perm 区域存放的是 class 这些静态信息，一般默认为 64 MB。如果工程很大，有可能一启动就报错：”out of memory permsize”；如果用 spring 框架的话很多类是动态反射加载的，运行一段时间也有可能出现此异常。此类情况下，设置 permsize 的大小即可。</font></li>
+</ul>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><p>性能优化：Tomcat 启动参数优化（堆内存、栈内存、GC 日志、堆转储等）</p>
+<pre><code class="bash">JAVA_OPTS=&quot;$JAVA_OPTS -Xms6144m -Xmx6144m -Xmn2384m -Xss512k -XX:MetaspaceSize=512M -XX:MaxMetaspaceSize=1024M -XX:+HeapDumpOnOutOfMemoryError -Djava.protocol.handler.pkgs=org.apache.catalina.webresources&quot;
+JAVA_OPTS=&quot;$JAVA_OPTS -Xloggc:$CATALINA_BASE/logs/gc.log -XX:HeapDumpPath=$CATALINA_BASE/logs&quot;
+JAVA_OPTS=&quot;$JAVA_OPTS -XX:+PrintGCDetails -XX:+UseParallelGC -XX:ParallelGCThreads=32&quot;
+JAVA_OPTS=&quot;$JAVA_OPTS -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=10 -XX:GCLogFileSize=10M&quot;
+</code></pre>
+</li>
+<li><p>性能优化：Tomcat 并发优化</p>
+<ol>
+<li>编辑 $CATALINA_HOME/conf/server.xml，在 <code>/Server/Service/Connector</code> 节点中，配置如下<pre><code class="xml">&lt;Connector ... 
+        protocol=&quot;org.apache.coyote.http11.Http11NioProtocol&quot;
+        maxThreads=&quot;500&quot;
+        minSpareThreads=&quot;100&quot;
+        maxSpareThreads=&quot;200&quot;
+        acceptCount=&quot;200&quot;
+        enableLookups=&quot;false&quot;
+        ... /&gt;
+</code></pre>
+<blockquote>
+<p>其中，参数  </p>
+<ul>
+<li><code>protocol</code> 指定协议。<a href="#tomcat-protocol">Http11NioProtocol（即 NIO 模式）较其它模式效率更高</a></li>
+<li><code>maxThreads</code> 指定当前可以同时处理的最大用户访问数</li>
+<li><code>minSpareThreads</code>、<code>maxSpareThreads</code> 指定最小、最大空闲线程连接数，用于优化线程池</li>
+<li><code>acceptCount</code> 指定当所有的线程已分配，仍然允许连接进来，但是处于等待状态的用户数。等待线程数 + 工作线程数 = 总的可最大连接数，如果超过此数，新的连接将不会被接受，并且将会产生一个 http 错误</li>
+<li><code>enableLookups</code> 指定是否允许 DNS 反查，如果为 true，request.getRemoteHost 会执行 DNS 查找，反向解析 ip 对应域名或主机名，当没有这样需要的时候，可以将这个功能关闭，在一定程度上提高了 Tomcat 服务器的性能</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><p>性能优化：使用 APR 提高可伸缩性和性能</p>
+</li>
+<li><p>性能优化：<a target="_blank" rel="noopener" href="http://tomcat.apache.org/tomcat-8.0-doc/logging.html#Using-Log4j">使用 log4j 管理 Tomcat 日志，并实现日志分割、备份清理</a></p>
+<ol>
+<li><p>下载 log4j-1.2.17.jar<br> <code>curl -O https://mirrors.tuna.tsinghua.edu.cn/apache/logging/log4j/1.2.17/log4j-1.2.17.tar.gz &amp;&amp; tar zxvf log4j-1.2.17.tar.gz apache-log4j-1.2.17/log4j-1.2.17.jar</code><br> 将 log4j-1.2.17.jar 复制到 $CATALINA_HOME/lib 目录中<br> <code>cp apache-log4j-1.2.17/log4j-1.2.17.jar $CATALINA_HOME/lib</code></p>
+</li>
+<li><p>下载 tomcat-juli-adapters.jar<br> <code>curl -O http://mirrors.tuna.tsinghua.edu.cn/apache/tomcat/tomcat-8/v8.0.52/bin/extras/tomcat-juli-adapters.jar</code><br> 将 tomcat-juli-adapters.jar 复制到 $CATALINA_HOME/lib 目录中<br> <code>cp tomcat-juli-adapters.jar $CATALINA_HOME/lib</code><br> 下载 tomcat-juli.jar<br> <code>curl -O http://mirrors.tuna.tsinghua.edu.cn/apache/tomcat/tomcat-8/v8.0.52/bin/extras/tomcat-juli.jar</code><br> 将 tomcat-juli.jar 复制并替换到 $CATALINA_HOME/bin 目录中<br> <code>cp -f tomcat-juli.jar $CATALINA_HOME/bin</code></p>
+</li>
+<li><p>在 $CATALINA_HOME/lib 目录下创建配置文件 log4j.properties<br> <code>vi $CATALINA_HOME/lib/log4j.properties</code><br> 编辑配置内容如下</p>
+<pre><code class="ini">log4j.rootLogger = INFO, CATALINA
+# log4j.rootLogger = INFO, CATALINA, CONSOLE
+
+# Define catalina appender
+log4j.appender.CATALINA = org.apache.log4j.RollingFileAppender
+log4j.appender.CATALINA.File = $&#123;catalina.base&#125;/logs/catalina.out
+log4j.appender.CATALINA.Append = true
+log4j.appender.CATALINA.Encoding = UTF-8
+log4j.appender.CATALINA.MaxFileSize = 10MB
+log4j.appender.CATALINA.MaxBackupIndex = 10
+log4j.appender.CATALINA.layout = org.apache.log4j.PatternLayout
+log4j.appender.CATALINA.layout.ConversionPattern = %d [%t] %-5p %c- %m%n
+
+# Define catalina appender
+log4j.appender.LOCALHOST = org.apache.log4j.RollingFileAppender
+log4j.appender.LOCALHOST.File = $&#123;catalina.base&#125;/logs/localhost.log
+log4j.appender.LOCALHOST.Append = true
+log4j.appender.LOCALHOST.Encoding = UTF-8
+log4j.appender.LOCALHOST.MaxFileSize = 10MB
+log4j.appender.LOCALHOST.MaxBackupIndex = 10
+log4j.appender.LOCALHOST.layout = org.apache.log4j.PatternLayout
+log4j.appender.LOCALHOST.layout.ConversionPattern = %d [%t] %-5p %c- %m%n
+
+# Define console appender
+log4j.appender.CONSOLE = org.apache.log4j.ConsoleAppender
+log4j.appender.CONSOLE.Encoding = UTF-8
+log4j.appender.CONSOLE.layout = org.apache.log4j.PatternLayout
+log4j.appender.CONSOLE.layout.ConversionPattern = %d [%t] %-5p %c- %m%n
+
+# Configure which loggers log to which appenders
+log4j.logger.org.apache.catalina.core.ContainerBase.[Catalina].[localhost] = INFO, LOCALHOST
+</code></pre>
+</li>
+<li><p>删除配置文件 logging.properties<br> <code>rm $CATALINA_HOME/conf/logging.properties</code></p>
+</li>
+<li><p>启动/重启 Tomcat</p>
+</li>
+</ol>
+</li>
+</ul>
+</details>
+
+<details>
+<summary>常用第三方 war 应用</summary>
+
+<ul>
+<li><p><span id="setup-jenkins">使用 Jenkins 搭建持续集成环境</span></p>
+<ol>
+<li>下载<br> <code>wget http://mirrors.jenkins.io/war-stable/latest/jenkins.war</code></li>
+<li>部署至 tomcat 中<br> <code>mv jenkins.war $CATALINA_HOME/webapps/</code><blockquote>
+<p>Jenkins 将会在 user.home 目录下，即 ~/ 目录下创建 .jenkins 目录。可通过修改启动参数来指定 user.home，如<br><code>SET CATALINA_OPTS=-Duser.home=&quot;E:\apache-tomcat-8.0.47\temp&quot;</code></p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><p>使用 <a target="_blank" rel="noopener" href="https://github.com/psi-probe/psi-probe">Probe</a> <a target="_blank" rel="noopener" href="http://www.cnblogs.com/dancser/p/4450963.html">监控 Tomcat</a></p>
+<ol>
+<li>下载 probe.war<br> <code>curl -L https://oss.sonatype.org/content/repositories/snapshots/com/github/psi-probe/psi-probe-web/3.0.0-SNAPSHOT/psi-probe-web-3.0.0-20180326.001732-103.war -o probe.war</code></li>
+<li>将 probe.war 复制到 webapps 目录下<br> <code>mv probe.war $CATALINA_HOME/webapps/</code></li>
+<li>添加用户账号<br> 编辑 $CATALINA_HOME/conf/tomcat-users.xml，在 <code>/tomcat</code> 节点下添加用户配置如下<pre><code class="xml">&lt;role rolename=&quot;manager&quot; /&gt;
+&lt;user username=&quot;admin&quot; password=&quot;admin&quot; roles=&quot;manager&quot; /&gt;
+</code></pre>
+</li>
+</ol>
+</li>
+</ul>
+</details>
+
+<ul>
+<li>参考<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/kismetv/p/7228274.html#title3-1">详解 Tomcat 配置文件 server.xml</a></p>
+</blockquote>
+</li>
+</ul>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2025/03/22/webassembly/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg" alt="Dim.Ke's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        904243852@qq.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto: 904243852@qq.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/algorithm/">algorithm<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/css/">css<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/deno/">deno<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/docker/">docker<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/elasticsearch/">elasticsearch<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/ffmpeg/">ffmpeg<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/golang/">golang<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/javascript/">javascript<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/kubernetes/">kubernetes<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/linux/">linux<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/mysql/">mysql<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/nginx/">nginx<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/nodejs/">nodejs<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/solr/">solr<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/tomcat/">tomcat<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/webassembly/">webassembly<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/isunk" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+
+    <!-- Gitee -->
+    
+        <a href="https://gitee.com/isunk" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background: url('https://gitee.com/static/images/logo-en.svg'); background-size: cover;">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;Dim.Ke
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/bollnh/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<!-- <script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('
+<link rel="stylesheet" href="/css/uc.css">
+');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script> -->
+
+<!-- Import prettify js  -->
+
+    
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
+        
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 2020;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/bollnh/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>

@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/bollnh/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            FFmpeg | 
+        
+        Dim.Ke
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg">
+    <link rel="icon" href="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content=",ffmpeg">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/github-v2.min.css?AfzKxt++K+/lhZBlSjnxwg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+            
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Dim.Ke">
+    <meta name="msapplication-starturl" content="https://isunk.github.io/2025/03/22/ffmpeg/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Dim.Ke">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg">
+
+    <!-- Site Verification -->
+    
+    <meta name="baidu-site-verification" content="code-ibxIxWHREM" />
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://isunk.github.io/2025/03/22/ffmpeg/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="FFmpeg | Dim.Ke">
+    <meta property="og:image" content="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg">
+    <meta property="og:description" content="">
+    <meta property="og:article:tag" content="ffmpeg"> 
+
+    
+        <meta property="article:published_time" content="Sat Mar 22 2025 06:39:26 GMT+0000">
+        <meta property="article:modified_time" content="Sat Mar 22 2025 02:25:41 GMT+0000">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="https://isunk.github.io/2025/03/22/ffmpeg/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://isunk.github.io/2025/03/22/ffmpeg/index.html",
+    "headline": "FFmpeg",
+    "datePublished": "Sat Mar 22 2025 06:39:26 GMT+0000",
+    "dateModified": "Sat Mar 22 2025 02:25:41 GMT+0000",
+    "author": {
+        "@type": "Person",
+        "name": "Dim.Ke",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Dim.Ke",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg"
+        }
+    },
+    "keywords": ",ffmpeg",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+    <script src="https://kulroakonsu.net/88/tag.min.js" data-zone="137717" async data-cfasync="false"></script><!-- Monetag 广告 -->
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#FFmpeg"><span class="post-toc-text">FFmpeg</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E"><span class="post-toc-text">参数说明</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%9F%BA%E6%9C%AC%E9%80%89%E9%A1%B9"><span class="post-toc-text">基本选项</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%A7%86%E9%A2%91%E9%80%89%E9%A1%B9"><span class="post-toc-text">视频选项</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E9%9F%B3%E9%A2%91%E9%80%89%E9%A1%B9"><span class="post-toc-text">音频选项</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="post-toc-text">常用命令</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E8%A7%86%E9%A2%91%E8%BD%AC%E7%A0%81"><span class="post-toc-text">视频转码</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%8F%90%E5%8F%96%E9%9F%B3%E9%A2%91%E3%80%81%E8%A7%86%E9%A2%91"><span class="post-toc-text">提取音频、视频</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E8%A7%86%E9%A2%91%E5%89%AA%E5%88%87"><span class="post-toc-text">视频剪切</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E7%A0%81%E7%8E%87%E6%8E%A7%E5%88%B6"><span class="post-toc-text">码率控制</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E8%A7%86%E9%A2%91%E7%BC%96%E7%A0%81%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2"><span class="post-toc-text">视频编码格式转换</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%8F%AA%E6%8F%90%E5%8F%96%E8%A7%86%E9%A2%91-ES-%E6%95%B0%E6%8D%AE"><span class="post-toc-text">只提取视频 ES 数据</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E8%BF%87%E6%BB%A4%E5%99%A8"><span class="post-toc-text">过滤器</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%88%AA%E5%8F%96%E8%A7%86%E9%A2%91%E5%9B%BE%E5%83%8F"><span class="post-toc-text">截取视频图像</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%BA%8F%E5%88%97%E5%B8%A7%E4%B8%8E%E8%A7%86%E9%A2%91%E7%9A%84%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2"><span class="post-toc-text">序列帧与视频的相互转换</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%8A%93%E5%B1%8F"><span class="post-toc-text">抓屏</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%85%B6%E4%BB%96%E7%94%A8%E6%B3%95"><span class="post-toc-text">其他用法</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#FFplay"><span class="post-toc-text">FFplay</span></a></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                FFmpeg
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Dim.Ke</strong>
+        <span>3月 22, 2025</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-none-link" href="/tags/ffmpeg/" rel="tag">ffmpeg</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=FFmpeg&url=https://isunk.github.io/2025/03/22/ffmpeg/index.html&pic=https://isunk.github.iohttps://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=FFmpeg&url=https://isunk.github.io/2025/03/22/ffmpeg/index.html&via=Dim.Ke" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://isunk.github.io/2025/03/22/ffmpeg/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://isunk.github.io/2025/03/22/ffmpeg/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="FFmpeg"><a href="#FFmpeg" class="headerlink" title="FFmpeg"></a><a target="_blank" rel="noopener" href="http://ffmpeg.org/">FFmpeg</a></h1><h2 id="参数说明"><a href="#参数说明" class="headerlink" title="参数说明"></a>参数说明</h2><h3 id="基本选项"><a href="#基本选项" class="headerlink" title="基本选项"></a>基本选项</h3><table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>参数说明</th>
+<th>参数示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-i</td>
+<td>指定输入视频文件</td>
+<td>-i input.mp4</td>
+</tr>
+<tr>
+<td>-y</td>
+<td>覆盖已有文件</td>
+<td>-y</td>
+</tr>
+</tbody></table>
+<h3 id="视频选项"><a href="#视频选项" class="headerlink" title="视频选项"></a>视频选项</h3><table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>参数说明</th>
+<th>参数示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-vcodec</td>
+<td>视频编码格式，取值：”libx264”（libx264 解码器）、”h264”（H.264 编码）</td>
+<td>-vcodec libx264</td>
+</tr>
+<tr>
+<td>-s</td>
+<td>视频分辨率</td>
+<td>-s 540x960</td>
+</tr>
+<tr>
+<td>-r</td>
+<td>视频帧速率，单位：帧/秒</td>
+<td>-r 25</td>
+</tr>
+<tr>
+<td>-b</td>
+<td>视频码率，单位：bit/s 或 bps</td>
+<td>-b 800000</td>
+</tr>
+</tbody></table>
+<h3 id="音频选项"><a href="#音频选项" class="headerlink" title="音频选项"></a>音频选项</h3><table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>参数说明</th>
+<th>参数示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-acodec</td>
+<td>音频编码，取值：”aac”（AAC 编码）</td>
+<td>-acodec aac</td>
+</tr>
+<tr>
+<td>-ac</td>
+<td>音频声道个数，取值：”1”（单声道）、”2”（立体声）</td>
+<td>-ac 2</td>
+</tr>
+<tr>
+<td>-ar</td>
+<td>音频采样频率，单位：Hz</td>
+<td>-ar 44100</td>
+</tr>
+<tr>
+<td>-b:a（旧版本写法：-ab）</td>
+<td>音频比特率，单位：bit/s 或 bps，一般选择 32、64、96、128</td>
+<td>-b:a 128 或 -ab 128</td>
+</tr>
+</tbody></table>
+<ul>
+<li>视频文件大小计算公式  <pre><code class="bash">视频文件大小（byte） ≈ 总比特率（bps） / 8 * 播放时长（s） = (视频码率（bps） + 音频码率（bps）) / 8 * 播放时长（s）
+# 例如，某视频文件，总比特率为 862 kbps（其中视频码率为 734 kbps，音频码率为 128 kbps），时长为 00:00:15，则文件大小约为 862 kbps / 8 * 15 s = 107.75 KB * 15 s = 1616.25 KB
+</code></pre>
+</li>
+</ul>
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><pre><code class="bash"># 查看视频信息
+ffmpeg -i input.mp4
+
+# 视频压缩
+# ffmpeg -i input.mp4 -vcodec libx264 -s 540x480 -r 25 -b 800000 -acodec aac -ac 2 -ar 44100 -ab 128 -y output.mp4
+ffmpeg -i input.mp4 -vcodec libx264 -r 25 -b 800000 -acodec aac -ac 2 -ar 44100 -ab 128 -y output.mp4
+
+# 视频压缩，并推送至流媒体服务器
+ffmpeg \
+    -i input.mp4 \
+    -vcodec libx264 -r 25 -vf scale=-1:720 \ # 视频分辨率 720p，帧率 25 fps
+    # -acodec aac -ac 2 -ar 44100 -b:a 128k \
+    -acodec copy \
+    -f flv rtmp://127.0.0.1:1935/
+
+# 视频裁剪、压缩
+ffmpeg \
+    -i &quot;input.mp4&quot; \
+    -ss 00:01:00 -t 00:01:00 \ # 从 01:00 开始，截取长度为 01:00 时间的视频
+    # -vcodec copy \ # 保持原分辨率
+    -vf scale=-1:480 \ # 等比例压缩至 *x480 分辨率
+    -acodec copy \
+    output.mp4
+
+# 循环推流、[添加时间水印](https://blog.csdn.net/ternence_hsu/article/details/102540626)
+ffmpeg \
+    -re \ # 表示按帧率发送，推流时一定要加这个参数，否则 ffmpeg 会以最高速率不断发送
+    -stream_loop -1 \ # 循环推流次数，-1 表示无限次数
+    -i test.h264 \
+    # -vcodec copy -acodec copy \
+    -vf &quot;settb=AVTB,setpts=&#39;trunc(PTS/1K)*1K+st(1,trunc(RTCTIME/1K))-1K*trunc(ld(1)/1K)&#39;,drawtext=fontsize=20:fontcolor=white:text=&#39;%&#123;localtime&#125;.%&#123;eif\:1M*t-1K*trunc(t*1K)\:d&#125;&#39;&quot; -c:v libx264 -an \ # 添加本地时间水印,打印详细日期并且精确到毫秒
+    -f flv \
+    -y rtmp://127.0.0.1:1935/live/test
+
+# 将图片合成视频
+ffmpeg \
+    -loop 1 \ # 循环读取输入文件
+    -i input.jpg \ # 指定输入文件
+    -t 15 \ # 生成 15 秒的视频
+    output.mp4
+ffmpeg \
+    -f image2 \
+    -r 0.2 \ # 输入帧率(在 -i 之前为输入帧率，默认为 25)，如 0.2 表示每秒读取 0.2 张图片，即每张图片播放 5 秒
+    -i input-%d.jpg \ # 读取图片如 input-0.jpg, input-1.jpg, input-2.jpg
+    -r 10 \ # 输出帧率(在 -i 之前为输入帧率，默认为 25)，即视频帧率
+    output.mp4
+
+# 将图片合成视频，实时添加时间水印，并且推流
+ffmpeg \
+    -re
+    -loop 1 \
+    -i input.jpg \
+    -vf &quot;setpts=PTS,realtime,setpts=PTS,drawtext=fontfile=arial.ttf:x=w-tw:fontcolor=white:fontsize=30:text=&#39;%&#123;localtime\:%H\\\:%M\\\:%S&#125;&#39;&quot; \ # 添加时间水印，按照实时速率
+    -vcodec h264 \ # 转换成 H.264 视频格式
+    -f flv \
+    rtmp://127.0.0.1:1935/live/test
+</code></pre>
+<h2 id="视频转码"><a href="#视频转码" class="headerlink" title="视频转码"></a>视频转码</h2><pre><code class="bash"># 将 input.avi 转码为 output.mp4
+ffmpeg -i input.avi output.mp4
+
+# 将 input.avi 转码为 output.ts
+ffmpeg -i input.mp4 output.ts
+
+# 转码为码流原始文件
+ffmpeg –i test.mp4 –vcodec h264 –s 352*278 –an –f m4v test.264
+ffmpeg –i test.mp4 –vcodec h264 –bf 0 –g 25 –s 352*278 –an –f m4v test.264
+
+# 转码为封装文件
+ffmpeg –i test.avi -vcodec mpeg4 –vtag xvid –qsame test_xvid.avi
+
+# 将input.avi转码成output.ts，并设置视频的码率为640kbps（-bf B帧数目控制，-g 关键帧间隔控制，-s 分辨率控制）
+ffmpeg -i input.avi -b:v 640k output.ts
+</code></pre>
+<h2 id="提取音频、视频"><a href="#提取音频、视频" class="headerlink" title="提取音频、视频"></a>提取音频、视频</h2><pre><code class="bash"># 提取音频
+ffmpeg -i test.mp4 -acodec copy -vn output.aac # 默认 mp4 的 audio codec 是 aac
+ffmpeg -i test.mp4 -acodec aac -vn output.aac # 如果不是 aac 格式，可以都转为 aac 
+
+# 提取视频
+ffmpeg -i input.mp4 -vcodec copy -an output.mp4
+</code></pre>
+<h2 id="视频剪切"><a href="#视频剪切" class="headerlink" title="视频剪切"></a>视频剪切</h2><pre><code class="bash"># 从时间为 00:00:15 开始，截取 5 秒钟的视频
+ffmpeg -ss 00:00:15 -t 00:00:05 -i input.mp4 -vcodec copy -acodec copy output.mp4
+</code></pre>
+<blockquote>
+<p>-ss 表示开始切割的时间，-t 表示要切多少</p>
+</blockquote>
+<h2 id="码率控制"><a href="#码率控制" class="headerlink" title="码率控制"></a>码率控制</h2><pre><code class="bash"># 把码率从原码率（如 10 Mbps）转成 2 Mbps 码率，这样其实也间接让文件变小了
+# ffmpeg -i input.mp4 -b:v 2000k output.mp4
+ffmpeg -i input.mp4 -b:v 2000k -bufsize 2000k output.mp4
+ffmpeg -i input.mp4 -b:v 2000k -bufsize 2000k -maxrate 2500k output.mp4
+</code></pre>
+<h2 id="视频编码格式转换"><a href="#视频编码格式转换" class="headerlink" title="视频编码格式转换"></a>视频编码格式转换</h2><pre><code class="bash"># 比如一个视频的编码是 MPEG4，先转成 H264 编码
+ffmpeg -i input.mp4 -vcodec h264 output.mp4
+# H264 编码转成 MPEG4
+ffmpeg -i input.mp4 -vcodec mpeg4 output.mp4
+
+# # 如果 ffmpeg 编译时，添加了外部的 x265 或者 X264，那也可以用外部的编码器来编码
+# ffmpeg -i input.mp4 -c:v libx265 output.mp4
+# ffmpeg -i input.mp4 -c:v libx264 output.mp4
+</code></pre>
+<h2 id="只提取视频-ES-数据"><a href="#只提取视频-ES-数据" class="headerlink" title="只提取视频 ES 数据"></a>只提取视频 ES 数据</h2><pre><code class="bash">ffmpeg –i input.mp4 –vcodec copy –an –f m4v output.h264
+</code></pre>
+<h2 id="过滤器"><a href="#过滤器" class="headerlink" title="过滤器"></a>过滤器</h2><pre><code class="bash"># 将输入的 1920 x 1080 缩小到 960 x 540 输出
+ffmpeg -i input.mp4 -vf scale=960:540 output.mp4 # 如果540不写，写成-1，即scale=960:-1, 那也是可以的，ffmpeg会通知缩放滤镜在输出时保持原始的宽高比
+
+# 为视频添加 logo
+ffmpeg -i input.mp4 -i logo.png -filter_complex overlay output.mp4 # 左上角位置
+# ffmpeg -i input.mp4 -i logo.png -filter_complex overlay=W-w output.mp4 # 右上角位置
+# ffmpeg -i input.mp4 -i logo.png -filter_complex overlay=0:H-h output.mp4 # 左下角位置
+# ffmpeg -i input.mp4 -i logo.png -filter_complex overlay=W-w:H-h output.mp4 # 右下角位置
+
+# 去掉视频的 logo
+ffmpeg -i input.mp4 -vf delogo=0:0:220:90:100:1 output.mp4 
+# 语法：-vf delogo=x:y:w:h[:t[:show]]
+# x:y 离左上角的坐标
+# w:h logo 的宽和高
+# t: 矩形边缘的厚度默认值 4
+# show：若设置为 1 有一个绿色的矩形，默认值 0
+</code></pre>
+<h2 id="截取视频图像"><a href="#截取视频图像" class="headerlink" title="截取视频图像"></a>截取视频图像</h2><pre><code class="bash">ffmpeg -i input.mp4 -r 1 -q:v 2 -f image2 pic-%03d.jpeg
+
+# 从 input.mp4 的第 20s 时间开始，往下 10s，即 20 ~ 30s 这 10 秒钟之间，每隔 1s 就抓一帧，总共会抓 10 帧
+ffmpeg -i input.mp4 -ss 00:00:20 -t 10 -r 1 -q:v 2 -f image2 pic-%03d.jpeg 
+</code></pre>
+<blockquote>
+<p>-r 表示每一秒几帧<br>-q:v 表示存储 jpeg 的图像质量，一般 2 是高质量。</p>
+</blockquote>
+<h2 id="序列帧与视频的相互转换"><a href="#序列帧与视频的相互转换" class="headerlink" title="序列帧与视频的相互转换"></a>序列帧与视频的相互转换</h2><pre><code class="bash"># 把 darkdoor.[001-100].jpg 序列帧和 001.mp3 音频文件利用 mpeg4 编码方式合成视频文件 darkdoor.avi
+ffmpeg -i 001.mp3 -i darkdoor.%3d.jpg -s 1024x768 -author fy -vcodec mpeg4 darkdoor.avi
+
+# 还可以把视频文件导出成 jpg 序列帧
+ffmpeg -i bc-cinematic-en.avi example.%d.jpg
+</code></pre>
+<h2 id="抓屏"><a href="#抓屏" class="headerlink" title="抓屏"></a>抓屏</h2><pre><code class="bash"># 最简单的抓屏
+ffmpeg -f gdigrab -i desktop out.mpg
+
+# 以 15 的帧率抓屏 20 秒，保存为视频格式是 vp9 的 mkv 文件
+ffmpeg -f gdigrab -t 20 -r 15 -i desktop -vcodec libvpx-vp9 capture-vp9.mkv
+
+# 以 15 的帧率抓屏 10 秒，保存为视频格式是 vp9，分辨率是 720 x 420 的 mkv 文件
+ffmpeg -f gdigrab -t 10 -r 15 -i desktop -vcodec libvpx-vp9 -s 720x420 vp9-720-420.mkv
+
+# 以 15 的帧率抓屏 20 秒，抓屏范围，以点(100, 60)开始，大小 600 x 480，保存为视频格式是 264 的 mp4 文件
+ffmpeg -f gdigrab -video_size 600x480 -offset_x 100 -offset_y 60 -t 20 -r 15 -i desktop -vcodec libx264 x264.mp4
+
+# 抓屏 10 秒，并生成 gif 图片
+ffmpeg -f gdigrab -t 10 -r 15 -i desktop -pix_fmt rgb24 capture.gif
+</code></pre>
+<h2 id="其他用法"><a href="#其他用法" class="headerlink" title="其他用法"></a>其他用法</h2><ul>
+<li><p>对视频进行TS切片（转化成HLS）</p>
+<ul>
+<li><p>直接切片（hls）<br>  <code>ffmpeg -i video.mp4 -c:v libx264 -c:a aac -strict -2 -f hls -hls_list_size 0 -hls_time 5 video.m3u8</code></p>
+<blockquote>
+<ul>
+<li><code>-hls_time n</code> 设置每片的长度，默认值为 2。单位为秒  </li>
+<li><code>-hls_list_size n</code> 设置播放列表保存的最多条目，设置为 0 会保存有所片信息，默认值为 5  </li>
+<li><code>-hls_wrap n</code> 设置多少片之后开始覆盖，如果设置为 0 则不会覆盖，默认值为 0。这个选项能够避免在磁盘上存储过多的片，而且能够限制写入磁盘的最多的片的数量  </li>
+<li><code>-hls_start_number n</code> 设置播放列表中 sequence number 的值为 number，默认值为 0</li>
+</ul>
+</blockquote>
+</li>
+<li><p>转码为 ts 文件并生成 m3u8（segment）</p>
+<ol>
+<li><p>将 mp4 转为完整的 ts<br> <code>ffmpeg -i out.mp4 -c copy -bsf h264_mp4toannexb output.ts</code></p>
+</li>
+<li><p>将 ts 切片，并生成 m3u8 文件<br> <code>ffmpeg -i output.ts -c copy -map 0 -f segment -segment_list playlist.m3u8 -segment_time 10 output%03d.ts</code></p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>将文件当做直播送至 live<br>  <code>ffmpeg -re -i video.mp4 -c copy -f flv rtmp://127.0.0.1/live/stream_name</code><br>  <code>ffmpeg -re -i video.mp4  -vcodec copy -acodec copy -f rtsp rtsp://127.0.0.1/live/stream_name</code></p>
+</li>
+<li><p>读取摄像头、话筒的数据</p>
+<ul>
+<li><p>使用 VFW 读取摄像头的数据（采集 10秒，采集设备为 vfwcap 类型设备，第 0 个 vfwcap 采集设备（如果系统有多个 vfw 的视频采集设备，可以通过 -i num 来选择），每秒 8 帧，输出方式为文件，格式为 mp4）<br>  <code>ffmpeg -t 10 -f vfwcap -i 0 -r 8 -f mp4 cap.mp4</code></p>
+</li>
+<li><p>使用 DirectShow 读取摄像头的数据  </p>
+<ol>
+<li><span id="query_device">列出所有设备</span>，查找设备名称（如摄像头为”WebCam SC-0311139N”，话筒为”楹﹀厠椋?(Realtek High Definition Audio)”(ANSI 乱码”楹﹀厠椋?”转 UTF-8 之后为”麦克风”)）<br> <code>ffmpeg -list_devices true -f dshow -i dummy</code></li>
+<li>获取摄像头数据  <ul>
+<li>从摄像头读取数据并编码为 H.264，最后保存成 mycamera.mkv<br>  <code>ffmpeg -f dshow -i video=&quot;WebCam SC-0311139N&quot; -vcodec libx264 mycamera.mkv</code></li>
+<li>获取摄像头数据，编码为 H.264，封装为 UDP 并发送至组播地址<br>  <code>ffmpeg -f dshow -i video=&quot;WebCam SC-0311139N&quot; -vcodec libx264 -preset:v ultrafast -tune:v zerolatency -f h264 udp://233.233.233.223:6666</code></li>
+<li>获取摄像头数据，编码为 H.264，封装为 RTP 并发送至组播地址<br>  <code>ffmpeg -f dshow -i video=&quot;WebCam SC-0311139N&quot; -vcodec libx264 -preset:v ultrafast -tune:v zerolatency -f rtp rtp://233.233.233.223:6666&gt;test.sdp</code></li>
+<li>获取摄像头数据，编码为 H.264，并发送至 RTMP 服务器<br>  <code>ffmpeg -f dshow -i video=&quot;WebCam SC-0311139N&quot; -vcodec libx264 -preset:v ultrafast -tune:v zerolatency -f flv rtmp://127.0.0.1/live/livestream</code></li>
+<li>采集当前摄像头及音频数据，视频 h264、音频 faac 压缩后发布至 RTMP 服务器<br>  <code>ffmpeg -f dshow -s 640*480 -i video=&quot;WebCam SC-0311139N&quot;:audio=&quot;麦克风 (Realtek High Definition Audio)&quot; -vcodec libx264 -b 600k -acodec libfaac -ab 128k -f flv rtmp://192.168.1.200/live/video</code></li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>屏幕录制</p>
+<ul>
+<li>linux 下使用 x11grab 录制屏幕<br>  <code>ffmpeg -f x11grab -s 1600x900 -r 50 -vcodec libx264 –preset:v ultrafast –tune:v zerolatency -crf 18 -f mpegts udp://localhost:1234</code>  </li>
+<li>将屏幕录制后编码为 H.264 并保存为本地文件（在 Windows 平台下，使用 -dshow 取代 x11grab）<br>  <code>ffmpeg -f dshow -i video=&quot;screen-capture-recorder&quot; -r 5 -vcodec libx264 -preset:v ultrafast -tune:v zerolatency MyDesktop.mkv</code></li>
+<li>将屏幕录制后编码为 H.264 并封装成 UDP 发送到组播地址<br>  <code>ffmpeg -f dshow -i video=&quot;screen-capture-recorder&quot; -r 5 -vcodec libx264 -preset:v ultrafast -tune:v zerolatency -f h264 udp://233.233.233.223:6666</code></li>
+<li>将屏幕录制后编码为 H.264 并封装成 RTP 并发送到组播地址<br>  <code>ffmpeg -f dshow -i video=&quot;screen-capture-recorder&quot; -vcodec libx264 -preset:v ultrafast -tune:v zerolatency -f rtp rtp://233.233.233.223:6666&gt;test.sdp</code></li>
+<li>编码为 H.264，发布 RTMP<br>  <code>ffmpeg -f dshow -i video=&quot;WebCam SC-0311139N&quot; -vcodec libx264 -preset:v ultrafast -tune:v zerolatency -f flv rtmp://127.0.0.1/live/livestream</code></li>
+</ul>
+</li>
+<li><p>gdigrab 屏幕录制（另一种屏幕录制的方式）<br>  简单的抓屏<br>  <code>ffmpeg -f gdigrab -i desktop out.mpg</code><br>  从屏幕的（10,20）点处开始，抓取 640 x 480 的屏幕，设定帧率为 5<br>  <code>ffmpeg -f gdigrab -framerate 5 -offset_x 10 -offset_y 20 -video_size 640x480 -i desktop out.mpg</code></p>
+</li>
+<li><p>录制视频、音频（按 q 键停止录制）</p>
+<pre><code class="bash"># 查看可用设备名字，如 &quot;WebCam SC-0311139N&quot;、&quot;麦克风 (Realtek High Definition Audio)&quot;
+# ffmpeg -list_devices true -f dshow -i dummy
+# 查看（视频录制）设备的可选参数
+# ffmpeg -f dshow -list_options true -i video=&quot;WebCam SC-0311139N&quot;
+
+# 录制视频（摄像头）
+ffmpeg -f dshow -rtbufsize 702000k -i video=&quot;WebCam SC-0311139N&quot; v-out.mp4 # &quot;WebCam SC-0311139N&quot; 为设备名称
+
+# 录制声音
+ffmpeg -f dshow -i audio=&quot;麦克风 (Realtek High Definition Audio)&quot; a-out.aac # &quot;麦克风 (Realtek High Definition Audio)&quot; 为设备名称
+ffmpeg -f dshow -i audio=&quot;@device_cm_&#123;33D9A762-90C8-11D0-BD43-00A0C911CE86&#125;\wave_&#123;2F4C5655-04D4-4202-B399-8515DE44DD04&#125;&quot; a-out.aac # &quot;@device_cm_&#123;33D9A762-90C8-11D0-BD43-00A0C911CE86&#125;\wave_&#123;2F4C5655-04D4-4202-B399-8515DE44DD04&#125;&quot; 为 Alternative name
+
+# 同时录制声音和视频（摄像头）
+ffmpeg -f dshow -i video=&quot;screen-capture-recorder&quot;:audio=&quot;virtual-audio-capturer&quot; av-out.mp4
+ffmpeg -f gdigrab -video_size 1366x768 -framerate 30 -pixel_format yuv420p -i video=&quot;screen-capture-recorder&quot;:audio=&quot;virtual-audio-capturer&quot; av-out.mp4
+
+# 同时录制音频和视频（桌面）
+ffmpeg -f gdigrab -i desktop -f dshow -i audio=&quot;麦克风 (Realtek High Definition Audio)&quot; av-out.mp4
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>分离视频音频流</p>
+<pre><code class="bash">ffmpeg -i input_file -vcodec copy -an output_file_video　　//分离视频流
+ffmpeg -i input_file -acodec copy -vn output_file_audio　　//分离音频流
+</code></pre>
+</li>
+<li><p>视频解复用</p>
+<pre><code class="bash">ffmpeg –i test.mp4 –vcodec copy –an –f m4v test.264
+ffmpeg –i test.avi –vcodec copy –an –f m4v test.264
+</code></pre>
+</li>
+<li><p>视频封装</p>
+<pre><code class="bash">ffmpeg –i video_file –i audio_file –vcodec copy –acodec copy output_file
+</code></pre>
+</li>
+<li><p>视频剪切</p>
+<pre><code class="bash">ffmpeg –i test.avi –r 1 –f image2 image-%3d.jpeg # 提取图片
+ffmpeg -ss 0:1:30 -t 0:0:20 -i input.avi -vcodec copy -acodec copy output.avi # 剪切视频
+</code></pre>
+<blockquote>
+<p>-r 提取图像的频率，-ss 开始时间，-t 持续时间</p>
+</blockquote>
+</li>
+<li><p>视频录制<br>  <code>ffmpeg –i rtsp://192.168.3.205:5555/test –vcodec copy out.avi</code></p>
+</li>
+<li><p>YUV序列播放<br>  <code>ffplay -f rawvideo -video_size 1920x1080 input.yuv</code></p>
+</li>
+<li><p>YUV序列转AVI<br>  <code>ffmpeg –s w*h –pix_fmt yuv420p –i input.yuv –vcodec mpeg4 output.avi</code></p>
+</li>
+<li><p>将直播媒体保存至本地文件<br>  <code>ffmpeg -i rtmp://server/live/streamName -c copy dump.flv</code></p>
+</li>
+<li><p>将其中一个直播流，视频改用 h264 压缩，音频不变，送至另外一个直播服务流<br>  <code>ffmpeg -i rtmp://server/live/originalStream -c:a copy -c:v libx264 -vpre slow -f flv rtmp://server/live/h264Stream</code> </p>
+</li>
+<li><p>将其中一个直播流，视频改用 h264 压缩，音频改用 faac 压缩，送至另外一个直播服务流<br>  <code>ffmpeg -i rtmp://server/live/originalStream -c:a libfaac -ar 44100 -ab 48k -c:v libx264 -vpre slow -vpre baseline -f flv rtmp://server/live/h264Stream</code></p>
+</li>
+<li><p>将其中一个直播流，视频不变，音频改用 faac 压缩，送至另外一个直播服务流<br>  <code>ffmpeg -i rtmp://server/live/originalStream -acodec libfaac -ar 44100 -ab 48k -vcodec copy -f flv rtmp://server/live/h264_AAC_Stream</code></p>
+</li>
+<li><p>将一个 JPG 图片经过 h264 压缩循环输出为 mp4 视频<br>  <code>ffmpeg.exe -i INPUT.jpg -an -vcodec libx264 -coder 1 -flags +loop -cmp +chroma -subq 10 -qcomp 0.6 -qmin 10 -qmax 51 -qdiff 4 -flags2 +dct8x8 -trellis 2 -partitions +parti8x8+parti4x4 -crf 24 -threads 0 -r 25 -g 25 -y OUTPUT.mp4</code></p>
+</li>
+<li><p>将普通流视频改用 h264 压缩，音频不变，送至高清流服务(新版本 FMS live=1)<br>  <code>ffmpeg -i rtmp://server/live/originalStream -c:a copy -c:v libx264 -vpre slow -f flv &quot;rtmp://server/live/h264Stream live=1〃</code></p>
+</li>
+<li><p>最简单的抓屏<br>  <code>ffmpeg -f gdigrab -i desktop out.mpg</code></p>
+</li>
+<li><p>从屏幕的（10,20）点处开始，抓取 640x480 的屏幕，设定帧率为 5<br>  <code>ffmpeg -f gdigrab -framerate 5 -offset_x 10 -offset_y 20 -video_size 640x480 -i desktop out.mpg </code></p>
+</li>
+<li><p>ffmpeg 从视频中生成 gif 图片<br>  <code>ffmpeg -i capx.mp4 -t 10 -s 320x240 -pix_fmt rgb24 jidu1.gif</code></p>
+</li>
+<li><p>ffmpeg 将图片转换为视频<br>  假如你的图片在c:\temp\下面。那么通过下面的命令就可以将这个目录下面的图片转换成视频。这里面有个要求就是你的图片全部是自然数为文件名， 001, 002, 003这样的。前面要几个0取决于你的图片的个数，如109张，那么就是3-1=2个0，从001 到109，如果是1009张就是0001到1009.<br>  <code>ffmpeg -f image2 -i c:\temp\d.jpg test.mp4</code><br>  你可以指定编码格式<br>  <code>ffmpeg -f image2 -i c:\temp\d.jpg -vcodec libx264 test.mp4</code><br>  也许你还想指定输出帧率<br>  <code>ffmpeg -f image2 -i c:\temp\d.jpg -vcodec libx264 -r 10  test.mp4</code><br>  这样输出的test.mp4就是每秒播放10帧了<br>  如果你要指定码率<br>  <code>ffmpeg -f image2 -i c:\temp\d.jpg -vcodec libx264 -r 10 -b 200k  test.mp4</code><br>  注意这里的200k的单位bit/s.<br>  也许你要问那么到底最后生成的文件的参数都是什么样子，比如我们刚才设置的参数，还有我们没有设置的参数<br>  那么这个命令就可以帮你搞定<br>  <code>ffmpeg -i test.mp4</code></p>
+</li>
+<li><p>将一个高清流，复制为几个不同视频清晰度的流重新发布，其中音频不变<br>  <code>ffmpeg -re -i rtmp://server/live/high_FMLE_stream -acodec copy -vcodec x264lib -s 640×360 -b 500k -vpre medium -vpre baseline rtmp://server/live/baseline_500k -acodec copy -vcodec x264lib -s 480×272 -b 300k -vpre medium -vpre baseline rtmp://server/live/baseline_300k -acodec copy -vcodec 264lib -s 320×200 -b 150k -vpre medium -vpre baseline rtmp://server/live/baseline_150k -acodec libfaac -vn -ab 48k rtmp://server/live/audio_only_AAC_48k</code></p>
+</li>
+<li><p>功能同上一样，只是采用 -x264opts 选项<br>  <code>ffmpeg -re -i rtmp://server/live/high_FMLE_stream -c:a copy -c:v x264lib -s 640×360 -x264opts bitrate=500:profile=baseline:preset=slow rtmp://server/live/baseline_500k -c:a copy -c:v x264lib -s 480×272 -x264opts bitrate=300:profile=baseline:preset=slow rtmp://server/live/baseline_300k -c:a copy -c:v x264lib -s 320×200 -x264opts bitrate=150:profile=baseline:preset=slow rtmp://server/live/baseline_150k -c:a libfaac -vn -b:a 48k rtmp://server/live/audio_only_AAC_48k</code></p>
+</li>
+<li><p>提取视频的 YUV 原始数据<br>  <code>ffmpeg -i input.mp4 output.yuv</code></p>
+</li>
+<li><p>抽取某一帧 YUV：抽出 jpeg 图片，然后把 jpeg 转为 YUV<br>  <code>ffmpeg -i input.mp4 -ss 00:00:20 -t 10 -r 1 -q:v 2 -f image2 pic-%03d.jpeg</code><br>  <code>ffmpeg -i pic-001.jpeg -s 1440x1440 -pix_fmt yuv420p xxx3.yuv</code></p>
+</li>
+</ul>
+<blockquote>
+<p>常用参数说明：</p>
+<ul>
+<li>主要参数：  <pre><code>-i 设定输入流    
+-f 设定输出格式  
+-ss 开始时间 
+</code></pre>
+</li>
+<li>视频参数：<br>  -b 设定视频流量，默认为200Kbit/s<br>  -r 设定帧速率，默认为25<br>  -s 设定画面的宽与高<br>  -aspect 设定画面的比例<br>  -vn 不处理视频<br>  -vcodec 设定视频编解码器，未设定时则使用与输入流相同的编解码器</li>
+<li>音频参数：<br>  -ar 设定采样率<br>  -ac 设定声音的Channel数<br>  -acodec 设定声音编解码器，未设定时则使用与输入流相同的编解码器<br>  -an 不处理音频</li>
+</ul>
+</blockquote>
+<h1 id="FFplay"><a href="#FFplay" class="headerlink" title="FFplay"></a>FFplay</h1><ul>
+<li><p>设置代理并播放</p>
+<pre><code class="bash">export http_proxy=http://xxx:80
+export https_proxy=http://xxx:80
+
+ffplay &quot;https://xxxx/xxx.m3u8&quot;
+</code></pre>
+</li>
+<li><p>播放 test.mp4 ，播放完成后自动退出<br>  <code>ffplay -autoexit test.mp4</code></p>
+</li>
+<li><p>以 320 x 240 的大小播放 test.mp4<br>  <code>ffplay -x 320 -y 240 test.mp4</code></p>
+</li>
+<li><p>将窗口标题设置为 “myplayer”，循环播放 2 次<br>  <code>ffplay -window_title myplayer -loop 2 test.mp4</code></p>
+</li>
+<li><p>播放 双通道 32K 的 PCM 音频数据<br>  <code>ffplay -f s16le -ar 32000 -ac 2 test.pcm</code></p>
+</li>
+<li><p>直接播放摄像头的数据（”WebCam SC-0311139N”为<a href="#query_device">设备名称</a>）<br>  <code>ffplay -f dshow -i video=&quot;WebCam SC-0311139N&quot;</code></p>
+</li>
+<li><p>播放流<br>  <code>ffplay rtmp://127.0.0.1:1935/live/oceans</code><br>  <code>ffplay http://127.0.0.1:80/hls/oceans.m3u8</code></p>
+</li>
+</ul>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2025/03/22/elasticsearch/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2025/03/22/golang/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg" alt="Dim.Ke's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        904243852@qq.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto: 904243852@qq.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/algorithm/">algorithm<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/css/">css<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/deno/">deno<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/docker/">docker<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/elasticsearch/">elasticsearch<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/ffmpeg/">ffmpeg<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/golang/">golang<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/javascript/">javascript<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/kubernetes/">kubernetes<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/linux/">linux<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/mysql/">mysql<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/nginx/">nginx<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/nodejs/">nodejs<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/solr/">solr<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/tomcat/">tomcat<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/webassembly/">webassembly<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/isunk" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+
+    <!-- Gitee -->
+    
+        <a href="https://gitee.com/isunk" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background: url('https://gitee.com/static/images/logo-en.svg'); background-size: cover;">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;Dim.Ke
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/bollnh/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<!-- <script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('
+<link rel="stylesheet" href="/css/uc.css">
+');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script> -->
+
+<!-- Import prettify js  -->
+
+    
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
+        
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 2020;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/bollnh/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>

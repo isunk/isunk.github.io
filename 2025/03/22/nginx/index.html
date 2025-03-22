@@ -1,0 +1,1892 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/bollnh/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            Nginx | 
+        
+        Dim.Ke
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg">
+    <link rel="icon" href="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content=",nginx">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/github-v2.min.css?AfzKxt++K+/lhZBlSjnxwg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+            
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Dim.Ke">
+    <meta name="msapplication-starturl" content="https://isunk.github.io/2025/03/22/nginx/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Dim.Ke">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg">
+
+    <!-- Site Verification -->
+    
+    <meta name="baidu-site-verification" content="code-ibxIxWHREM" />
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://isunk.github.io/2025/03/22/nginx/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Nginx | Dim.Ke">
+    <meta property="og:image" content="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg">
+    <meta property="og:description" content="">
+    <meta property="og:article:tag" content="nginx"> 
+
+    
+        <meta property="article:published_time" content="Sat Mar 22 2025 06:39:26 GMT+0000">
+        <meta property="article:modified_time" content="Sat Mar 22 2025 02:25:41 GMT+0000">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="https://isunk.github.io/2025/03/22/nginx/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://isunk.github.io/2025/03/22/nginx/index.html",
+    "headline": "Nginx",
+    "datePublished": "Sat Mar 22 2025 06:39:26 GMT+0000",
+    "dateModified": "Sat Mar 22 2025 02:25:41 GMT+0000",
+    "author": {
+        "@type": "Person",
+        "name": "Dim.Ke",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Dim.Ke",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg"
+        }
+    },
+    "keywords": ",nginx",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+    <script src="https://kulroakonsu.net/88/tag.min.js" data-zone="137717" async data-cfasync="false"></script><!-- Monetag 广告 -->
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Nginx"><span class="post-toc-text">Nginx</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%BA%90%E7%A0%81%E5%AE%89%E8%A3%85"><span class="post-toc-text">源码安装</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E9%85%8D%E7%BD%AE"><span class="post-toc-text">配置</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%A0%87%E5%87%86%E9%85%8D%E7%BD%AE"><span class="post-toc-text">标准配置</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%99%9A%E6%8B%9F%E7%9B%AE%E5%BD%95%E9%85%8D%E7%BD%AE"><span class="post-toc-text">虚拟目录配置</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HTTPS-%E5%8A%A0%E5%AF%86"><span class="post-toc-text">HTTPS 加密</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HTTPS-%E5%8F%8C%E5%90%91%E8%AE%A4%E8%AF%81"><span class="post-toc-text">HTTPS 双向认证</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1"><span class="post-toc-text">负载均衡</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%8F%8C%E6%9C%BA%E7%83%AD%E5%A4%87"><span class="post-toc-text">双机热备</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E9%85%8D%E7%BD%AE%E9%9D%99%E6%80%81%E5%86%85%E5%AE%B9%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="post-toc-text">配置静态内容服务器</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86"><span class="post-toc-text">反向代理</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E4%BF%AE%E6%94%B9%E4%B8%8A%E6%B8%B8%E6%9C%8D%E5%8A%A1%E7%9A%84%E5%93%8D%E5%BA%94%E5%A4%B4"><span class="post-toc-text">修改上游服务的响应头</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%8E%8B%E7%BC%A9%E5%92%8C%E8%A7%A3%E5%8E%8B"><span class="post-toc-text">压缩和解压</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%86%85%E5%AE%B9%E7%BC%93%E5%AD%98"><span class="post-toc-text">内容缓存</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E9%85%8D%E7%BD%AE%E6%97%A5%E5%BF%97"><span class="post-toc-text">配置日志</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%B7%A8%E5%9F%9F%E9%85%8D%E7%BD%AE"><span class="post-toc-text">跨域配置</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E9%98%B2%E7%9B%97%E9%93%BE"><span class="post-toc-text">防盗链</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8-WebSocket"><span class="post-toc-text">配置使用 WebSocket</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%8E%B7%E5%8F%96%E8%87%AA%E5%AE%9A%E4%B9%89-cookie-%E5%92%8C-header%EF%BC%8C%E8%AE%BE%E7%BD%AE-header"><span class="post-toc-text">获取自定义 cookie 和 header，设置 header</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%AD%90%E5%9F%9F%E5%90%8D"><span class="post-toc-text">子域名</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80%EF%BC%9A%E4%BD%BF%E7%94%A8%E6%AD%A3%E5%88%99%E5%B0%86%E5%AD%90%E5%9F%9F%E5%90%8D%E7%9A%84%E8%AF%B7%E6%B1%82%E6%98%A0%E5%B0%84%E5%88%B0%E5%AF%B9%E5%BA%94%E7%9B%AE%E5%BD%95%E4%B8%AD"><span class="post-toc-text">方法一：使用正则将子域名的请求映射到对应目录中</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C%EF%BC%9A"><span class="post-toc-text">方法二：</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%AE%89%E5%85%A8%E9%85%8D%E7%BD%AE"><span class="post-toc-text">安全配置</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%91%BD%E4%BB%A4"><span class="post-toc-text">命令</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Troubleshooting"><span class="post-toc-text">Troubleshooting</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#nginx-%E5%90%AF%E5%8A%A8%E5%90%8E%EF%BC%8Cjs%E3%80%81html-%E5%8F%AF%E4%BB%A5%E5%8A%A0%E8%BD%BD%EF%BC%8C%E4%BD%86%E6%98%AF%E5%BC%95%E7%94%A8%E7%9A%84-css-%E6%A0%B7%E5%BC%8F%E5%A4%B1%E6%95%88"><span class="post-toc-text">nginx 启动后，js、html 可以加载，但是引用的 css 样式失效</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97"><span class="post-toc-text">第三方模块</span></a></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                Nginx
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Dim.Ke</strong>
+        <span>3月 22, 2025</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-none-link" href="/tags/nginx/" rel="tag">nginx</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Nginx&url=https://isunk.github.io/2025/03/22/nginx/index.html&pic=https://isunk.github.iohttps://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Nginx&url=https://isunk.github.io/2025/03/22/nginx/index.html&via=Dim.Ke" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://isunk.github.io/2025/03/22/nginx/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://isunk.github.io/2025/03/22/nginx/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h1><h2 id="源码安装"><a href="#源码安装" class="headerlink" title="源码安装"></a>源码安装</h2><ol>
+<li><p>安装依赖</p>
+<pre><code class="bash"># cat &gt; /etc/apt/sources.list &lt;&lt; EOF
+# deb http://cn.archive.ubuntu.com/ubuntu/ trusty main restricted
+# deb http://cn.archive.ubuntu.com/ubuntu/ trusty-updates main restricted
+# deb http://cn.archive.ubuntu.com/ubuntu/ trusty universe
+# deb http://cn.archive.ubuntu.com/ubuntu/ trusty-updates universe
+# EOF
+
+apt-get update
+
+apt-get -y install build-essential
+apt-get -y install libpcre++-dev libssl-dev make \
+    libxml2-dev libxslt-dev libgd-dev libgeoip-dev \
+    libgoogle-perftools-dev libatomic-ops-dev libperl-dev
+</code></pre>
+</li>
+<li><p>下载源码</p>
+<pre><code class="bash">cd /usr/local/src
+
+curl -O http://nginx.org/download/nginx-1.15.0.tar.gz
+
+# 解压
+tar zxvf nginx-1.15.0.tar.gz
+</code></pre>
+</li>
+<li><p>新建 nginx 用户及用户组</p>
+<pre><code class="bash">groupadd nginx
+useradd -g nginx -M nginx -s /sbin/nologin
+</code></pre>
+</li>
+<li><p>编译配置、编译、安装  </p>
+<pre><code class="bash">cd /usr/local/src/nginx*
+
+./configure --prefix=/usr/local/nginx \
+    --pid-path=/usr/local/nginx/run/nginx.pid \
+    --with-http_ssl_module \
+    --user=nginx \
+    --group=nginx \
+    --with-pcre \
+    --without-mail_pop3_module \
+    --without-mail_imap_module \
+    --without-mail_smtp_module
+
+make
+make install
+</code></pre>
+<blockquote>
+<p>–prefix=/usr/local/nginx 指定安装到 /usr/local/nginx 目录下</p>
+</blockquote>
+</li>
+<li><p>查看安装后的程序版本<br> <code>/usr/local/nginx/sbin/nginx -v</code></p>
+</li>
+</ol>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://nginxconfig.io/">可视化配置并生成配置文件</a></p>
+</blockquote>
+<p>编辑配置文件 /usr/local/nginx/conf/nginx.conf</p>
+<h3 id="标准配置"><a href="#标准配置" class="headerlink" title="标准配置"></a>标准配置</h3><pre><code class="nginx">events &#123;
+    worker_connections  1024;
+&#125;
+
+http &#123;
+    server &#123;
+        listen      80;
+        server_name localhost;
+        location / &#123;
+            root    html; # /usr/local/nginx/html
+            index   index.html index.htm; # /usr/local/nginx/html/index.html
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<blockquote>
+<p>curl <a target="_blank" rel="noopener" href="http://127.0.0.1/">http://127.0.0.1:80/</a></p>
+</blockquote>
+<h3 id="虚拟目录配置"><a href="#虚拟目录配置" class="headerlink" title="虚拟目录配置"></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/kevingrace/p/6187482.html">虚拟目录配置</a></h3><pre><code class="nginx">events &#123;
+    worker_connections  1024;
+&#125;
+
+http &#123;
+    server &#123;
+        listen      80;
+        server_name localhost;
+        location / &#123;
+            root    html; # /usr/local/nginx/html
+            index   index.html index.htm; # /usr/local/nginx/html/index.html
+        &#125;
+
+        location /hls &#123;
+            types &#123;
+                application/vnd.apple.mpegurl m3u8;
+                video/mp2t ts;
+            &#125;
+
+            # root 响应的路径：配置的路径 + 完整访问路径(完整的 location 配置路径 + 静态文件)
+            # root /usr/share/nginx/html; # &quot;/usr/share/nginx/html&quot; + &quot;/hls/oceans.m3u8&quot;
+            # alias 响应的路径：配置路径 + 静态文件(去除 location 中配置的路径)
+            alias /usr/share/nginx/html/hls/; # &quot;/usr/share/nginx/html/hls/&quot; + &quot;oceans.m3u8&quot;
+
+            # expires -1;
+            add_header Cache-Control no-cache;
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<blockquote>
+<ul>
+<li>使用 alias 时目录名后面一定要加 “/”</li>
+<li>一般情况下，在 location / 中配置 root，在 location /other 中配置 alias</li>
+</ul>
+</blockquote>
+<h3 id="HTTPS-加密"><a href="#HTTPS-加密" class="headerlink" title="HTTPS 加密"></a>HTTPS 加密</h3><p>生成 CA 自签名证书并签发服务器证书</p>
+<pre><code class="bash">cd /var/ssl
+
+# 生成 CA 自签名证书
+openssl genrsa -out ca.key 4096
+openssl req -new -x509 -days 7300 -key ca.key -subj &quot;/C=CN/ST=JS/L=NJ/O=Sunke, Inc./CN=Sunke Root CA&quot; -out ca.crt
+
+# 生成服务器证书
+openssl req -newkey rsa:2048 -nodes -keyout server.key -subj &quot;/C=CN/ST=JS/L=NJ/O=Sunke, Inc./CN=localhost&quot; -out server.csr
+openssl x509 -sha256 -req -extfile &lt;(printf &quot;subjectAltName=DNS:localhost,IP:127.0.0.1&quot;) -days 365 -in server.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out server.crt
+
+cat server.crt ca.crt &gt; server.b.crt # 证书链
+</code></pre>
+<p>在 <code>/http</code> 节点下，配置 <code>server</code> 如下</p>
+<pre><code class="nginx">server &#123;
+    listen 443 ssl;
+    server_name localhost;
+
+    ssl_protocols TLSv1.2; # 支持 TLSv1.2 协议
+
+    ssl_certificate /var/ssl/server.b.crt; # server 公钥，需使用绝对路径
+    ssl_certificate_key /var/ssl/server.key; # server 私钥
+
+    location / &#123;
+        ...
+    &#125;
+&#125;
+</code></pre>
+<h3 id="HTTPS-双向认证"><a href="#HTTPS-双向认证" class="headerlink" title="HTTPS 双向认证"></a>HTTPS 双向认证</h3><p>生成客户端证书</p>
+<pre><code class="bash">cd /var/ssl
+
+openssl req -newkey rsa:2048 -nodes -keyout client.key -subj &quot;/C=CN/ST=JS/L=NJ/O=/CN=&quot; -out client.csr
+openssl x509 -sha256 -req -days 365 -in client.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out client.crt
+</code></pre>
+<p>在 <code>/http</code> 节点下，配置 <code>server</code> 如下</p>
+<pre><code class="nginx">server &#123;
+    listen 443 ssl;
+    server_name localhost;
+
+    ssl_protocols TLSv1.2; # 支持 TLSv1.2 协议
+
+    ssl_certificate /var/ssl/server.b.crt; # server 公钥
+    ssl_certificate_key /var/ssl/server.key; # server 私钥
+
+    ssl_client_certificate /var/ssl/ca.crt; # 根级证书公钥，用于验证各个二级 client
+    ssl_verify_client on;
+
+    location / &#123;
+        ...
+
+        # proxy_set_header X-SSL-Client-Cert $ssl_client_cert; # 客户端证书内容信息
+        # proxy_set_header X-SSL-serial $ssl_client_serial; # 客户端证书序列号
+        # proxy_set_header cert-subject $ssl_client_s_dn; # 客户端证书 subject 信息
+    &#125;
+&#125;
+</code></pre>
+<h3 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h3><p>在 <code>/http</code> 节点下，新增 <code>upstream</code> 配置如下</p>
+<pre><code class="nginx">http &#123;
+    upstream myproject &#123;
+        server 127.0.0.1:8000 weight=3;
+        server 127.0.0.1:8001;
+        server 127.0.0.1:8002;
+        server 127.0.0.1:8003;
+        ip_hash; # 配置 ip hash，可用于解决 session 不同步的问题
+    &#125;       
+    server &#123;
+        listen 80;
+        server_name www.domain.com;
+        location / &#123;
+            proxy_pass http://myproject;
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<h3 id="双机热备"><a href="#双机热备" class="headerlink" title="双机热备"></a>双机热备</h3><p>在 <code>/http</code> 节点下，新增 <code>upstream</code> 配置如下</p>
+<pre><code class="nginx">http &#123;
+    upstream myserver &#123;
+        server 192.168.1.101:8080;
+        server 127.0.0.1:8080 backup;
+    &#125;
+    server &#123;
+        listen 8000;
+        location / &#123;
+            proxy_set_header Host $http_host;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+
+            proxy_pass http://myserver;
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<h3 id="配置静态内容服务器"><a href="#配置静态内容服务器" class="headerlink" title="配置静态内容服务器"></a>配置静态内容服务器</h3><p>在 <code>/http/server</code> 节点下，配置 <code>location</code> 如下</p>
+<pre><code class="nginx">location / &#123;
+    root   html;
+    index  index.html index.htm;
+&#125;
+location /image/ &#123;
+    root   /usr/local/myImage/;
+    autoindex on;
+&#125;
+</code></pre>
+<h3 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h3><p>在 <code>/http/server</code> 节点下，配置 <code>location</code> 如下</p>
+<pre><code class="nginx">location / &#123;
+    proxy_pass http://127.0.0.1:8080; # 反向代理服务器的地址
+    index index.html index.htm;  
+&#125;
+location /a &#123;
+    proxy_pass http://127.0.0.1:8081;
+    proxy_set_header Host $host:$proxy_port; # 区别于 add_header 只能用于新增响应消息头，proxy_set_header 用于设置 Nginx 转发至上游服务的请求消息头
+&#125;
+location /b &#123;
+    proxy_pass http://192.168.1.102:8081/b;
+    proxy_cookie_path /a /b;
+&#125;
+
+location /api &#123;
+    # 代理转发
+    proxy_pass http://192.168.1.101:3000/; # 如果在 proxy_pass 中的 url 后面加 /，表示绝对根路径，如 http://127.0.0.1:80/api/greeting =&gt; http://192.168.1.101:3000//greeting
+    # proxy_pass http://192.168.1.101:3000; # 否则表示相对路径，把匹配的路径部分也给代理走，如 http://127.0.0.1:80/api/greeting =&gt; http://192.168.1.101:3000/api/greeting
+&#125;
+# location /api/ &#123;
+#     proxy_pass http://192.168.1.101:3000/; # 绝对路径，如 http://127.0.0.1:80/api/greeting =&gt; http://192.168.1.101:3000/greeting
+#     proxy_pass http://192.168.1.101:3000; # 相对路径，如 http://127.0.0.1:80/api/greeting =&gt; http://192.168.1.101:3000/api/greeting
+#     proxy_pass http://192.168.1.101:3000/user/; # 如 http://127.0.0.1:80/api/greeting =&gt; http://192.168.1.101:3000/user/greeting
+#     proxy_pass http://192.168.1.101:3000/user; # 如 http://127.0.0.1:80/api/greeting =&gt; http://192.168.1.101:3000/usergreeting
+# &#125;
+</code></pre>
+<h4 id="修改上游服务的响应头"><a href="#修改上游服务的响应头" class="headerlink" title="修改上游服务的响应头"></a>修改上游服务的响应头</h4><pre><code class="nginx">location / &#123;
+    proxy_hide_header X-Frame-Options; # Nginx 会将上游服务器的响应转发给客户端，但默认不会转发以下 HTTP 头部字段：Date、Server、X-Pad和X-Accel-*。使用 proxy_hide_header 后可以任意地指定哪些 HTTP 头部字段不能被转发。
+    add_header X-Frame-Options SAMEORIGIN; # 新增响应头
+    proxy_pass http://127.0.0.1:8080; # 反向代理服务器的地址  
+&#125;
+</code></pre>
+<h3 id="压缩和解压"><a href="#压缩和解压" class="headerlink" title="压缩和解压"></a>压缩和解压</h3><p>在 <code>/http</code> 节点下，配置 <code>server</code> 如下</p>
+<pre><code class="nginx">server &#123;
+    gzip on;
+    gzip_types      text/plain application/xml;
+    gzip_proxied    no-cache no-store private expired auth;
+    gzip_min_length 1000;
+    ...
+&#125;
+</code></pre>
+<h3 id="内容缓存"><a href="#内容缓存" class="headerlink" title="内容缓存"></a>内容缓存</h3><p>在 <code>/http</code> 节点下，配置 <code>server</code> 如下</p>
+<pre><code class="nginx">server &#123;
+    listen 80;
+    server_name localhost;
+    location ~ .*.(html|htm)$ &#123;
+        # 缓存开关
+        expires 24h;
+        root /home/project/nginx-code;
+    &#125;
+&#125;
+</code></pre>
+<h3 id="配置日志"><a href="#配置日志" class="headerlink" title="配置日志"></a>配置日志</h3><p>在 <code>/</code> 节点下，配置 <code>http</code> 如下</p>
+<pre><code class="nginx">http &#123;
+    ...
+    log_format main &#39;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &#39;
+                    &#39;$status $body_bytes_sent &quot;$http_referer&quot; &#39;
+                    &#39;&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;&#39;
+                    &#39;$upstream_addr $upstream_response_time $request_time&#39;;
+
+    access_log  logs/access.log  main;
+    ...
+&#125;
+</code></pre>
+<h3 id="跨域配置"><a href="#跨域配置" class="headerlink" title="跨域配置"></a>跨域配置</h3><p>在 <code>/http/server</code> 节点下，配置 <code>location</code> 如下</p>
+<pre><code class="nginx">server &#123;
+    listen 80;
+    server_name localhost;
+    location ~ .*.(html|htm)$ &#123;
+        add_header Access-Control-Allow-Origin *;
+        add_header Access-Control-Allow-Methods GET,POST,PUT,DELETE,OPTIONS;
+        root /home/project/nginx-code;
+    &#125;
+&#125;
+</code></pre>
+<h3 id="防盗链"><a href="#防盗链" class="headerlink" title="防盗链"></a>防盗链</h3><p>在 <code>/http/server</code> 节点下，配置 <code>location</code> 如下</p>
+<pre><code class="nginx">location ~* \.(gif|jpg|png|swf|flv)$ &#123; # 表示对 gif、jpg、png、swf、flv 后缀的文件实行防盗链
+    root html # 如果在 server &#123;...&#125; 中有设置，这里可以不设置
+    valid_referers none blocked 127.0.0.1 *.nginxcn.com; # 表示对 127.0.0.1、*.nginxcn.com 这 2 个 url 进行判断
+    if ($invalid_referer) &#123;
+        rewrite ^/ www.nginx.cn # 如果不是指定 url 就跳转到 www.nginx.cn
+        # return 403; # 或这可以直接返回 403 状态码
+    &#125;
+&#125;
+</code></pre>
+<blockquote>
+<p>valid_referers 指令后面可以接 none、blocked、serevr_names、string 或正则表达式</p>
+<ul>
+<li>none 代表没有 referer</li>
+<li>blocked 代表有 referer 但是被防火墙或者是代理给去除了</li>
+<li>string 或正在表达式，用来匹配 referer</li>
+</ul>
+</blockquote>
+<h3 id="配置使用-WebSocket"><a href="#配置使用-WebSocket" class="headerlink" title="配置使用 WebSocket"></a>配置使用 WebSocket</h3><p>在 <code>/http/server</code> 节点下，配置 <code>location</code> 如下</p>
+<pre><code class="nginx">location /api/ &#123;
+    proxy_pass ws://127.0.0.1:3000/;
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection &quot;upgrade&quot;;
+&#125;
+</code></pre>
+<h3 id="获取自定义-cookie-和-header，设置-header"><a href="#获取自定义-cookie-和-header，设置-header" class="headerlink" title="获取自定义 cookie 和 header，设置 header"></a>获取自定义 cookie 和 header，设置 header</h3><p>在 <code>/http</code> 节点下，配置 <code>server</code> 如下</p>
+<pre><code class="nginx">location /api/ &#123;
+    set $token &quot;&quot;;
+    if ( $http_cookie ~* &quot;X-Token=(.+?)(?=;|$)&quot; ) &#123;
+        set $token $1; # 获取请求 cookie 中的 X-Token 值
+    &#125;
+    if ( $http_x_token != &quot;&quot; ) &#123;
+        set $token $http_x_token; # 获取请求 header 中的 X-Token 值
+    &#125;
+    proxy_set_header X-Auth-Token $token;
+    proxy_pass http://127.0.0.1:3000/;
+&#125;
+</code></pre>
+<h3 id="子域名"><a href="#子域名" class="headerlink" title="子域名"></a>子域名</h3><h4 id="方法一：使用正则将子域名的请求映射到对应目录中"><a href="#方法一：使用正则将子域名的请求映射到对应目录中" class="headerlink" title="方法一：使用正则将子域名的请求映射到对应目录中"></a>方法一：使用正则将子域名的请求映射到对应目录中</h4><p>在 <code>/http/server</code> 节点下，配置如下</p>
+<pre><code class="nginx">if ( $host ~* (\b(?!www\b)\w+)\.\w+\.\w+ ) &#123;
+    set $subdomain /$1;
+&#125;
+location / &#123;
+    root /home/web/public_html$subdomain; # 如 www.myserver.com 映射目录 /home/web/public_html，blog.myserver.com 映射目录 /home/web/public_htmlblog
+    index index.html index.php;
+&#125;
+</code></pre>
+<h4 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h4><p>在 <code>/http</code> 节点下，配置 <code>server</code> 如下</p>
+<pre><code class="nginx">server &#123;
+    listen      80;
+    server_name www.myserver.com myserver.com;
+    location / &#123;
+        root    html;
+        index   index.html;
+    &#125;
+&#125;
+server &#123;
+    listen      80;
+    server_name blog.myserver.com;
+    location / &#123;
+        root    html;
+        index   index.html;
+    &#125;
+&#125;
+
+# 动态配置如下
+server &#123;
+    listen      80;
+    server_name ~$ (.*).myserver.com;
+    root        $root_path;
+    if ( $host ~* blog.myserver.com ) &#123;
+        set root_path &#39;/home/web/public_htmlblog&#39;;
+    &#125;
+&#125;
+</code></pre>
+<p>修改 <code>/etc/hosts</code> 文件（windows 下位于 C:\Windows\System32\drivers\etc\hosts）如下</p>
+<pre><code>127.0.0.1    blog.myserver.com
+</code></pre>
+<h3 id="安全配置"><a href="#安全配置" class="headerlink" title="安全配置"></a><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/163c26766a80">安全配置</a></h3><ul>
+<li><p>限制请求率<br>  <font color="grey">将 Nginx 可接受的入站请求率限制为某个适合真实用户的值。例如，根据 ip 限制每个用户每两秒钟才能访问一次页面</font></p>
+<pre><code class="nginx">http &#123;
+    # limit_req_zone $binary_remote_addr $uri zone=api_read:20m rate=50r/s;
+    limit_req_zone $binary_remote_addr zone=one:10m rate=30r/m;
+
+    server &#123;
+        location / &#123;
+            # limit_req zone=api_read burst=5;
+            limit_req zone=one;
+            ...
+        &#125;
+        ...
+    &#125;
+&#125;
+</code></pre>
+<blockquote>
+<ul>
+<li>limit_req_zone 配置参数：<ul>
+<li><code>$binary_remote_addr</code> 表示通过 remote_addr 这个标识来做限制，”binary_” 的目的是缩写内存占用量，是限制同一客户端 ip 地址</li>
+<li><code>zone=api_read:20m</code> 表示生成一个大小为 20M，名字为 api_read 的内存区域，用来存储访问的频次信息</li>
+<li><code>rate=50r/s</code> 表示允许相同标识的客户端的访问频次，这里限制的是每秒 50 次，还可以有比如 30r/m 的</li>
+</ul>
+</li>
+<li>limit_req 配置参数：<ul>
+<li><code>zone=api_read</code> 设置使用哪个配置区域来做限制，与上面 limit_req_zone 里的 name 对应</li>
+<li><code>burst=5</code>（可选，默认为 0），burst（英文为爆发的意思）配置是指设置一个大小为 5 的缓冲区当有大量请求（爆发）过来时，超过了访问频次限制的请求可以先放到这个缓冲区内</li>
+<li><code>nodelay</code>（可选），如果设置，超过访问频次而且缓冲区也满了的时候就会直接返回 503，如果没有设置，则所有请求会等待排队</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+</li>
+<li><p>限制连接的数量<br>  <font color="grey">将某个客户端 ip 地址所能打开的连接数限制为真实用户的合理值。例如，限制每一个 ip 对网站打开的连接数不超过 10 个</font></p>
+<pre><code class="nginx">http &#123;
+    # # 按 ip 配置一个连接 zone
+    # limit_conn_zone $binary_remote_addr zone=perip_conn:10m;
+    
+    # # 按 server 配置一个连接 zone
+    # limit_conn_zone $server_name zone=perserver_conn:100m;
+
+    limit_conn_zone $binary_remote_addr zone=addr:10m;
+
+    server &#123;
+        location / &#123;
+            # # 连接数限制,每个 ip 并发请求为 2
+            # limit_conn perip_conn 2;
+            
+            # # 服务所限制的连接数（即限制了该 server 并发连接数量）
+            # limit_conn perserver_conn 1000;
+
+            limit_conn addr 10;
+            ...
+        &#125;
+        ...
+    &#125;
+&#125;
+</code></pre>
+</li>
+<li><p>关闭慢连接<br>  <font color="grey">关闭那些一直保持打开同时写数据又特别频繁的连接，因为它们会降低服务器接受新连接的能力。Slowloris 就是这种类型的攻击。对此，可以通过 client_body_timeout 和 client_header_timeout 指令控制请求体或者请求头的超时时间，例如，通过下面的配置将等待时间控制在 5s 之内</font></p>
+<pre><code class="nginx">http &#123;
+    ...
+    server &#123;
+        client_body_timeout 5s;
+        client_header_timeout 5s;
+        ...
+    &#125;
+&#125;
+</code></pre>
+</li>
+<li><p>设置 ip 黑名单<br>  <font color="grey">如果能识别攻击者所使用的客户端 ip 地址，那么通过 deny 指令将其屏蔽，拒绝来自这些地址的连接或请求。例如，通过下面的指令拒绝来自 123.123.123.3、123.123.123.5 的请求</font></p>
+<pre><code class="nginx">http &#123;
+    ...
+    server &#123;
+        location / &#123;
+            deny 123.123.123.3;
+            deny 123.123.123.5;
+            ...
+        &#125;
+        ...
+    &#125;
+&#125;
+</code></pre>
+</li>
+<li><p>设置 ip 白名单<br>  <font color="grey">如果允许访问的 ip 地址比较固定，那么通过 allow 和 deny 指令让网站或者应用程序只接受来自于某个 ip 地址或者某个 ip 地址段的请求。例如，通过下面的指令将访问限制为本地网络的一个 ip 段</font></p>
+<pre><code class="nginx">http &#123;
+    ...
+    server &#123;
+        location / &#123;
+            allow 192.168.1.0/24;
+            deny all;
+            ...
+        &#125;
+        ...
+    &#125;
+&#125;
+</code></pre>
+</li>
+<li><p>阻塞请求<br>  <font color="grey">通过下面的配置阻塞已识别出的 User-Agent 头的值是 foo 或者 bar 的 DDoS 攻击</font></p>
+<pre><code class="nginx">http &#123;
+    ...
+    server &#123;
+        location / &#123;
+            if ($http_user_agent ~* foo|bar) &#123;
+                return 403;
+            &#125;
+            ...
+        &#125;
+        ...
+    &#125;
+&#125;
+</code></pre>
+</li>
+<li><p>限制对后端服务器的连接数<br>  <font color="grey">例如，通过下面的配置限制每一台后端服务器之间建立的连接数不多于 200 个</font></p>
+<pre><code class="nginx">http &#123;
+    ...
+    upstream website &#123;
+        server 192.168.100.1:80 max_conns=200;
+        server 192.168.100.2:80 max_conns=200;
+        queue 10 timeout=30s;
+        ...
+    &#125;
+&#125;
+</code></pre>
+</li>
+<li><p>连接限速<br>  <font color="grey">例如，通过下面的配置限制连接速度小于 100k</font></p>
+<pre><code class="nginx">http &#123;
+    ...
+    server &#123;
+        ...
+        location / &#123;
+            # 连接限速
+            limit_rate 100k;
+            ...
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+</li>
+</ul>
+<details>
+<summary>官方完整示例</summary>
+
+<pre><code class="nginx">user www www; # 使用的用户和组
+
+worker_processes  2; # 指定工作衍生进程数
+
+pid /var/run/nginx.pid; # 指定 pid 存放的路径
+
+# 错误日志级别，可以为 [ debug | info | notice | warn | error | crit ]
+error_log  /var/log/nginx.error_log  info;
+
+events &#123;
+    worker_connections   2000;  # 允许的连接数
+
+    # use [ kqueue | epoll | /dev/poll | select | poll ];
+    use kqueue; # 具体内容查看 http://wiki.codemongers.com/ 事件模型
+&#125;
+
+http &#123;
+
+    include       conf/mime.types;
+    default_type  application/octet-stream;
+
+
+    log_format main      &#39;$remote_addr - $remote_user [$time_local] &#39;
+                         &#39;&quot;$request&quot; $status $bytes_sent &#39;
+                         &#39;&quot;$http_referer&quot; &quot;$http_user_agent&quot; &#39;
+                         &#39;&quot;$gzip_ratio&quot;&#39;;
+
+    log_format download  &#39;$remote_addr - $remote_user [$time_local] &#39;
+                         &#39;&quot;$request&quot; $status $bytes_sent &#39;
+                         &#39;&quot;$http_referer&quot; &quot;$http_user_agent&quot; &#39;
+                         &#39;&quot;$http_range&quot; &quot;$sent_http_content_range&quot;&#39;;
+
+    client_header_timeout  3m;
+    client_body_timeout    3m;
+    send_timeout           3m;
+
+    client_header_buffer_size    1k;
+    large_client_header_buffers  4 4k;
+
+    gzip on;
+    gzip_min_length  1100;
+    gzip_buffers     4 8k;
+    gzip_types       text/plain;
+
+    output_buffers   1 32k;
+    postpone_output  1460;
+
+    sendfile         on;
+    tcp_nopush       on;
+    tcp_nodelay      on;
+    send_lowat       12000;
+
+    keepalive_timeout  75 20;
+
+    #lingering_time     30;
+    #lingering_timeout  10;
+    #reset_timedout_connection  on;
+
+
+    server &#123;
+        listen        one.example.com;
+        server_name   one.example.com  www.one.example.com;
+
+        access_log   /var/log/nginx.access_log  main;
+
+        location / &#123;
+            proxy_pass         http://127.0.0.1/;
+            proxy_redirect     off;
+
+            proxy_set_header   Host             $host;
+            proxy_set_header   X-Real-IP        $remote_addr;
+            #proxy_set_header  X-Forwarded-For  $proxy_add_x_forwarded_for;
+
+            client_max_body_size       10m;
+            client_body_buffer_size    128k;
+
+            client_body_temp_path      /var/nginx/client_body_temp;
+
+            proxy_connect_timeout      70;
+            proxy_send_timeout         90;
+            proxy_read_timeout         90;
+            proxy_send_lowat           12000;
+
+            proxy_buffer_size          4k;
+            proxy_buffers              4 32k;
+            proxy_busy_buffers_size    64k;
+            proxy_temp_file_write_size 64k;
+
+            proxy_temp_path            /var/nginx/proxy_temp;
+
+            charset  koi8-r;
+        &#125;
+
+        error_page  404  /404.html;
+
+        location /404.html &#123;
+            root  /spool/www;
+        &#125;
+
+        location /old_stuff/ &#123;
+            rewrite   ^/old_stuff/(.*)$  /new_stuff/$1  permanent;
+        &#125;
+
+        location /download/ &#123;
+
+            valid_referers  none  blocked  server_names  *.example.com;
+
+            if ($invalid_referer) &#123;
+                #rewrite   ^/   http://www.example.com/;
+                return   403;
+            &#125;
+
+            #rewrite_log  on;
+
+            # rewrite /download/*/mp3/*.any_ext to /download/*/mp3/*.mp3
+            rewrite ^/(download/.*)/mp3/(.*)\..*$
+                    /$1/mp3/$2.mp3                   break;
+
+            root         /spool/www;
+            #autoindex    on;
+            access_log   /var/log/nginx-download.access_log  download;
+        &#125;
+
+        location ~* \.(jpg|jpeg|gif)$ &#123;
+            root         /spool/www;
+            access_log   off;
+            expires      30d;
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+</details>
+
+<h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><pre><code class="bash"># 验证配置文件是否合法
+/usr/local/nginx/sbin/nginx -t
+
+# 启动 nginx
+/usr/local/nginx/sbin/nginx
+# /usr/local/nginx/sbin/nginx -c ./nginx.conf
+
+# 重启 nginx
+/usr/nginx/sbin/nginx -s reload
+
+# 停止
+nginx -s stop
+
+# 退出
+nginx -s quit
+</code></pre>
+<h2 id="Troubleshooting"><a href="#Troubleshooting" class="headerlink" title="Troubleshooting"></a>Troubleshooting</h2><h3 id="nginx-启动后，js、html-可以加载，但是引用的-css-样式失效"><a href="#nginx-启动后，js、html-可以加载，但是引用的-css-样式失效" class="headerlink" title="nginx 启动后，js、html 可以加载，但是引用的 css 样式失效"></a>nginx 启动后，js、html 可以加载，但是引用的 css 样式失效</h3><ul>
+<li><p>现象<br>  查看引用失效的 css 文件后发现请求头中 Accept 为 text/css，但是响应头中 Content-Type 为 text/plain</p>
+</li>
+<li><p>解决方案  </p>
+<ol>
+<li><p>在 nginx.conf 文件中 http 内增加配置 <code>include mime.types;</code> 如下</p>
+<pre><code class="nginx">events &#123;
+    worker_connections  1024;
+&#125;
+
+http &#123;
+    include mime.types;
+
+    server &#123;
+        listen      80;
+        server_name localhost;
+        location / &#123;
+            root    html; # /usr/local/nginx/html
+            index   index.html index.htm; # /usr/local/nginx/html/index.html
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+</li>
+<li><p>在 /etc/nginx/mime.types 放入配置文件</p>
+<pre><code>types &#123;
+    text/html                                        html htm shtml;
+    text/css                                         css;
+    text/xml                                         xml;
+    image/gif                                        gif;
+    image/jpeg                                       jpeg jpg;
+    application/javascript                           js;
+    application/atom+xml                             atom;
+    application/rss+xml                              rss;
+
+    text/mathml                                      mml;
+    text/plain                                       txt;
+    text/vnd.sun.j2me.app-descriptor                 jad;
+    text/vnd.wap.wml                                 wml;
+    text/x-component                                 htc;
+
+    image/png                                        png;
+    image/svg+xml                                    svg svgz;
+    image/tiff                                       tif tiff;
+    image/vnd.wap.wbmp                               wbmp;
+    image/webp                                       webp;
+    image/x-icon                                     ico;
+    image/x-jng                                      jng;
+    image/x-ms-bmp                                   bmp;
+
+    application/font-woff                            woff;
+    application/java-archive                         jar war ear;
+    application/json                                 json;
+    application/mac-binhex40                         hqx;
+    application/msword                               doc;
+    application/pdf                                  pdf;
+    application/postscript                           ps eps ai;
+    application/rtf                                  rtf;
+    application/vnd.apple.mpegurl                    m3u8;
+    application/vnd.google-earth.kml+xml             kml;
+    application/vnd.google-earth.kmz                 kmz;
+    application/vnd.ms-excel                         xls;
+    application/vnd.ms-fontobject                    eot;
+    application/vnd.ms-powerpoint                    ppt;
+    application/vnd.oasis.opendocument.graphics      odg;
+    application/vnd.oasis.opendocument.presentation  odp;
+    application/vnd.oasis.opendocument.spreadsheet   ods;
+    application/vnd.oasis.opendocument.text          odt;
+    application/vnd.openxmlformats-officedocument.presentationml.presentation
+                                                    pptx;
+    application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+                                                    xlsx;
+    application/vnd.openxmlformats-officedocument.wordprocessingml.document
+                                                    docx;
+    application/vnd.wap.wmlc                         wmlc;
+    application/x-7z-compressed                      7z;
+    application/x-cocoa                              cco;
+    application/x-java-archive-diff                  jardiff;
+    application/x-java-jnlp-file                     jnlp;
+    application/x-makeself                           run;
+    application/x-perl                               pl pm;
+    application/x-pilot                              prc pdb;
+    application/x-rar-compressed                     rar;
+    application/x-redhat-package-manager             rpm;
+    application/x-sea                                sea;
+    application/x-shockwave-flash                    swf;
+    application/x-stuffit                            sit;
+    application/x-tcl                                tcl tk;
+    application/x-x509-ca-cert                       der pem crt;
+    application/x-xpinstall                          xpi;
+    application/xhtml+xml                            xhtml;
+    application/xspf+xml                             xspf;
+    application/zip                                  zip;
+
+    application/octet-stream                         bin exe dll;
+    application/octet-stream                         deb;
+    application/octet-stream                         dmg;
+    application/octet-stream                         iso img;
+    application/octet-stream                         msi msp msm;
+
+    audio/midi                                       mid midi kar;
+    audio/mpeg                                       mp3;
+    audio/ogg                                        ogg;
+    audio/x-m4a                                      m4a;
+    audio/x-realaudio                                ra;
+
+    video/3gpp                                       3gpp 3gp;
+    video/mp2t                                       ts;
+    video/mp4                                        mp4;
+    video/mpeg                                       mpeg mpg;
+    video/quicktime                                  mov;
+    video/webm                                       webm;
+    video/x-flv                                      flv;
+    video/x-m4v                                      m4v;
+    video/x-mng                                      mng;
+    video/x-ms-asf                                   asx asf;
+    video/x-ms-wmv                                   wmv;
+    video/x-msvideo                                  avi;
+&#125;
+</code></pre>
+</li>
+<li><p>重启 nginx</p>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="第三方模块"><a href="#第三方模块" class="headerlink" title="第三方模块"></a>第三方模块</h2><details>
+<summary>使用 nginx-rtmp-module 搭建流媒体服务器</summary>
+
+<ol>
+<li><p>下载 nginx-rtmp-module  </p>
+<pre><code class="bash"># apt-get -y install git
+
+git clone https://github.com/arut/nginx-rtmp-module.git /usr/local/src/nginx-rtmp-module
+</code></pre>
+</li>
+<li><p>安装 nginx</p>
+<pre><code class="bash"># apt-get install openssl openssl-devel
+
+# cd /usr/local/src
+# curl -O http://nginx.org/download/nginx-1.15.0.tar.gz
+# tar -zxvf nginx-1.15.0.tar.gz
+
+cd /usr/local/src/nginx-1.15.0
+
+make clean
+
+./configure --prefix=/usr/local/nginx \
+            --add-module=../nginx-rtmp-module \
+            --with-http_ssl_module
+
+make &amp;&amp; make install
+
+mkdir -p /usr/share/nginx/html/hls
+mkdir -p /usr/share/nginx/html/vod
+</code></pre>
+<blockquote>
+<p>查看 nginx 版本、编译参数信息 <code>/usr/local/nginx/sbin/nginx -V</code></p>
+</blockquote>
+</li>
+<li><p>修改 nginx 配置文件<br> <code>vi /usr/local/nginx/conf/nginx.conf</code><br> 添加 rtmp 配置如下</p>
+<pre><code class="nginx">events &#123;
+    worker_connections  1024;
+&#125;
+
+http &#123;
+    server &#123;
+        listen      80;
+        server_name localhost;
+        
+        location / &#123;
+            root    html; # /usr/local/nginx/html
+            index   index.html index.htm; # /usr/local/nginx/html/index.html
+        &#125;
+    &#125;
+&#125;
+
+rtmp &#123;
+    server &#123;
+        listen 1935; # 监听的端口
+        chunk_size 4096;
+
+        application live &#123; # rtmp 推流请求路径
+            live on; # 开启 rtmp 直播
+        &#125;
+
+        application vod &#123;
+            play /usr/share/nginx/html/vod; # 视频文件如 oceans.mp4 存放路径
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+</li>
+<li><p>启动 nginx<br> <del><code>/usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf</code></del><br> <code>/usr/local/nginx/sbin/nginx</code></p>
+</li>
+<li><p><span id="streaming">推流</span>  </p>
+<pre><code class="bash">ffmpeg -re -i oceans.mp4 -c copy -f flv rtmp://127.0.0.1:1935/live/oceans
+</code></pre>
+</li>
+<li><p>播放  </p>
+<pre><code class="bash">ffplay rtmp://127.0.0.1:1935/live/oceans
+
+ffplay rtmp://127.0.0.1:1935/vod/oceans.mp4 # /usr/share/nginx/html/vod/oceans.mp4
+</code></pre>
+</li>
+</ol>
+<ul>
+<li><p>搭建 hls 直播</p>
+<ol>
+<li><p>修改 nginx 配置文件<br> <code>vi /usr/local/nginx/conf/nginx.conf</code><br> 配置 nginx.conf 如下</p>
+<pre><code class="nginx">user root;
+
+events &#123;
+    worker_connections  1024;
+&#125;
+
+http &#123;
+    server &#123;
+        listen      80;
+        server_name localhost;
+        
+        location / &#123;
+            root    html; # /usr/local/nginx/html
+            index   index.html index.htm; # /usr/local/nginx/html/index.html
+        &#125;
+
+        location /hls &#123;
+            types &#123;
+                application/vnd.apple.mpegurl m3u8;
+                video/mp2t ts;
+            &#125;
+
+            alias /usr/share/nginx/html/hls/; # &quot;/usr/share/nginx/html/hls/&quot; + &quot;oceans.m3u8&quot;
+
+            # expires -1;
+            add_header Cache-Control no-cache;
+
+            # valid_referers blocked 127.0.0.1 192.168.56.5; # 开启防盗链功能，只允许本站（192.168.56.5）网页上访问
+            # if ($invalid_referer) &#123;
+            #     return 403;
+            # &#125;
+        &#125;
+    &#125;
+&#125;
+
+rtmp &#123;
+    server &#123;
+        listen 1935; # 监听的端口
+        chunk_size 4096;
+
+        application live &#123; # rtmp 推流请求路径
+            live on; # 开启 rtmp 直播
+
+            hls on; # 开启 hls 直播
+            hls_path /usr/share/nginx/html/hls; # hls 的 m3u8 文件保存路径
+            hls_fragment 5s; # 切片长度
+
+            hls_cleanup off; # 关闭自动清理 m3u8、ts 文件功能，默认为开启 on
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+</li>
+<li><p>创建 live.html<br> <code>vi /usr/local/nginx/html/live.html</code><br> 编辑 live.html 如下</p>
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;title&gt;live&lt;/title&gt;
+        &lt;!-- PC 端不支持播放 m3u8 格式，需要引入 video.js --&gt;
+        &lt;link href=&quot;https://unpkg.com/video.js/dist/video-js.css&quot; rel=&quot;stylesheet&quot;&gt;
+        &lt;script src=&quot;https://unpkg.com/video.js/dist/video.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;https://unpkg.com/videojs-contrib-hls/dist/videojs-contrib-hls.js&quot;&gt;&lt;/script&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+        &lt;video id=&quot;video&quot; class=&quot;video-js vjs-default-skin fillWidth&quot; controls width=&quot;800&quot; height=&quot;480&quot; data-setup=&#39;&#123;&#125;&#39;&gt;
+            &lt;source id=&quot;source&quot; type=&quot;application/x-mpegURL&quot; /&gt;
+            &lt;p&gt;Your browser does not support HTML5 video.&lt;/p&gt;
+        &lt;/video&gt;
+
+        &lt;script type=&quot;text/javascript&quot;&gt;
+            var m = window.location.href.match(/#(.+)$/);
+            if(null != m) &#123;
+                var name = m[1];
+
+                document.getElementById(&quot;source&quot;).src = &quot;/hls/&quot; + name + &quot;.m3u8&quot;
+                document.getElementById(&quot;video&quot;).load();
+                document.title = &quot;Live - &quot; + name;
+            &#125;
+        &lt;/script&gt;
+    &lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<blockquote>
+<p>在 html5 中播放（需开启 hls 直播）</p>
+<pre><code class="html">&lt;video&gt;
+    &lt;source src=&quot;http://127.0.0.1:80/hls/oceans.m3u8&quot;/&gt;
+    &lt;p&gt;Your browser does not support HTML5 video.&lt;/p&gt;
+&lt;/video&gt;
+</code></pre>
+</blockquote>
+</li>
+<li><p>重启 nginx<br> <code>/usr/local/nginx/sbin/nginx -s reload</code></p>
+</li>
+<li><p><a href="#streaming">推流</a></p>
+</li>
+<li><p>播放<br> <code>ffplay http://127.0.0.1:80/hls/oceans.m3u8</code></p>
+</li>
+<li><p>访问 <a target="_blank" rel="noopener" href="http://127.0.0.1/live.html#oceans">http://127.0.0.1/live.html#oceans</a></p>
+</li>
+</ol>
+</li>
+</ul>
+</details>
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2025/03/22/mysql/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2025/03/22/nodejs/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg" alt="Dim.Ke's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        904243852@qq.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto: 904243852@qq.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/algorithm/">algorithm<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/css/">css<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/deno/">deno<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/docker/">docker<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/elasticsearch/">elasticsearch<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/ffmpeg/">ffmpeg<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/golang/">golang<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/javascript/">javascript<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/kubernetes/">kubernetes<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/linux/">linux<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/mysql/">mysql<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/nginx/">nginx<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/nodejs/">nodejs<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/solr/">solr<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/tomcat/">tomcat<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/webassembly/">webassembly<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/isunk" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+
+    <!-- Gitee -->
+    
+        <a href="https://gitee.com/isunk" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background: url('https://gitee.com/static/images/logo-en.svg'); background-size: cover;">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;Dim.Ke
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/bollnh/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<!-- <script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('
+<link rel="stylesheet" href="/css/uc.css">
+');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script> -->
+
+<!-- Import prettify js  -->
+
+    
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
+        
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 2020;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/bollnh/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>

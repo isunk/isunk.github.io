@@ -1,0 +1,1577 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/bollnh/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            Nodejs | 
+        
+        Dim.Ke
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg">
+    <link rel="icon" href="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content=",nodejs">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/github-v2.min.css?AfzKxt++K+/lhZBlSjnxwg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+            
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Dim.Ke">
+    <meta name="msapplication-starturl" content="https://isunk.github.io/2025/03/22/nodejs/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Dim.Ke">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg">
+
+    <!-- Site Verification -->
+    
+    <meta name="baidu-site-verification" content="code-ibxIxWHREM" />
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://isunk.github.io/2025/03/22/nodejs/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Nodejs | Dim.Ke">
+    <meta property="og:image" content="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg">
+    <meta property="og:description" content="">
+    <meta property="og:article:tag" content="nodejs"> 
+
+    
+        <meta property="article:published_time" content="Sat Mar 22 2025 06:39:26 GMT+0000">
+        <meta property="article:modified_time" content="Sat Mar 22 2025 02:25:41 GMT+0000">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="https://isunk.github.io/2025/03/22/nodejs/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://isunk.github.io/2025/03/22/nodejs/index.html",
+    "headline": "Nodejs",
+    "datePublished": "Sat Mar 22 2025 06:39:26 GMT+0000",
+    "dateModified": "Sat Mar 22 2025 02:25:41 GMT+0000",
+    "author": {
+        "@type": "Person",
+        "name": "Dim.Ke",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Dim.Ke",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg"
+        }
+    },
+    "keywords": ",nodejs",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+    <script src="https://kulroakonsu.net/88/tag.min.js" data-zone="137717" async data-cfasync="false"></script><!-- Monetag 广告 -->
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Nodejs"><span class="post-toc-text">Nodejs</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%90%AD%E5%BB%BA%E7%8E%AF%E5%A2%83"><span class="post-toc-text">搭建环境</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7"><span class="post-toc-text">包管理工具</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E7%AC%AC%E4%B8%89%E6%96%B9-nodejs-%E5%BA%94%E7%94%A8"><span class="post-toc-text">第三方 nodejs 应用</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Snippets"><span class="post-toc-text">Snippets</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#node-webkit"><span class="post-toc-text">node-webkit</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#electron"><span class="post-toc-text">electron</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#express"><span class="post-toc-text">express</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#node-fetch"><span class="post-toc-text">node-fetch</span></a></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                Nodejs
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Dim.Ke</strong>
+        <span>3月 22, 2025</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-none-link" href="/tags/nodejs/" rel="tag">nodejs</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Nodejs&url=https://isunk.github.io/2025/03/22/nodejs/index.html&pic=https://isunk.github.iohttps://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Nodejs&url=https://isunk.github.io/2025/03/22/nodejs/index.html&via=Dim.Ke" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://isunk.github.io/2025/03/22/nodejs/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://isunk.github.io/2025/03/22/nodejs/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="Nodejs"><a href="#Nodejs" class="headerlink" title="Nodejs"></a>Nodejs</h1><h2 id="搭建环境"><a href="#搭建环境" class="headerlink" title="搭建环境"></a>搭建环境</h2><ul>
+<li><p>使用仓库安装<br>  <code>apt-get install nodejs</code></p>
+</li>
+<li><p>从官网下载安装</p>
+<ol>
+<li>下载并解压<br> <code>cd /opt</code><br> <code>curl -O https://nodejs.org/dist/v16.15.0/node-v16.15.0-linux-x64.tar.xz</code><br> <code>tar -xvf node-v16.15.0-linux-x64.tar.xz</code></li>
+<li>设置环境变量  <ul>
+<li>设置全局环境变量<br>  <code>echo &#39;export PATH=&quot;$PATH:/opt/node-v16.15.0-linux-x64/bin&quot;&#39; &gt;&gt; /etc/profile</code></li>
+<li><del>设置临时环境变量<br>  <code>export PATH=&quot;$PATH:/opt/node-v16.5.0-linux-x64/bin&quot;</code></del></li>
+</ul>
+</li>
+<li>注销并重新登录后即可生效<br> <code>logout</code></li>
+<li>安装coffee script（可选）<br> <code>npm install -g coffee-script</code></li>
+</ol>
+</li>
+</ul>
+<h2 id="包管理工具"><a href="#包管理工具" class="headerlink" title="包管理工具"></a>包管理工具</h2><ul>
+<li><p>cnpm（使用国内淘宝源，速度较快）</p>
+<ul>
+<li>安装 cnpm<br>  <code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code></li>
+<li>使用 cnpm 代替 npm，如<br>  <code>cnpm install -g typescript</code></li>
+</ul>
+</li>
+<li><p>yarn</p>
+<ul>
+<li>安装<br>  <code>npm install -g yarn</code></li>
+<li>配置淘宝源，用于加速<br>  <code>yarn config set registry &#39;https://registry.npm.taobao.org&#39;</code></li>
+</ul>
+</li>
+<li><p>npm</p>
+<ul>
+<li><p>配置</p>
+<ul>
+<li><p>通过 config 命令</p>
+<ul>
+<li>查看当前配置内容<br>  <del><code>npm config ls</code></del><br>  <code>npm config list</code></li>
+<li>设置远程仓库地址（使用 taobao 源镜像加速）<br>  <code>npm config set registry https://registry.npm.taobao.org</code></li>
+<li>设置 npm 安装 package 的全局 node_modules 路径<br>  <code>npm config set prefix &quot;E:\nodejs&quot;</code></li>
+<li>设置代理服务器<br>  <code>npm config set proxy http://username:password@server:port</code><br>  <code>npm config set https-proxy http://username:password@server:port</code></li>
+<li>设置不校验 SSL 证书<br>  <code>npm config set strict-ssl false</code></li>
+</ul>
+</li>
+<li><p>通过编辑配置文件 ~/.npmrc（或 nodejs 安装目录下的 node_modules/npm/.npmrc 或 node_modules/npm/npmrc 文件）</p>
+<pre><code># 设置远程仓库地址
+# registry = https://registry.npm.taobao.org
+
+# 设置 npm 安装 package 的全局 node_modules 路径
+prefix = E:\nodejs
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>从 npm 默认远程仓库下载安装 uglify-js 到全局 node_modules 路径下（参数 “-g” 表示下载到全局 node_modules 路径下并安装到 node_modules 的上一级目录，这里即 nodejs 安装目录下）<br>  <code>npm install uglify-js -g</code></p>
+<blockquote>
+<p>从 npm 默认远程仓库下载安装 uglify-js 到当前路径下的 node_modules 目录中<br><code>npm install uglify-js</code><br>从 npm 远程仓库 “–registry <a target="_blank" rel="noopener" href="https://registry.npm.taobao.org&quot;/">https://registry.npm.taobao.org&quot;</a> 下载安装 uglify-js<br><code>npm install uglify-js --registry https://registry.npm.taobao.org</code></p>
+</blockquote>
+</li>
+<li><p>在当前目录下，初始化一个 node 工程<br>  <code>npm init</code></p>
+</li>
+<li><p>安装依赖（package.json 中定义的依赖）<br>  <code>npm install</code><br>  安装 <a target="_blank" rel="noopener" href="http://www.expressjs.com.cn/">express</a> 并将依赖添加至 package.json 中<br>  <code>npm install express --save</code></p>
+</li>
+<li><p>自定义运行</p>
+<ol>
+<li>编辑 package.json 如下<pre><code class="json">&quot;scripts&quot;: &#123;
+    &quot;start&quot;: &quot;electron .&quot;
+&#125;
+</code></pre>
+</li>
+<li>运行上一步骤中的 start 命令<br> <code>npm run start</code></li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="第三方-nodejs-应用"><a href="#第三方-nodejs-应用" class="headerlink" title="第三方 nodejs 应用"></a>第三方 nodejs 应用</h2><ul>
+<li><p>快速搭建本地 http 服务器</p>
+<pre><code class="bash"># 安装
+npm i -g http-server
+
+# 在当前目录下启动 http 服务器
+http-server .
+
+# 在当前目录下启动 https 服务器
+http-server \
+    -p 443 \ # 要使用的端口（默认为8080）
+    -S \ # 启用 https
+    -C server.crt \ # 证书文件的路径（默认值：cert.pem）
+    -K server.key \ # 密钥文件的路径（默认值：key.pem）
+    --cors \ # 通过 Access-Control-Allow-Origin 标题启用 CORS
+    .
+</code></pre>
+</li>
+<li><p>使用 uglify-js 压缩 js 文件</p>
+<ol>
+<li>安装 uglify-js<br> <code>npm install -g uglify-js</code></li>
+<li><del>压缩 js 文件 template.js 并将结果打印到控制台<br> <code>uglifyjs template.js</code></del><br> 使用 uglify-js 高度压缩（混淆变量名）js 文件 template.js，并保存到 文件 template.min.js 中<br> <code>uglifyjs -m toplevel template.js -o template.min.js</code></li>
+</ol>
+</li>
+<li><p><a href="typescript.md#install">typescript</a></p>
+</li>
+<li><p>gitbook</p>
+<ol>
+<li>安装 gitbook<br> <code>npm install -g gitbook-cli</code></li>
+<li>在当前目录下，初始化一个 gitbook 工程<br> <code>gitbook init</code></li>
+<li>构建<br> <del><code>gitbook build</code></del><br> <code>gitbook build --gitbook=2.6.7</code>  <blockquote>
+<p>2.6.7 版本支持离线 html 跳转链接</p>
+</blockquote>
+</li>
+<li>运行服务<br> <code>gitbook serve</code><br> 浏览器中访问 <a target="_blank" rel="noopener" href="http://127.0.0.1:4000/">http://127.0.0.1:4000/</a> 即可浏览</li>
+</ol>
+</li>
+<li><p>docsify</p>
+<ol>
+<li>安装 docsify<br> <code>npm install -g docsify-cli</code></li>
+<li>在当前目录下，初始化一个工程<br> <code>docsify init .</code></li>
+<li>运行服务<br> <code>docsify serve .</code><br> 浏览器中访问 <a target="_blank" rel="noopener" href="http://127.0.0.1:3000/">http://127.0.0.1:3000/</a> 即可浏览</li>
+</ol>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/iizukanao/node-rtsp-rtmp-server">node-rtsp-rtmp-server(RTSP/RTMP/HTTP hybrid server)</a>  </p>
+<ol>
+<li>下载源码<br> <code>git clone https://github.com/iizukanao/node-rtsp-rtmp-server.git</code></li>
+<li>安装依赖（需要nodejs版本 &gt;= 0.12）<br> <code>cd node-rtsp-rtmp-server</code><br> <code>npm install -d</code></li>
+<li>安装 coffeescript<br> <code>npm install -g coffeescript</code></li>
+<li>运行服务（服务配置见config.coffee）  <ul>
+<li>直接使用coffee运行<br>  <code>coffee server.coffee</code>  </li>
+<li><del>使用coffee编译后，使用nodejs运行<br>  <code>coffee -c .</code><br>  <code>node server.js</code></del></li>
+</ul>
+</li>
+<li>访问（192.168.1.200为服务器ip，80端口和1935端口号配置见config.coffee）<ul>
+<li>点播  <ol>
+<li>复制媒体文件video.mp4到file目录下  </li>
+<li>访问<br> rtsp://192.168.1.200:80/file/video.mp4<br> rtmp://192.168.1.200/file/mp4:video.mp4</li>
+</ol>
+</li>
+<li>直播<ol>
+<li>使用ffmpeg推流<br> <code>ffmpeg -re -i input.mp4 -c:v copy -c:a copy -f rtsp rtsp://192.168.1.200:80/live/video</code><br> <code>ffmpeg -re -i video.mp4 -c:v copy -c:a copy -f flv rtmp://192.168.1.200/live/video</code></li>
+<li>访问<br> rtsp://192.168.1.200:80/live/video<br> rtmp://192.168.1.200/live/video</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/swagger-api/swagger-editor">swagger-editor</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/electron/electron">electron</a></p>
+<ul>
+<li>运行当前目录下的工程<br>  <code>electron .</code></li>
+</ul>
+</li>
+<li><p>electron-packager</p>
+<ul>
+<li>打包成可执行程序<br>  <code>electron-packager . electron-quick-start</code></li>
+</ul>
+</li>
+<li><p>grunt<br>  <code>npm install -g grunt grunt-electron-installer</code></p>
+<ul>
+<li><p>构建安装程序</p>
+<ol>
+<li><p>在项目根目录下（即与 package.json 同级目录下），新建 Gruntfile.js 文件如下</p>
+<pre><code class="javascript">var grunt = require(&quot;grunt&quot;);
+grunt.config.init(&#123;
+    pkg: grunt.file.readJSON(&quot;package.json&quot;),
+    &quot;create-windows-installer&quot;: &#123;
+        x64: &#123;
+            appDirectory: &quot;./electron-quick-start-win32-x64&quot;,
+            authors: &quot;no one&quot;,
+            exe: &quot;electron-quick-start.exe&quot;,
+            description:&quot;electron-quick-start&quot;,
+        &#125;       
+    &#125;
+&#125;)
+
+grunt.loadNpmTasks(&quot;grunt-electron-installer&quot;);
+grunt.registerTask(&quot;default&quot;, [&quot;create-windows-installer&quot;]);
+</code></pre>
+</li>
+<li><p>执行命令<br> <code>grunt</code></p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>使用 zan-proxy 代理服务器</p>
+<pre><code class="bash">npm install zan-proxy -g
+zan-proxy --no-update
+</code></pre>
+</li>
+<li><p>使用 whistle 代理服务器，浏览器可搭配使用 SwitchyOmega</p>
+<pre><code class="bash">npm install whistle -g
+w2 start
+</code></pre>
+</li>
+<li><p>使用 marp-cli 转换 markdown 为 ppt/pdf</p>
+<pre><code class="bash">npm install -g @marp-team/marp-cli
+
+marp-cli readme.md
+marp-cli readme.md -o readme.pptx
+
+marp-cli -p --server .
+</code></pre>
+</li>
+<li><p>增强 shell 脚本工具 <a target="_blank" rel="noopener" href="https://github.com/google/zx">zx</a></p>
+<ul>
+<li><p>安装（依赖 node.js 需 ≥ 14.8 版本）</p>
+<pre><code class="bash">npm i -g zx
+</code></pre>
+</li>
+<li><p>示例</p>
+<blockquote>
+<p>将编写的脚本放在 .mjs 后缀的文件中，或者使用 .js 后缀，但是需要 void async function () {…}() 对脚本进行包装</p>
+</blockquote>
+<pre><code class="javascript">#!/usr/bin/env zx
+
+$.verbose = false; // 默认为 true。关闭打印所有命令以及输出
+
+await $`cat package.json | grep name`
+
+let branch = await $`git branch --show-current`
+await $`dep deploy --branch=$&#123;branch&#125;`
+
+await Promise.all([
+    $`sleep 1; echo 1`,
+    $`sleep 2; echo 2`,
+    $`sleep 3; echo 3`,
+])
+
+let name = &quot;foo bar&quot;
+await $`mkdir /tmp/$&#123;name&#125;`
+</code></pre>
+</li>
+<li><p>执行脚本</p>
+<pre><code class="bash"># 执行远程脚本
+zx https://medv.io/example-script.mjs
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>使用 <a target="_blank" rel="noopener" href="https://github.com/mscdex/ssh2">ssh2</a> 连接 sftp 服务器</p>
+<ol>
+<li><p>安装</p>
+<pre><code class="bash">npm install ssh2
+</code></pre>
+</li>
+<li><p>示例</p>
+<pre><code class="javascript">const &#123; readFileSync &#125; = require(&quot;fs&quot;);
+const &#123; Client &#125; = require(&quot;ssh2&quot;);
+
+const conn = new Client();
+conn.on(&quot;ready&quot;, () =&gt; &#123;
+    console.log(&quot;SSH connection ready.&quot;);
+
+    conn.sftp((err, sftp) =&gt; &#123;
+        if (err) throw err;
+
+        // 读取 &quot;./&quot; 目录
+        sftp.readdir(&quot;./&quot;, (err, list) =&gt; &#123;
+            if (err) throw err;
+            console.dir(list.map(f =&gt; f.filename));
+            conn.end(); // 退出 ssh 连接
+        &#125;);
+
+        // 读取文件内容
+        sftp.readFile(&quot;./webdav.txt&quot;, (err, buf) =&gt; &#123;
+            if (err) throw err;
+            console.log(buf.toString(&quot;base64&quot;));
+            conn.end();
+        &#125;);
+
+        // 删除文件
+        sftp.unlink(&quot;./webdav.txt&quot;, (err) =&gt; &#123;
+            if (err) throw err;
+            console.log(&quot;Delete file successfully.&quot;);
+            conn.end();
+        &#125;);
+
+        // 下载 &quot;./webdav.txt&quot; 到本地当前目录下
+        sftp.fastGet(&quot;./webdav.txt&quot;, &quot;./webdav.txt&quot;, (err) =&gt; &#123;
+            if (err) throw err;
+            console.log(&quot;Download file successfully.&quot;);
+            conn.end();
+        &#125;);
+
+        // 上传文件
+        sftp.fastPut(&quot;./package.json&quot;, &quot;./package.json&quot;, (err) =&gt; &#123;
+            if (err) throw err;
+            console.log(&quot;Upload file successfully.&quot;);
+            conn.end();
+        &#125;);
+    &#125;);
+&#125;).on(&quot;error&quot;, (err) =&gt; &#123;
+    throw err;
+&#125;).connect(&#123;
+    host: &quot;127.0.0.1&quot;,
+    port: 22,
+    username: &quot;sftpuser&quot;,
+    // privateKey: readFileSync(&quot;~/.ssh/id_rsa&quot;),
+    password: &quot;123456&quot;,
+    // debug: function(s) &#123; console.log(new Date(), s); &#125; // 打开调试日志
+&#125;);
+</code></pre>
+</li>
+</ol>
+</li>
+<li><p>使用 <a target="_blank" rel="noopener" href="https://github.com/pegjs/pegjs">PEG.js</a> 自定义 DSL 解析</p>
+<ol>
+<li><p>安装</p>
+<pre><code class="bash">npm install -g pegjs
+</code></pre>
+</li>
+<li><p>编写语法文件，可参考<a target="_blank" rel="noopener" href="https://pegjs.org/online">在线语法设计</a></p>
+<pre><code>Expression
+  = head:Term tail:(_ (&quot;+&quot; / &quot;-&quot;) _ Term)* &#123;
+      return tail.reduce(function(result, element) &#123;
+        if (element[1] === &quot;+&quot;) return result + element[3];
+        if (element[1] === &quot;-&quot;) return result - element[3];
+      &#125;, head);
+    &#125;
+
+Term
+  = head:Factor tail:(_ (&quot;*&quot; / &quot;/&quot;) _ Factor)* &#123;
+      return tail.reduce(function(result, element) &#123;
+        if (element[1] === &quot;*&quot;) return result * element[3];
+        if (element[1] === &quot;/&quot;) return result / element[3];
+      &#125;, head);
+    &#125;
+
+Factor
+  = &quot;(&quot; _ expr:Expression _ &quot;)&quot; &#123; return expr; &#125;
+  / Integer
+  / arr:Array &quot;[&quot; _ idx:Expression _ &quot;]&quot; &#123; return arr[idx]; &#125;
+
+Array
+  = &quot;[&quot; _ &quot;]&quot; &#123; return []; &#125; // 空数组
+  / &quot;[&quot; head:(_ Integer _ &quot;,&quot;)* tail:(_ Integer _) &quot;]&quot; &#123; return head.concat([tail]) .map((element) =&gt; element[1]); &#125;
+
+Integer &quot;integer&quot;
+  = _ [0-9]+ &#123; return parseInt(text(), 10); &#125;
+
+_ &quot;whitespace&quot;
+  = [ \t\n\r]*
+</code></pre>
+</li>
+<li><p>根据步骤二的语法文件（如 arithmetics.pegjs），生成 js 解析代码</p>
+<pre><code class="bash">pegjs arithmetics.pegjs
+# pegjs -o arithmetics-parser.js arithmetics.pegjs
+</code></pre>
+</li>
+<li><p>使用</p>
+<pre><code class="javascript">const parser = require(&quot;./arithmetics&quot;);
+parser.parse(&quot;2 * (3 + 4)&quot;);
+parser.parse(&quot;[1,2][1] + 2&quot;);
+</code></pre>
+</li>
+</ol>
+</li>
+<li><p>使用 <a target="_blank" rel="noopener" href="https://github.com/remy/inliner">inliner</a> 转换 web 页面到单个 html 文件中</p>
+<ol>
+<li>安装<pre><code class="bash">npm install -g inliner
+</code></pre>
+</li>
+<li>压缩<pre><code class="bash">inliner https://www.baidu.com &gt; baidu.html
+</code></pre>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="Snippets"><a href="#Snippets" class="headerlink" title="Snippets"></a><em>Snippets</em></h2><ul>
+<li><p><a target="_blank" rel="noopener" href="http://nodejs.cn/api/process.html#process_process_memoryusage">获取内存信息</a></p>
+<pre><code class="javascript">process.memoryUsage();
+// &#123; // 单位：字节（byte）
+//     rss: 34009088, // 常驻集大小, 是为进程分配的物理内存（总分配内存的子集）的大小，包括所有的 C++ 和 JavaScript 对象与代码
+//     heapTotal: 5455872, // V8 堆内存大小，包括已使用的和未使用的
+//     heapUsed: 3022072, // V8 已使用堆内存大小
+//     external: 1583051, // V8 管理的绑定到 Javascript 对象的 C++ 对象的内存使用情况
+//     arrayBuffers: 9399 // 分配给 ArrayBuffer 和 SharedArrayBuffer 的内存，包括所有的 Node.js Buffer。这也包含在 external 值中。当 Node.js 被用作嵌入式库时，此值可能为 0，因为在这种情况下可能无法跟踪 ArrayBuffer 的分配。
+// &#125;
+</code></pre>
+</li>
+<li><p>Socket（TCP&amp;UDP）</p>
+<ul>
+<li>TCP<ul>
+<li>服务端<pre><code class="javascript">var net = require(&quot;net&quot;);
+var server = net.createServer();
+server.on(&quot;connection&quot;, function(socket) &#123;
+    socket.setEncoding(&quot;utf8&quot;);
+    socket.on(&quot;data&quot;, function(data) &#123;
+        console.log(data.toString());
+    &#125;);
+    socket.on(&quot;end&quot;, function() &#123;
+        console.log(&quot;end&quot;);
+    &#125;);
+&#125;);
+server.listen(8765, &quot;127.0.0.1&quot;);
+</code></pre>
+</li>
+<li>客户端<pre><code class="javascript">var net = require(&quot;net&quot;);
+var client = new net.Socket();
+client.setEncoding(&quot;utf8&quot;);
+client.connect(8765, &quot;127.0.0.1&quot;, function() &#123;
+    console.log(&quot;connect&quot;);
+    client.write(&quot;to server&quot;);
+    client.end(&quot;end&quot;);
+&#125;);
+client.on(&quot;data&quot;, function(data) &#123;
+    console.log(&quot;receive data from server&quot;);
+&#125;);
+</code></pre>
+</li>
+</ul>
+</li>
+<li>UDP<ul>
+<li>服务器<pre><code class="javascript">var dgram = require(&quot;dgram&quot;);
+var server = dgram.createSocket(&quot;udp4&quot;);
+server.on(&quot;message&quot;, function(msg, rinfo) &#123;
+    console.log(msg);
+    var buf = new Buffer(&quot;测试&quot;);
+    server.send(buf, 0, buf.length, rinfo.port, rinfo.address);
+&#125;);
+server.on(&quot;listening&quot;, function() &#123;
+    console.log(&quot;listen&quot;);
+&#125;);
+server.bind(12345, &quot;127.0.0.1&quot;);
+</code></pre>
+</li>
+<li>客户端<pre><code class="javascript">server.on(&quot;message&quot;, function(msg, rinfo) &#123;
+    console.log(msg);
+    var buf = new Buffer(&quot;测试&quot;);
+    server.send(buf, 0, buf.length, rinfo.port, rinfo.address);
+&#125;);
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>读取文件内容</p>
+<pre><code class="javascript">var fs = require(&quot;fs&quot;);
+
+fs.readFile(&quot;./services.txt&quot;, &quot;utf-8&quot;, function(err, data) &#123;
+    if (err) throw err;
+    console.info(data);
+&#125;);
+</code></pre>
+</li>
+<li><p>创建一个简单的 http 服务</p>
+<pre><code class="javascript">var http = require(&quot;http&quot;);
+
+var server = http.createServer(function(req, res) &#123;
+    res.writeHead(200, &#123; &quot;Content-Type&quot;: &quot;text/html&quot; &#125;);
+
+    res.end(&quot;&lt;!DOCTYPE html&gt;&lt;html lang=\&quot;en\&quot;&gt;&lt;head&gt;&lt;meta charset=\&quot;UTF-8\&quot;&gt;&lt;title&gt;greeting&lt;/title&gt;&lt;/head&gt;&lt;body&gt;hello, world&lt;/body&gt;&lt;/html&gt;&quot;);
+&#125;);
+
+server.listen(8080, function() &#123;
+    console.log(&quot;Server is running at http://localhost:8080/&quot;);
+&#125;);
+</code></pre>
+</li>
+<li><p>创建一个简单的 https 服务（双向认证）  </p>
+<pre><code class="bash"># 生成 CA 自签名证书
+openssl genrsa -out ca.key 4096
+openssl req -new -x509 -days 7300 -key ca.key -subj &quot;/C=CN/ST=JS/L=NJ/O=Sunke, Inc./CN=Sunke Root CA&quot; -out ca.crt
+
+# 生成服务器证书
+openssl req -newkey rsa:2048 -nodes -keyout server.key -subj &quot;/C=CN/ST=JS/L=NJ/O=Sunke, Inc./CN=localhost&quot; -out server.csr
+openssl x509 -sha256 -req -extfile &lt;(printf &quot;subjectAltName=DNS:localhost,IP:127.0.0.1&quot;) -days 365 -in server.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out server.crt
+# cat server.crt ca.crt &gt; server.b.crt
+
+# 生成客户端证书
+openssl req -newkey rsa:2048 -nodes -keyout client.key -subj &quot;/C=CN/ST=JS/L=NJ/O=/CN=&quot; -out client.csr
+openssl x509 -sha256 -req -days 365 -in client.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out client.crt
+</code></pre>
+<pre><code class="javascript">const https = require(&quot;https&quot;);
+const fs = require(&quot;fs&quot;);
+
+https.createServer(&#123;
+    key: fs.readFileSync(&quot;./server.key&quot;),
+    // passphrase: &quot;123456&quot;, // server.key 加密秘钥
+    cert: fs.readFileSync(&quot;./server.crt&quot;),
+    ca: fs.readFileSync(&quot;./ca.crt&quot;),
+    requestCert:true, // 请求客户端证书
+    rejectUnauthorized: true // 如果请求的客户端没有来自信任 CA 颁发的证书，拒绝客户端的连接
+&#125;, (req, res) =&gt; &#123;
+    res.writeHead(200, &#123; &quot;Content-Type&quot;: &quot;text/html&quot; &#125;);
+    res.write(&quot;&lt;!DOCTYPE html&gt;&lt;html lang=\&quot;en\&quot;&gt;&lt;head&gt;&lt;meta charset=\&quot;UTF-8\&quot;&gt;&lt;title&gt;greeting&lt;/title&gt;&lt;/head&gt;&lt;body&gt;hello, world&lt;/body&gt;&lt;/html&gt;&quot;);
+    res.end();
+&#125;).listen(8443, function() &#123;
+    console.log(&quot;Server is running at https://127.0.0.1:8443/&quot;);
+&#125;);
+</code></pre>
+<pre><code class="bash">curl --cacert ./ca.crt --cert ./client.crt --key ./client.key https://127.0.0.1:8443
+</code></pre>
+</li>
+<li><p>sqlite</p>
+<pre><code class="bash">npm install sqlite3
+</code></pre>
+<pre><code class="javascript">const sqlite3 = require(&quot;sqlite3&quot;);
+const db = new sqlite3.Database(&quot;mydb.db&quot;);
+</code></pre>
+</li>
+</ul>
+<h1 id="node-webkit"><a href="#node-webkit" class="headerlink" title="node-webkit"></a>node-webkit</h1><ul>
+<li><p>创建项目(hello World)</p>
+<ol>
+<li>创建页面文件 index.html<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Hello World!&lt;/h1&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</li>
+<li>创建配置文件 package.json<pre><code class="json">&#123;
+    &quot;name&quot;: &quot;helloworld&quot;,
+    &quot;main&quot;: &quot;index.html&quot;
+&#125;
+</code></pre>
+</li>
+</ol>
+</li>
+<li><p>运行</p>
+<ol>
+<li>将index.html和package.json这两个文件压缩到一个zip压缩包里，命名为helloworld.zip</li>
+<li>把helloworld.zip这个文件的扩展名改为nw,变为 helloworld.nw</li>
+<li>之前得到的helloworld.nw这个文件就可以用nw.exe来执行了，直接把helloworld.nw拖到nw.exe上就可以了。</li>
+<li>把helloworld.nw这个文件跟node-webkit的环境文件一起打包成一个可执行文件，打开windows的cmd,然后输入如下命令：<br> <code>copy /b nw.exe+app.nw app.exe</code></li>
+<li>但我们大多数人想的是给用户一个exe文件，用户就可以使用了，不用再附带一些其他文件。需要一个软件叫Enigma Virtual Box，首先下载和安装这个软件，然后打开它。然后在Enter Input File Name那里输入我们的app.exe的路径，在Enter Output File Name那里填写我们要把打包出来的可执行文件输出到哪里。最后是把除app.exe外的其它文件拖入到Files那里，遇到提示的话默认就可以了。<blockquote>
+<ul>
+<li>The nw.pak and icudt.dll must be shipped along with nw.exe, the former one contains important javascript lib files, and the latter one is a important network library.  </li>
+<li>ffmpegsumo.dll are media library, if you want to use &lt;video&gt; and &lt;audio&gt; tag, or other media related features, you should ship it.  </li>
+<li>libEGL.dll and libGLESv2.dll are used for WebGL and GPU acceleration, you had better ship them. And D3DCompiler_43.dll and d3dx9_43.dll as well if you want to make sure WebGL works on more hardware. These 2 files are from DirectX redistributable.</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+</li>
+</ul>
+<h1 id="electron"><a href="#electron" class="headerlink" title="electron"></a>electron</h1><ul>
+<li><p>环境搭建</p>
+<ol>
+<li>npm install electron</li>
+<li>npm install electron-packager –save-dev</li>
+<li>npm install electron-packager -g</li>
+</ol>
+</li>
+<li><p>创建项目(hello World)</p>
+<ol>
+<li><p>创建目录helloworld</p>
+</li>
+<li><p>在helloworld目录下创建页面文件 index.html</p>
+<pre><code class="html">&lt;h1&gt;Hello World!&lt;/h1&gt;
+</code></pre>
+</li>
+<li><p>在helloworld目录下创建脚本文件 main.js</p>
+<pre><code class="javascript">const &#123;app, BrowserWindow&#125; = require(&quot;electron&quot;);
+
+let mainWindow;
+
+app.on(&quot;ready&quot;, () =&gt; &#123;
+    mainWindow = new BrowserWindow(&#123;
+        height: 600,
+        width: 800
+    &#125;);
+
+    mainWindow.loadURL(&quot;file://&quot; + __dirname + &quot;/index.html&quot;);
+&#125;);
+</code></pre>
+</li>
+<li><p>在helloworld目录下创建配置文件 package.json</p>
+<pre><code class="json">&#123;
+    &quot;name&quot;:    &quot;helloworld&quot;,
+    &quot;version&quot;: &quot;1.0.1&quot;,
+    &quot;main&quot;:    &quot;main.js&quot;
+&#125;
+</code></pre>
+</li>
+</ol>
+</li>
+<li><p>运行</p>
+<pre><code class="bash">electron .
+</code></pre>
+</li>
+<li><p>发布</p>
+<pre><code class="bash">electron-packager &lt;sourcedir&gt; &lt;appname&gt; --platform=&lt;platform&gt; --arch=&lt;arch&gt; [optional flags...]
+</code></pre>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://m.w3cschool.cn/electronmanual/electronmanual-protocol.html">使用 protocol 注册自定义协议或拦截协议请求</a></p>
+<pre><code class="javascript">const electron = require(&quot;electron&quot;);
+const app = electron.app;
+const path = require(&quot;path&quot;);
+
+app.on(&quot;ready&quot;, function() &#123;
+    var protocol = electron.protocol;
+
+    protocol.registerFileProtocol(&quot;atom&quot;, function(request, callback) &#123;
+        var url = request.url.substr(7);
+        callback(&#123;path: path.normalize(__dirname + &quot;/&quot; + url)&#125;);
+    &#125;, function(error) &#123;
+        if (error)
+            console.error(&quot;Failed to register protocol&quot;)
+    &#125;);
+    
+    // protocol.interceptHttpProtocol(&quot;http&quot;, handler[, completion]); // 拦截 http 请求
+&#125;);
+</code></pre>
+</li>
+</ul>
+<h1 id="express"><a href="#express" class="headerlink" title="express"></a><a target="_blank" rel="noopener" href="https://www.expressjs.com.cn/">express</a></h1><ol>
+<li><p>安装 express</p>
+<pre><code class="bash">npm install express
+</code></pre>
+</li>
+<li><p>创建 app.js</p>
+<pre><code class="javascript">const app = require(&quot;express&quot;)();
+const bodyParser = require(&quot;body-parser&quot;);
+
+app.use(bodyParser.json()); // for parsing application/json
+
+app.post(&quot;/greeting&quot;, function(req, res, next) &#123;
+    console.log(req.body);
+    res.json(req.body);
+&#125;);
+</code></pre>
+</li>
+<li><p>运行</p>
+<pre><code class="bash">node app.js
+</code></pre>
+</li>
+</ol>
+<h1 id="node-fetch"><a href="#node-fetch" class="headerlink" title="node-fetch"></a>node-fetch</h1><ol>
+<li><p>安装</p>
+<pre><code class="bash">npm install node-fetch
+</code></pre>
+</li>
+<li><p>调用</p>
+<pre><code class="javascript">const fetch = require(&quot;node-fetch&quot;);
+
+fetch(&quot;https://www.baidu.com&quot;);
+</code></pre>
+</li>
+<li><p>代理访问</p>
+<ol>
+<li><p>安装</p>
+<pre><code class="bash">npm install https-proxy-agent
+</code></pre>
+</li>
+<li><p>调用</p>
+<pre><code class="javascript">const HttpsProxyAgent = require(&quot;https-proxy-agent&quot;);
+
+fetch(&quot;https://www.baidu.com&quot;, &#123;
+    agent: new HttpsProxyAgent(&quot;http://192.168.0.1:5566&quot;)
+&#125;);
+</code></pre>
+</li>
+</ol>
+</li>
+</ol>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2025/03/22/nginx/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2025/03/22/solr/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg" alt="Dim.Ke's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        904243852@qq.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto: 904243852@qq.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/algorithm/">algorithm<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/css/">css<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/deno/">deno<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/docker/">docker<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/elasticsearch/">elasticsearch<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/ffmpeg/">ffmpeg<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/golang/">golang<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/javascript/">javascript<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/kubernetes/">kubernetes<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/linux/">linux<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/mysql/">mysql<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/nginx/">nginx<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/nodejs/">nodejs<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/solr/">solr<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/tomcat/">tomcat<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/webassembly/">webassembly<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/isunk" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+
+    <!-- Gitee -->
+    
+        <a href="https://gitee.com/isunk" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background: url('https://gitee.com/static/images/logo-en.svg'); background-size: cover;">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;Dim.Ke
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/bollnh/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<!-- <script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('
+<link rel="stylesheet" href="/css/uc.css">
+');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script> -->
+
+<!-- Import prettify js  -->
+
+    
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
+        
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 2020;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/bollnh/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>

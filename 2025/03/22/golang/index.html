@@ -1,0 +1,1903 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/bollnh/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            Golang | 
+        
+        Dim.Ke
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg">
+    <link rel="icon" href="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content=",golang">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/github-v2.min.css?AfzKxt++K+/lhZBlSjnxwg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+            
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Dim.Ke">
+    <meta name="msapplication-starturl" content="https://isunk.github.io/2025/03/22/golang/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Dim.Ke">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg">
+
+    <!-- Site Verification -->
+    
+    <meta name="baidu-site-verification" content="code-ibxIxWHREM" />
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://isunk.github.io/2025/03/22/golang/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Golang | Dim.Ke">
+    <meta property="og:image" content="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg">
+    <meta property="og:description" content="">
+    <meta property="og:article:tag" content="golang"> 
+
+    
+        <meta property="article:published_time" content="Sat Mar 22 2025 06:39:26 GMT+0000">
+        <meta property="article:modified_time" content="Sat Mar 22 2025 02:25:41 GMT+0000">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="https://isunk.github.io/2025/03/22/golang/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://isunk.github.io/2025/03/22/golang/index.html",
+    "headline": "Golang",
+    "datePublished": "Sat Mar 22 2025 06:39:26 GMT+0000",
+    "dateModified": "Sat Mar 22 2025 02:25:41 GMT+0000",
+    "author": {
+        "@type": "Person",
+        "name": "Dim.Ke",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Dim.Ke",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg"
+        }
+    },
+    "keywords": ",golang",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+    <script src="https://kulroakonsu.net/88/tag.min.js" data-zone="137717" async data-cfasync="false"></script><!-- Monetag 广告 -->
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Go"><span class="post-toc-text">Go</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="post-toc-text">环境搭建</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E7%BC%96%E8%AF%91%E8%BF%90%E8%A1%8C"><span class="post-toc-text">编译运行</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91"><span class="post-toc-text">交叉编译</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E8%AF%AD%E6%B3%95"><span class="post-toc-text">语法</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%A0%87%E5%87%86%E5%BA%93"><span class="post-toc-text">标准库</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%BD%91%E7%BB%9C"><span class="post-toc-text">网络</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93"><span class="post-toc-text">第三方库</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%94%E7%94%A8"><span class="post-toc-text">第三方应用</span></a></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                Golang
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Dim.Ke</strong>
+        <span>3月 22, 2025</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-none-link" href="/tags/golang/" rel="tag">golang</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Golang&url=https://isunk.github.io/2025/03/22/golang/index.html&pic=https://isunk.github.iohttps://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Golang&url=https://isunk.github.io/2025/03/22/golang/index.html&via=Dim.Ke" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://isunk.github.io/2025/03/22/golang/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://isunk.github.io/2025/03/22/golang/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="Go"><a href="#Go" class="headerlink" title="Go"></a>Go</h1><h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><ul>
+<li><p>安装 Go</p>
+<ul>
+<li>标准安装<ol>
+<li>下载二进制包<br> <code>curl -OkL https://golang.google.cn/dl/go1.18.linux-amd64.tar.gz</code><blockquote>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://studygolang.com/dl/golang/go1.16.3.windows-amd64.zip">window 版本下载</a></li>
+</ul>
+</blockquote>
+</li>
+<li>将下载的二进制包解压至 /usr/local目录<br> <code>tar -C /usr/local -xzf go*.tar.gz</code></li>
+<li>将 /usr/local/go/bin 目录添加至 PATH 环境变量<br> <code>export PATH=$PATH:/usr/local/go/bin</code></li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/visualfc/liteide">LiteIDE</a></p>
+<pre><code>http://sourceforge.mirrorservice.org/l/li/liteide/x36/liteidex36.linux64-qt5.5.1.tar.gz
+http://sourceforge.mirrorservice.org/l/li/liteide/x36/liteidex36.windows-qt5.9.5.zip
+</code></pre>
+</li>
+<li><p>国内加速</p>
+<pre><code class="bash">export GO111MODULE=auto
+# export GOPROXY=&quot;https://goproxy.io&quot;
+export GOPROXY=&quot;https://mirrors.aliyun.com/goproxy/&quot;
+</code></pre>
+</li>
+<li><p>获取第三方库</p>
+<pre><code class="bash"># go get github.com/go-sql-driver/mysql
+go install github.com/go-sql-driver/mysql@latest
+</code></pre>
+</li>
+</ul>
+<h2 id="编译运行"><a href="#编译运行" class="headerlink" title="编译运行"></a>编译运行</h2><ol>
+<li><p>新建文件 greeting.go 并编辑内容如下</p>
+<pre><code class="golang">package main
+
+import &quot;fmt&quot;
+
+func main() &#123;
+    fmt.Println(&quot;hello, world&quot;)
+&#125;
+</code></pre>
+</li>
+<li><p>直接运行<br> <code>go run greeting.go</code></p>
+</li>
+<li><p>编译为可执行文件<br> <code>go build greeting.go</code></p>
+</li>
+</ol>
+<h3 id="交叉编译"><a href="#交叉编译" class="headerlink" title="交叉编译"></a>交叉编译</h3><ul>
+<li><p>Linux 下编译 Mac、Windows 平台的 64 位可执行程序</p>
+<pre><code class="bash">CGO_ENABLED=0 # 编译成单个可执行文件
+GOOS=darwin # Mac
+GOARCH=amd64 # x64
+go build main.go # 编译
+</code></pre>
+<pre><code class="bash">CGO_ENABLED=0
+GOOS=windows # Windows
+GOARCH=amd64 # x64
+go build main.go # 编译
+</code></pre>
+</li>
+<li><p>Windows 下编译 Mac、Linux 平台的 64 位可执行程序</p>
+<pre><code class="batch">SET CGO_ENABLED=0
+SET GOOS=darwin3
+SET GOARCH=amd64
+go build main.go
+</code></pre>
+<pre><code class="batch">SET CGO_ENABLED=0
+SET GOOS=linux
+SET GOARCH=amd64
+go build main.go
+</code></pre>
+</li>
+<li><p>Mac 下编译 Linux、Windows 平台的 64 位可执行程序</p>
+<pre><code class="bash">CGO_ENABLED=0
+GOOS=linux
+GOARCH=amd64
+go build main.go
+</code></pre>
+<pre><code class="bash">CGO_ENABLED=0
+GOOS=windows
+GOARCH=amd64
+go build main.go
+</code></pre>
+</li>
+</ul>
+<blockquote>
+<p>参数描述：</p>
+<ul>
+<li>CGO_ENABLED<br>当 <code>CGO_ENABLED=1</code>， 进⾏编译时， 会将⽂件中引⽤libc的库（⽐如常⽤的 net 包），以动态链接的⽅式⽣成⽬标⽂件。<br>当 <code>CGO_ENABLED=0</code>， 进⾏编译时， 则会把在⽬标⽂件中未定义的符号（外部函数）⼀起链接到可执⾏⽂件中。</li>
+<li>GOOS<br>目标可执行程序运行操作系统，支持 <code>darwin</code>、<code>freebsd</code>、<code>linux</code>、<code>windows</code></li>
+<li>GOARCH<br>目标可执行程序操作系统构架，包括 <code>386</code>、<code>amd64</code>、<code>arm</code></li>
+</ul>
+</blockquote>
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><ul>
+<li><p>基本数据类型</p>
+<ul>
+<li><p>布尔型<br>  布尔型的值只可以是常量 <code>true</code> 或者 <code>false</code>（默认为 false）</p>
+<pre><code class="go">var a bool = true
+</code></pre>
+</li>
+<li><p>数字类型<br>  整型 int 和浮点型 float32、float64，支持复数，其中位的运算采用补码</p>
+<pre><code class="go">var a int; // 32 位有符号整数
+</code></pre>
+<ul>
+<li>整型<table>
+<thead>
+<tr>
+<th>位长度（bit）</th>
+<th>有符号</th>
+<th>无符号</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>8</td>
+<td><code>int8</code> (-128 - 127)</td>
+<td><code>uint8</code> (0 - 255)</td>
+</tr>
+<tr>
+<td>16</td>
+<td><code>int16</code> (-32768 - 32767)</td>
+<td><code>uint16</code> (0 - 65535)</td>
+</tr>
+<tr>
+<td>32</td>
+<td><code>int32</code> (-2147483648 - 2147483647)</td>
+<td><code>uint32</code> (0 - 4294967295)</td>
+</tr>
+<tr>
+<td>64</td>
+<td><code>int64</code> (-9223372036854775808 - 9223372036854775807)</td>
+<td><code>uint64</code> (0 - 18446744073709551615)</td>
+</tr>
+</tbody></table>
+</li>
+<li>浮点型<table>
+<thead>
+<tr>
+<th>位长度（bit）</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>32</td>
+<td><code>float32</code></td>
+</tr>
+<tr>
+<td>64</td>
+<td><code>float64</code></td>
+</tr>
+</tbody></table>
+</li>
+<li>复数<table>
+<thead>
+<tr>
+<th>位长度（bit）</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>32</td>
+<td><code>complex64</code></td>
+</tr>
+<tr>
+<td>64</td>
+<td><code>complex128</code></td>
+</tr>
+</tbody></table>
+</li>
+<li>其他<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>byte</code></td>
+<td>同 uint8</td>
+</tr>
+<tr>
+<td><code>rune</code></td>
+<td>同 int32</td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td>即 uint32</td>
+</tr>
+<tr>
+<td><code>int</code></td>
+<td>即 int32</td>
+</tr>
+<tr>
+<td><code>uintptr</code></td>
+<td>无符号整型，用于存放一个指针</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+</li>
+<li><p>字符串类型<br>  字符串的字节使用 UTF-8 编码标识 Unicode 文本（默认值为空字符串）</p>
+<pre><code class="go">const b string = &quot;abc&quot; // 显式指定 string 类型
+const b = &quot;abc&quot; // 隐式指定 string 类型
+</code></pre>
+</li>
+<li><p>派生类型</p>
+<ul>
+<li><p>指针类型（Pointer）  </p>
+<ul>
+<li>chan，即 Channel</li>
+<li>map</li>
+<li>slice，即切片</li>
+<li>函数，如 <code>fun := func(s string) string &#123; return &quot;modify&quot; + s &#125;</code></li>
+<li>interface，一个类型为 interface{} 或者 interface 接口的变量可能是指针变量，也可能是普通变量</li>
+<li>function type，如 <code>type Func func(string)</code><br>其它非指针类型有：struct、基本数据类型、数组（区别切片）</li>
+</ul>
+</li>
+<li><p>数组类型（[len]byte）</p>
+</li>
+<li><p>结构化类型（struct）</p>
+<pre><code class="go">type User struct &#123;
+    Name    string
+    Gender  bool
+    Age     int
+    Address string
+    Parents []User
+&#125;
+
+// 方法一：基本的实例化：结构体本身是一种类型，可以像整型、字符串等类型一样，以 var 的方式声明结构体即可完成实例化
+var user User
+user.Name = &quot;zhangsan&quot;
+user.Age = 20
+
+// 方法二：创建指针类型的结构体：使用 new 关键字对类型（包括结构体、整型、浮点数、字符串等）进行实例化，结构体在实例化后会形成指针类型的结构体
+user2 := new(User)
+user2.Name = &quot;lisi&quot;
+user2.Age = 21
+
+// 方法三：取结构体的地址实例化：对结构体进行 &amp; 取地址操作时，视为对该类型进行一次 new 的实例化操作
+user3 := &amp;User&#123;&#125;
+user3.Name = &quot;wangwu&quot;
+user3.Age = 22
+</code></pre>
+<pre><code class="go">// 匿名结构体
+user := struct &#123;
+    name string
+    age int
+&#125; &#123;
+    name: &quot;zhangsan,
+    age: 18
+&#125;
+</code></pre>
+</li>
+<li><p>Channel 类型</p>
+</li>
+<li><p>函数类型</p>
+</li>
+<li><p>切片类型</p>
+</li>
+<li><p>接口类型（interface）</p>
+</li>
+<li><p>Map 类型（map）</p>
+<pre><code class="go">var m map[string]int // 定义 map
+m = make(map[string]int) // 初始化 map
+m[&quot;a&quot;] = 1 // 赋值
+
+v, ok = m[&quot;a&quot;]
+fmt.Println(v, ok) // 1 true
+
+v2, ok2 = m[&quot;c&quot;] // 无法取出 c 的值
+fmt.Println(v, ok) // 0 false
+</code></pre>
+<pre><code class="go">var m = map[string]int &#123;
+   &quot;a&quot;: 1,
+   &quot;b&quot;: 2
+&#125;
+fmt.Println(m) // map[a:1 b:2]
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/gaobinzhan/article/details/106109160">数组和切片</a></p>
+<ul>
+<li><p>数组：容量不可伸缩，两个数组可以比较</p>
+<pre><code class="go">// 数组初始化
+// var balance = [5]float32&#123;1000.0, 2.0, 3.4, 7.0, 50.0&#125;
+// balance := [5]float32&#123;1000.0, 2.0, 3.4, 7.0, 50.0&#125;
+balance := [...]float32&#123;1000.0, 2.0, 3.4, 7.0, 50.0&#125; // 使用 ... 代替数组的长度，编译器会根据元素个数自行推断数组的长度
+
+len(balance) // 获取数组长度
+</code></pre>
+<p>  声明</p>
+<pre><code class="go">var a [3]int // 声明并初始化为默认零值
+a[0] = 1
+b := [3]int&#123;1, 2, 3&#125;           // 声明同时初始化
+c := [2][2]int&#123;&#123;1, 2&#125;, &#123;3, 4&#125;&#125; // 多维数组初始化
+t.Log(a[0], a[2])
+t.Log(b[2])
+t.Log(c[1][1])
+</code></pre>
+<p>  遍历</p>
+<pre><code class="go">arr := [...]int&#123;1, 2, 3, 4, 5, 6&#125; // 自动判断长度
+
+for i := 0; i &lt; len(arr); i++ &#123; // 典型写法遍历数组
+    t.Log(arr[i])
+&#125;
+
+for idx, e := range arr &#123; // 相当于其它语言的foreach
+    t.Log(idx, e)
+&#125;
+
+for _, e := range arr &#123; // 我们可能用不到 idx 但go语言定义一个值不去使用编译会不通过 使用_代表不关心这个结果，来占位
+    t.Log(e)
+&#125;
+</code></pre>
+<p>  截取，格式：a[开始索引(包含):结束索引(不包含)]</p>
+<pre><code class="go">arr := [...]int&#123;1, 2, 3, 4, 5, 6&#125;
+// a[开始索引(包含):结束索引(不包含)]
+t.Log(arr[0:1]) // 1
+t.Log(arr[2:]) // 3 4 5 6
+t.Log(arr[1:len(arr)]) // 2 3 4 5 6
+t.Log(arr[1:3]) // 2 3
+</code></pre>
+</li>
+<li><p>切片：容量可以伸缩，两个切片不能比较<br>  声明</p>
+<pre><code class="go">var s0 []int            // 定义看起来特别像数组，但没有指定长度
+t.Log(len(s0), cap(s0)) // 0 0
+s0 = append(s0, 1)
+t.Log(len(s0), cap(s0)) // 1 1
+
+s1 := []int&#123;1, 2, 3, 4&#125; // 初始化一个切片
+t.Log(len(s1), cap(s1)) // 4 4
+
+// []type,len,cap 其中len个元素会被初始化为默认零值，未初始化元素不可以访问
+s2 := make([]int, 3, 5)    // len为3 cap为5
+t.Log(len(s2), cap(s2))    // 3 5
+t.Log(s2[0], s2[1], s2[2]) // 成功被初始化 结果：0 0 0
+//t.Log(s2[0], s2[1], s2[2], s2[3]) // 出现了一个错误 index out of range [3]
+s2 = append(s2, 1)
+t.Log(s2[0], s2[1], s2[2], s2[3]) // 0 0 0 1
+t.Log(len(s2), cap(s2))
+</code></pre>
+<p>  遍历</p>
+<pre><code class="go">s := []int&#123;&#125;
+for i := 0; i &lt; 10; i++ &#123;
+    s = append(s, i) // 为什么重新赋值给s,是因为结构体指向的连续存储空间进行了变化,并把原有的连续存储空间拷贝到新的连续存储空间
+    t.Log(len(s), cap(s))
+&#125;
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>循环</p>
+<pre><code class="go">sum := 0;
+for index := 0; index &lt; 10; index++ &#123;
+    sum += index
+    // break
+    // continue
+&#125;
+fmt.Println(&quot;sum is equal to&quot;, sum)
+</code></pre>
+<pre><code class="go">var user = map[string]string &#123;
+    &quot;name&quot;: &quot;zhangsan&quot;,
+    &quot;age&quot;: &quot;20&quot;
+&#125;
+for k, v := range user &#123; // 遍历 map 类型
+    fmt.Println(&quot;map&#39;s key:&quot;, k)
+    fmt.Println(&quot;map&#39;s value:&quot;, v)
+&#125;
+</code></pre>
+</li>
+<li><p>并发</p>
+<ul>
+<li>协程（即轻量级线程）/goroutine<pre><code class="go">import (
+    &quot;fmt&quot;
+    &quot;time&quot;
+)
+func say(s string) &#123;
+    for i := 0; i &lt; 5; i++ &#123;
+        time.Sleep(100 * time.Millisecond)
+        fmt.Println(s)
+    &#125;
+&#125;
+func main() &#123;
+    go say(&quot;world&quot;) // 使用 go 语句开启一个新的运行期线程（即 goroutine），以一个不同的、新创建的 goroutine 来执行一个函数。 同一个程序中的所有 goroutine 共享同一个地址空间
+    say(&quot;hello&quot;)
+&#125;
+</code></pre>
+</li>
+<li>chan（类似于 Java 的 BlockingQueue）<pre><code class="go">import (
+    &quot;fmt&quot;
+)
+func main() &#123;
+    c := make(chan int, 10) // 创建一个（双向）通道，指定缓冲区大小位 10
+    go fibonacci(cap(c), c)
+    for i := range c &#123; // range 函数遍历每个从通道接收到的数据，因为 c 在发送完 10 个数据之后就关闭了通道，所以这里我们 range 函数在接收到 10 个数据之后就结束了。如果上面的 c 通道不关闭，那么 range 函数就不会结束，从而在接收第 11 个数据的时候就阻塞了。
+        fmt.Println(i)
+    &#125;
+&#125;
+func fibonacci(n int, c chan int) &#123;
+    x, y := 0, 1
+    for i := 0; i &lt; n; i++ &#123;
+        c &lt;- x // 把变量 x 发送到通道 c
+        x, y = y, x + y
+    &#125;
+    close(c) // 关闭通道
+&#125;
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>延迟调用 defer<br>  defer 修饰的语句会被延迟执行，在 defer 所在的函数返回或执行结束前，会将 defer 语句的按照逆序进行执行（类似栈，即后进先出）。Go 语言中的 defer 类似于 Java 或 C# 的 finally 语句块，一般用于释放某些已分配的资源，典型的例子就是对一个互斥解锁，或者关闭一个文件。</p>
+<pre><code class="go">func main() &#123;
+    fmt.Println(&quot;defer begin&quot;)
+    // 将defer放入延迟调用栈
+    defer fmt.Println(1)
+    defer fmt.Println(2)
+    // 最后一个放入, 位于栈顶, 最先调用
+    defer fmt.Println(3)
+    fmt.Println(&quot;defer end&quot;)
+&#125;
+
+// 代码输出如下
+// defer begin
+// defer end
+// 3
+// 2
+// 1
+</code></pre>
+</li>
+</ul>
+<h2 id="标准库"><a href="#标准库" class="headerlink" title="标准库"></a>标准库</h2><ul>
+<li><p>定时任务</p>
+<pre><code class="go">import &quot;time&quot;
+ticker := time.NewTicker(time.Minute * 1)
+go func() &#123;
+    // 每隔一分钟打印当前时间
+    for _ = range ticker.C &#123;
+        fmt.Printf(&quot;\rnow time is %v&quot;, time.Now())
+    &#125;
+&#125;()
+</code></pre>
+</li>
+<li><p>正则</p>
+<pre><code class="go">import &quot;regexp&quot;
+
+re, _ := regexp.Compile(&quot;[a-z]&#123;2,4&#125;&quot;)
+
+a := &quot;I am learning Go language&quot;
+
+// 查找符合正则的第一个
+one := re.Find([]byte(a))
+fmt.Println(string(one)) // am
+
+// 查找符合正则的所有 slice
+all := re.FindAll([]byte(a), -1) // n (这里是 -1) 小于 0,表示返回全部符合的字符串，不然就是返回指定的长度
+fmt.Println(all)
+</code></pre>
+</li>
+<li><p>json</p>
+<pre><code class="go">import &quot;encoding/json&quot;
+
+type User struct &#123;
+    Name    string `json:&quot;name&quot;`
+    Gender  bool   `json:&quot;gender,omitempty&quot;` // &quot;omitempty&quot; 表示该字段如果没有提供，在序列化成 json 的时候就不要包含其默认值
+    Age     int    `json:&quot;age&quot;`
+    Address string `json:&quot;-&quot;` // &quot;-&quot; 表示不进行序列化
+&#125;
+
+user := &amp;User&#123;&#125;
+user.Name = &quot;zhangsan&quot;
+user.Gender = true
+user.Age = 22
+user.Address = &quot;earth&quot;
+
+// 序列化
+data, _ := json.Marshal(user)
+fmt.Println(string(data)) // &#123;&quot;name&quot;:&quot;zhangsan&quot;,&quot;gender&quot;:true,&quot;age&quot;:22&#125;
+
+// 反序列化
+u := &amp;User&#123;&#125;
+err := json.Unmarshal([]byte(data), u)
+if err != nil &#123;
+    panic(err)
+&#125;
+fmt.Println(*u) // &#123;zhangsan true 22 &#125;
+</code></pre>
+</li>
+<li><p>embed（需 goland 版本 ≥ 1.16）</p>
+<pre><code class="go">package main
+
+import (
+    &quot;embed&quot;
+    &quot;net/http&quot;
+)
+
+//go:embed js/* css/* img/* *.html robot.txt
+var fileList embed.FS
+
+func main() &#123;
+    http.Handle(&quot;/&quot;, http.FileServer(http.FS(fileList)))
+    http.ListenAndServe(&quot;:8080&quot;, nil)
+&#125;
+</code></pre>
+<blockquote>
+<p>原理是使用 <code>//go:embed</code> 标签来完成  </p>
+<ol>
+<li>文件不是 utf8 编码时，输出内容为中文会乱码</li>
+<li>测试过嵌入文件只能为源码文件同级目录和子目录下的文件，其他目录的绝对路径或相对路径会报错</li>
+<li>如果路径包含空格可以使用双引号或反引号括起来</li>
+<li>变量的类型只能是 <code>string</code>、<code>[]byte</code>、<code>embed.FS</code>，即使是这三个类型的别名也不行</li>
+</ol>
+</blockquote>
+</li>
+<li><p>unsafe</p>
+<pre><code class="go">import (
+    &quot;fmt&quot;
+    &quot;unsafe&quot;
+)
+
+var flag bool
+var n1 int64 = 10
+var name string = &quot;小白&quot;
+
+fmt.Printf(&quot;int的字节大小&quot;, unsafe.Sizeof(n1)) // 获取 int 的字节大小
+fmt.Println()
+fmt.Printf(&quot;string的字节大小&quot;, unsafe.Sizeof(name))
+fmt.Println()
+fmt.Printf(&quot;bool的字节大小&quot;, unsafe.Sizeof(flag))
+</code></pre>
+</li>
+<li><p>runtime</p>
+<pre><code class="go">import (
+    &quot;fmt&quot;
+    &quot;runtime&quot;
+)
+
+var m runtime.MemStats
+runtime.ReadMemStats(&amp;m)
+
+fmt.Printf(&quot;%+v\n&quot;, m) // 获取内存信息
+fmt.Printf(&quot;os %d\n&quot;, m.Sys)
+</code></pre>
+</li>
+</ul>
+<h3 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h3><ul>
+<li><p>http 静态服务器</p>
+<pre><code class="golang">package main
+
+import (&quot;net/http&quot;)
+
+func main() &#123;
+    http.Handle(&quot;/&quot;, http.FileServer(http.Dir(&quot;.&quot;)))
+    http.ListenAndServe(&quot;:8080&quot;, nil)
+&#125;
+</code></pre>
+</li>
+<li><p>http 服务器</p>
+<pre><code class="golang">package main
+
+import (
+    &quot;fmt&quot;
+    &quot;net/http&quot;
+    &quot;strings&quot;
+    &quot;log&quot;
+)
+
+func main() &#123;
+    http.HandleFunc(&quot;/greeting&quot;, func (w http.ResponseWriter, r *http.Request) &#123;
+        r.ParseForm() // 解析参数，默认是不会解析的
+        fmt.Println(r.Form) // 这些信息是输出到服务器端的打印信息
+        fmt.Println(&quot;path&quot;, r.URL.Path)
+        fmt.Println(&quot;scheme&quot;, r.URL.Scheme)
+        fmt.Println(r.Form[&quot;url_long&quot;])
+        for k, v := range r.Form &#123;
+            fmt.Println(&quot;key:&quot;, k)
+            fmt.Println(&quot;val:&quot;, strings.Join(v, &quot;&quot;))
+        &#125;
+        fmt.Fprintf(w, &quot;&lt;html&gt;&lt;body&gt;hello, world&lt;/body&gt;&lt;/html&gt;&quot;) // 这个写入到 w 的是输出到客户端的
+    &#125;)
+
+    err := http.ListenAndServe(&quot;:8080&quot;, nil) // 设置监听的端口
+    if err != nil &#123;
+        log.Fatal(&quot;Fail to start server&quot;, err)
+    &#125;
+&#125;
+</code></pre>
+<pre><code class="go">package main
+
+import (
+    &quot;io&quot;
+    &quot;encoding/json&quot;
+    &quot;fmt&quot;
+    // &quot;html&quot;
+    &quot;io/ioutil&quot;
+    &quot;log&quot;
+    &quot;net/http&quot;
+)
+
+type Order struct &#123;
+    AppId      string `json:&quot;appid&quot;`
+    MchId      string `json:&quot;mch_id&quot;`
+    OutTradeNo string `json:&quot;out_trade_no&quot;`
+    TotalFee   int    `json:&quot;total_fee&quot;`
+    NonceStr   string `json:&quot;nonce_str&quot;`
+    Sign       string `json:&quot;sign&quot;`
+    SignType   string `json:&quot;sign_type&quot;`
+&#125;
+
+type Result struct &#123;
+    Code string `json:&quot;code&quot;`
+    Msg  string `json:&quot;msg&quot;`
+&#125;
+
+func main() &#123;
+    // curl http://127.0.0.1:8002/pay/unifiedorder -XPOST -d &#39;&#123;&quot;appid&quot;:&quot;1&quot;,&quot;mch_id&quot;:&quot;1&quot;,&quot;out_trade_no&quot;:&quot;1&quot;,&quot;total_fee&quot;:1&#125;&#39;
+    http.HandleFunc(&quot;/pay/unifiedorder&quot;, func (w http.ResponseWriter, r *http.Request) &#123;
+        // fmt.Fprintf(w, &quot;the url is %q&quot;, html.EscapeString(r.URL.Path))
+        if r.Method == &quot;POST&quot; &#123;
+            b, err := ioutil.ReadAll(r.Body)
+            if err != nil &#123;
+                log.Println(&quot;Read failed&quot;, err)
+            &#125;
+            defer r.Body.Close()
+
+            order := &amp;Order&#123;&#125;
+            err = json.Unmarshal(b, order)
+            if err != nil &#123;
+                log.Println(&quot;Json unmarshal error&quot;, err)
+            &#125;
+            log.Println(&quot;order&quot;, order)
+
+            result := &amp;Result&#123;&#125;
+            result.Code = &quot;SUCCESS&quot;
+            result_json, _ := json.Marshal(result)
+            io.WriteString(w, string(result_json))
+        &#125; else &#123;
+            fmt.Fprintf(w, &quot;The method &quot; + r.Method + &quot; was not support&quot;)
+        &#125;
+    &#125;)
+    log.Fatal(http.ListenAndServe(&quot;:8002&quot;, nil))
+&#125;
+</code></pre>
+</li>
+<li><p>http 请求</p>
+<pre><code class="golang">import (
+    &quot;fmt&quot;
+    &quot;io/ioutil&quot;
+    &quot;net/http&quot;
+    &quot;time&quot;
+)
+
+client := http.Client&#123;
+    Timeout: 5 * time.Second,
+&#125;
+resp, err := client.Get(&quot;http://www.baidu.com&quot;)
+// resp, err := http.Get(&quot;http://www.baidu.com&quot;)
+if err != nil &#123;
+    fmt.Println(err)
+    return
+&#125;
+html, _ := ioutil.ReadAll(resp.Body)
+fmt.Println(string(html))
+</code></pre>
+</li>
+</ul>
+<h2 id="第三方库"><a href="#第三方库" class="headerlink" title="第三方库"></a>第三方库</h2><ul>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/mattn/go-sqlite3">sqlite3</a></p>
+<ol>
+<li><p>下载</p>
+<pre><code class="bash">go get github.com/mattn/go-sqlite3
+</code></pre>
+</li>
+<li><p>示例</p>
+<pre><code class="go">package main
+
+import (
+    &quot;fmt&quot;
+    &quot;time&quot;
+    &quot;database/sql&quot;
+    _ &quot;github.com/mattn/go-sqlite3&quot;
+)
+
+func main() &#123;
+    // 打开/创建
+    db, err := sql.Open(&quot;sqlite3&quot;, &quot;./my.db&quot;)
+
+    // 创建表
+    _, err = db.Exec(`
+        create table if not exists user (
+            uid integer primary key autoincrement,
+            name varchar(128) null,
+            birthday date null
+        );
+    `)
+
+    // 新增
+    stmt, err := db.Prepare(&quot;insert into user(name, birthday) values(?, ?)&quot;)
+    if err != nil &#123;
+        panic(err)
+    &#125;
+    res, err := stmt.Exec(&quot;luffy&quot;, &quot;2012-12-09&quot;) // res 为返回结果
+    if err != nil &#123;
+        panic(err)
+    &#125;
+    id, err := res.LastInsertId() // 可以通过 res 取自动生成的 id
+    if err != nil &#123;
+        panic(err)
+    &#125;
+    fmt.Println(&quot;insert success with id is&quot;, id)
+
+    // 更新
+    stmt, err = db.Prepare(&quot;update user set name = ? where uid = ?&quot;)
+    if stmt == nil || err != nil &#123;
+        panic(err)
+    &#125;
+    _, err = stmt.Exec(&quot;zhangsan&quot;, 1)
+    if err != nil &#123;
+        panic(err)
+    &#125;
+
+    // 查询
+    rows, err := db.Query(&quot;select * from user&quot;)
+    if err != nil &#123;
+        panic(err)
+    &#125;
+    defer rows.Close()
+    for rows.Next() &#123;
+        var uid int
+        var name string
+        var birth time.Time
+        err = rows.Scan(&amp;uid, &amp;name, &amp;birth)
+        if err != nil &#123;
+            panic(err)
+        &#125;
+        fmt.Printf(&quot;&#123; \&quot;uid\&quot;: %d, \&quot;name\&quot;: \&quot;%s\&quot;, \&quot;birthday\&quot;: \&quot;%s\&quot; &#125;\n&quot;, uid, name, birth)
+    &#125;
+
+    // 删除
+    stmt, err = db.Prepare(&quot;delete from user where uid = ?&quot;)
+    if err != nil &#123;
+        panic(err)
+    &#125;
+    res, err = stmt.Exec(id)
+    if err != nil &#123;
+        panic(err)
+    &#125;
+
+    // 关闭
+    db.Close()
+&#125;
+</code></pre>
+</li>
+</ol>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/gin-gonic/gin">Gin</a>（需要 Go 版本 ≥ 1.6）</p>
+<ol>
+<li><p>下载并安装</p>
+<pre><code class="bash"># 加速
+go env -w GO111MODULE=on
+go env -w GOPROXY=https://goproxy.cn,direct
+
+go mod init myapp
+
+# 下载、安装 Gin
+go get -u github.com/gin-gonic/gin
+</code></pre>
+</li>
+<li><p>示例</p>
+<pre><code class="go">package main
+
+import &quot;github.com/gin-gonic/gin&quot;
+
+func main() &#123;
+    r := gin.Default()
+    r.GET(&quot;/ping&quot;, func(c *gin.Context) &#123;
+        c.JSON(200, gin.H&#123;
+            &quot;message&quot;: &quot;pong&quot;,
+        &#125;)
+    &#125;)
+    r.Run() // listen and serve on 0.0.0.0:8080
+&#125;
+</code></pre>
+<pre><code class="go">package main
+
+import (
+    &quot;fmt&quot;
+    &quot;net/http&quot;
+    &quot;github.com/gin-gonic/gin&quot;
+)
+
+type Login struct &#123;
+    Name string `form:&quot;name&quot; json:&quot;name&quot; xml:&quot;name&quot;  binding:&quot;required&quot;`
+    Pass string `form:&quot;pass&quot; json:&quot;pass&quot; xml:&quot;pass&quot; binding:&quot;required&quot;`
+&#125;
+
+func main() &#123;
+    router := gin.Default()
+
+    // curl http://127.0.0.1:8002/greeting/luffy
+    router.GET(&quot;/greeting/:name&quot;, func(c *gin.Context) &#123;
+        name := c.Param(&quot;name&quot;) // 获取 URL 参数
+        c.String(http.StatusOK, &quot;hello, %s&quot;, name)
+    &#125;)
+
+    // curl -XPOST http://127.0.0.1:8002/parameter/Andy?q=Bob -d &#39;f=Charlie&#39;
+    // curl -XPOST &quot;http://127.0.0.1:8002/parameter/Andy?qm[a]=Bob&amp;qm[b]=Emma&quot; -d &#39;fm[a]=Charlie&amp;fm[b]=Frank&#39;
+    router.POST(&quot;/parameter/:p&quot;, func(c *gin.Context) &#123;
+        p := c.Param(&quot;p&quot;) // 获取 URL 参数
+        q := c.Query(&quot;q&quot;) // 获取 URL 后面拼接的参数
+        d := c.DefaultQuery(&quot;d&quot;, &quot;Dick&quot;) // 获取 URL 后面拼接的参数，如果没有入参，则使用默认值 Dick
+        f := c.PostForm(&quot;f&quot;) // 获取 form 表单参数
+        qm := c.QueryMap(&quot;qm&quot;) // 获取 URL 后面拼接的参数，返回 Map
+        fm := c.PostFormMap(&quot;fm&quot;) // 获取 form 表单参数，返回 Map
+        c.JSON(200, gin.H&#123;
+            &quot;p&quot;: p,
+            &quot;q&quot;: q,
+            &quot;d&quot;: d,
+            &quot;f&quot;: f,
+            &quot;qm&quot;: qm,
+            &quot;fm&quot;: fm,
+        &#125;)
+    &#125;)
+
+    // curl -XPOST http://127.0.0.1:8002/login -H &quot;Content-Type: application/json&quot; -d &#39;&#123; &quot;name&quot;: &quot;admin&quot;, &quot;pass&quot;: &quot;123&quot; &#125;&#39;
+    router.POST(&quot;/login&quot;, func(c *gin.Context) &#123;
+        var user Login
+        if err := c.ShouldBindJSON(&amp;user); err != nil &#123;
+            c.JSON(http.StatusBadRequest, gin.H&#123;&quot;error&quot;: err.Error()&#125;)
+            return
+        &#125;
+        if user.Name != &quot;admin&quot; || user.Pass != &quot;123&quot; &#123;
+            c.JSON(http.StatusUnauthorized, gin.H&#123; &quot;status&quot;: &quot;unauthorized&quot; &#125;)
+            return
+        &#125;
+        c.JSON(http.StatusOK, gin.H&#123; &quot;status&quot;: &quot;you are logged in&quot; &#125;)
+    &#125;)
+
+    router.MaxMultipartMemory = 8 &lt;&lt; 20  // Set a lower memory limit for multipart forms (default is 32 MiB)
+    // curl http://127.0.0.1:8002/upload -F &quot;file=@data.zip&quot;
+    // curl -X POST http://127.0.0.1:8002/upload -F &quot;file=@data.zip&quot; -H &quot;Content-Type: multipart/form-data&quot;
+    router.POST(&quot;/upload&quot;, func(c *gin.Context) &#123; // 单文件上传
+        file, _ := c.FormFile(&quot;file&quot;)
+        fmt.Println(&quot;upload with filename&quot;, file.Filename)
+        c.SaveUploadedFile(file, &quot;./&quot; + file.Filename) // 保存文件至指定位置
+        c.String(http.StatusOK, fmt.Sprintf(&quot;&#39;%s&#39; uploaded&quot;, file.Filename))
+    &#125;)
+    // curl -X POST http://127.0.0.1:8002/uploads -F &quot;upload[]=@data1.zip&quot; -F &quot;upload[]=@data2.zip&quot; -H &quot;Content-Type: multipart/form-data&quot;
+    router.POST(&quot;/uploads&quot;, func(c *gin.Context) &#123; // 多文件上传
+        form, _ := c.MultipartForm()
+        files := form.File[&quot;upload[]&quot;]
+        for _, file := range files &#123;
+            fmt.Println(&quot;upload with filename %s&quot;, file.Filename)
+            c.SaveUploadedFile(file, &quot;./&quot;)
+        &#125;
+        c.String(http.StatusOK, fmt.Sprintf(&quot;%d files uploaded&quot;, len(files)))
+    &#125;)
+
+    v1 := router.Group(&quot;/v1&quot;) // 分组
+    &#123;
+        // curl http://127.0.0.1:8002/v1/greeting
+        v1.GET(&quot;/greeting&quot;, greeting)
+        v1.POST(&quot;/greeting2&quot;, greeting)
+    &#125;
+
+    router.Run(&quot;:8002&quot;)
+&#125;
+
+func greeting(c *gin.Context) &#123;
+    c.String(http.StatusOK, &quot;hello, world&quot;)
+&#125;
+</code></pre>
+</li>
+</ol>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/robertkrimen/otto">otto</a></p>
+<pre><code class="go">import &quot;github.com/robertkrimen/otto&quot;
+
+vm := otto.New()
+// 执行 js 代码
+vm.Run(`
+    abc = 2 + 2;
+    console.log(&quot;The value of abc is &quot; + abc); // 4
+`)
+
+// 获取变量值
+if value, err := vm.Get(&quot;abc&quot;); err == nil &#123;
+    if value_int, err := value.ToInteger(); err == nil &#123;
+        fmt.Printf(&quot;&quot;, value_int, err)
+    &#125;
+&#125;
+
+// 变量赋值
+vm.Set(&quot;def&quot;, 11)
+vm.Run(`
+    console.log(&quot;The value of def is &quot; + def);
+    // The value of def is 11
+`)
+vm.Set(&quot;xyzzy&quot;, &quot;Nothing happens.&quot;)
+vm.Run(`
+    console.log(xyzzy.length); // 16
+`)
+
+// 获取表达式值
+value, _ = vm.Run(&quot;xyzzy.length&quot;)
+&#123;
+    // value is an int64 with a value of 16
+    value, _ := value.ToInteger()
+&#125;
+</code></pre>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/dop251/goja">goja</a></p>
+<pre><code class="go">import (
+    &quot;github.com/dop251/goja&quot;
+    &quot;github.com/dop251/goja_nodejs/require&quot;
+)
+
+registry := require.NewRegistryWithLoader(func(path string) ([]byte, error) &#123; // 创建自定义 require loader（registry 每次重新生成，防止 module 被缓存，从而导致 module 修改后不生效）
+    rows, err := Db.Query(&quot;select jscontent from script where name = ?&quot;, path)
+    if err != nil &#123;
+        panic(err.Error())
+        return nil, err
+    &#125;
+    defer rows.Close()
+    if rows.Next() == false &#123;
+        return nil, errors.New(&quot;The module was not found.&quot;)
+    &#125;
+    script := Script&#123;&#125;
+    err = rows.Scan(&amp;script.JsContent)
+    return []byte(script.JsContent), err
+&#125;)
+
+vm := goja.New()
+
+_ = registry.Enable(vm) // 启用自定义 require loader 
+
+vm.Set(&quot;exports&quot;, vm.NewObject())
+
+time.AfterFunc(60000 * time.Millisecond, func() &#123; // 允许脚本最大执行的时间为 60 秒
+    vm.Interrupt(&quot;The script executed timeout.&quot;)
+&#125;)
+
+// res, err := vm.RunString(&quot;require(&#39;./&quot; + name + &quot;&#39;).main();&quot;)
+
+_, err = vm.RunString(script.JsContent)
+if err != nil &#123;
+    panic(err)
+    return
+&#125;
+main, isFunction := goja.AssertFunction(vm.Get(&quot;main&quot;)) // 执行 js 中的 main 函数
+if !isFunction &#123;
+    panic(errors.New(&quot;The function main can not be found.&quot;))
+    return
+&#125;
+res, err := main(goja.Undefined(), vm.ToValue(&quot;this is parameter&quot;))
+</code></pre>
+</li>
+</ul>
+<h2 id="第三方应用"><a href="#第三方应用" class="headerlink" title="第三方应用"></a>第三方应用</h2><ul>
+<li><p>使用 <a target="_blank" rel="noopener" href="https://github.com/rogercoll/httpdump">httpdump</a> 抓包 HTTP 报文</p>
+<pre><code class="bash">apt install libpcap-dev
+# yum install libpcap-devel
+
+go install github.com/rogercoll/httpdump@latest
+</code></pre>
+<pre><code class="bash">httpdump
+
+httpdump -level all -port 80
+
+# parse pcap file
+sudo tcpdump -wa.pcap tcp
+httpdump -file a.pcap
+
+# capture specified device:
+httpdump -device eth0
+
+# filter by ip and/or port
+httpdump -port 80  # filter by port
+httpdump -ip 101.201.170.152 # filter by ip
+httpdump -ip 101.201.170.152 -port 80 # filter by ip and port
+</code></pre>
+</li>
+</ul>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2025/03/22/ffmpeg/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2025/03/22/hello-world/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="https://foruda.gitee.com/avatar/1742612186548659192/332261_isunk_1742612186.jpeg" alt="Dim.Ke's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        904243852@qq.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto: 904243852@qq.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/algorithm/">algorithm<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/css/">css<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/deno/">deno<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/docker/">docker<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/elasticsearch/">elasticsearch<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/ffmpeg/">ffmpeg<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/golang/">golang<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/javascript/">javascript<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/kubernetes/">kubernetes<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/linux/">linux<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/mysql/">mysql<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/nginx/">nginx<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/nodejs/">nodejs<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/solr/">solr<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/tomcat/">tomcat<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/webassembly/">webassembly<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/isunk" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+
+    <!-- Gitee -->
+    
+        <a href="https://gitee.com/isunk" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background: url('https://gitee.com/static/images/logo-en.svg'); background-size: cover;">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;Dim.Ke
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/bollnh/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<!-- <script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('
+<link rel="stylesheet" href="/css/uc.css">
+');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script> -->
+
+<!-- Import prettify js  -->
+
+    
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
+        
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 2020;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/bollnh/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
