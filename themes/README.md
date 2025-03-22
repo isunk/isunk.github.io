@@ -1,15 +1,15 @@
-# isunk.github.io
+# isunk.gitee.io
 
 ## [环境搭建](https://www.diandian100.cn/58462.html)
 
-1. 安装 [Hexo](https://hexo.io/zh-cn/)
+1. 安装 Hexo
     ```bash
     npm install -g hexo
     ```
 
 2. 初始化 Hexo
     ```bash
-    cd isunk.github.io && hexo init
+    cd isunk.gitee.io && hexo init
     ```
 
 3. 下载主题
@@ -34,7 +34,7 @@
 
     deploy:
       type: git
-      repository: git@github.com:isunk/isunk.github.io.git
+      repository: git@gitee.com:isunk/isunk.gitee.io.git
       branch: master
     ```
 
@@ -53,12 +53,17 @@
     hexo s
     ```
 
-7. 生成静态文件并上传至仓库
+7. 上传博客
     ```bash
-    hexo d -g
+    # 如果使用 hexo d 出现如下错误 “Deployer not found: gitee” 或者 “Deployer not found: git”，需安装插件如下
+    # npm install hexo-deployer-git --save
+
+    hexo d -g # 生成静态文件并上传至仓库
     ```
 
-8. 访问 https://isunk.github.io
+8. 登录 https://gitee.com/isunk/isunk.gitee.io/pages，更新 Gitee Pages 服务
+
+9. 访问 https://isunk.gitee.io
 
 ## [目录结构](https://hexo.io/zh-cn/docs/themes.html)
 
